@@ -7,7 +7,7 @@ import {
 } from "@remix-run/react";
 import "./tailwind.css";
 
-import Navbar from "./components/Navbar";
+import Navbar from "./components/global/Navbar";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
