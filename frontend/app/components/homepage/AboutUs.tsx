@@ -1,17 +1,23 @@
 export default function AboutUs() {
   return (
-    <section className="flex flex-col bg-slate-100 py-52 text-center">
-      <h2>O nas</h2>
-      <h2 className="sm:text-5xl md:text-6xl 2xl:text-8xl">
-        Ekoskrzat to przedszkole w domu z wielkim ogrodem w cichym zakątku
-        dzielnicy Bieżanów - Prokocim.
+    <section className="flex flex-col items-center gap-8 bg-slate-100 px-8 py-52 text-center">
+      <h3 className="w-fit rounded-full border border-slate-300 px-4 py-2 text-blue-600">
+        O nas
+      </h3>
+      <h2 className="font-display text-4xl text-slate-800 md:text-6xl lg:w-3/4 2xl:text-7xl">
+        Ekoskrzat to przedszkole w domu z <strong>wielkim ogrodem</strong> w
+        cichym zakątku dzielnicy Bieżanów - Prokocim.
       </h2>
-      <p>
+      <p className="max-w-prose text-slate-600 2xl:text-2xl">
         Tutaj dzieci mogą czuć się szczęśliwe, spokojne i bezpieczne, a poprzez
         kontakt z przyrodą i przebywanie z dala od miejskiego smogu mają
         możliwość poznania wartości, które niesie życie w zdrowym otoczeniu.{" "}
       </p>
-      <img src="/images/about-img.png" alt="Obrazek skrzata" />
+      <img
+        className="lg:w-1/2"
+        src="/images/about-img.png"
+        alt="Obrazek skrzata"
+      />
     </section>
   );
 }

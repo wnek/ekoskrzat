@@ -11,12 +11,19 @@ import AboutUs from "~/components/homepage/AboutUs";
 //   return json(articles);
 // }
 
-// export const meta: MetaFunction = () => {
-//   return [
-//     { title: "New Remix App" },
-//     { name: "description", content: "Welcome to Remix!" },
-//   ];
-// };
+export const meta: MetaFunction = () => {
+  return [
+    {
+      title:
+        "Przedszkole Bieżanów - Prokocim - Ekologiczne Przedszkole Ekoskrzat",
+    },
+    {
+      name: "description",
+      content:
+        "Prywatne przedszkole na terenie dzielnicy Bieżanów - Prokocim. Miejsce w którym dzieci mogą czuć się w pełni szczęśliwe, spokojne i bezpieczne. Poprzez kontakt z przyrodą, poznają najważniejsze wartości.",
+    },
+  ];
+};
 
 export default function Index() {
   // const articles = useLoaderData();
