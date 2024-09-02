@@ -4,6 +4,7 @@ import { json, LoaderFunction } from "@remix-run/node";
 
 import Hero from "~/components/homepage/Hero";
 import AboutUs from "~/components/homepage/AboutUs";
+import Mission from "~/components/homepage/Mission";
 
 // export const loader: LoaderFunction = async () => {
 //   const response = await fetch("http://localhost:1337/api/homepage?populate=*");
@@ -33,6 +34,7 @@ export default function Index() {
     <>
       <Hero />
       <AboutUs />
+      <Mission />
     </>
   );
 }
