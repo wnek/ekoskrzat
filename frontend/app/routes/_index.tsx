@@ -37,6 +37,7 @@ export default function Index() {
       <AboutUs />
       <Mission />
       <FirstFeature />
+      <Mission />
     </>
   );
 }
