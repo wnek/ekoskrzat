@@ -39,6 +39,7 @@ export default function Index() {
       <Mission />
       <FirstFeature />
       <Staff />
+      <FirstFeature />
     </>
   );
 }
