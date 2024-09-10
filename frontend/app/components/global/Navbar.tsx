@@ -7,7 +7,7 @@ export default function Navbar() {
         </a>
       </h1>
 
-      <ul className="flex space-x-6 text-slate-900">
+      {/* <ul className="flex space-x-6 text-slate-900">
         <li>
           <a href="/o-nas">O nas</a>
         </li>
@@ -21,14 +21,16 @@ export default function Navbar() {
         <li>
           <a href="/kontakt">Kontakt</a>
         </li>
-      </ul>
+      </ul> */}
 
       <ul className="flex space-x-6">
-        <li>
+        {/* <li>
           <a href="/dla-rodzicow">Dla rodziców</a>
-        </li>
+        </li> */}
         <li>
-          <a href="/zapisz-dziecko">Zapisz dziecko</a>
+          <a className="rounded-full border px-6 py-3" href="/zapisz-dziecko">
+            Zapisz dziecko
+          </a>
         </li>
       </ul>
     </nav>
