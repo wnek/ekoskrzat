@@ -14,7 +14,7 @@ export default function Staff() {
     target: targetRef,
     offset: ["start center", "end center"],
   });
-  const y = useTransform(scrollYProgress, [0, 1], [200, -200]);
+  const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     console.log("Page scroll Y progress: ", latest);
