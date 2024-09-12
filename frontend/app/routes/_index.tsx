@@ -7,6 +7,7 @@ import AboutUs from "~/components/homepage/AboutUs";
 import Mission from "~/components/homepage/Mission";
 import FirstFeature from "~/components/homepage/FirstFeature";
 import Staff from "~/components/homepage/Staff";
+import SecondFeature from "~/components/homepage/SecondFeature";
 
 // export const loader: LoaderFunction = async () => {
 //   const response = await fetch("http://localhost:1337/api/homepage?populate=*");
@@ -39,7 +40,7 @@ export default function Index() {
       <Mission />
       <FirstFeature />
       <Staff />
-      <FirstFeature />
+      <SecondFeature />
     </>
   );
 }
