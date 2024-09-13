@@ -8,7 +8,7 @@ export default function FirstFeature() {
         backgroundPosition: "center center",
       }}
     >
-      <div className="sticky top-[6rem] flex flex-col gap-12 rounded-2xl bg-slate-900 px-12 py-16 lg:w-1/3">
+      <div className="sticky top-[6rem] flex flex-col gap-8 rounded-2xl bg-slate-900 px-12 py-16 lg:w-1/3">
         <h3 className="text-2xl text-white 2xl:text-4xl">
           Przedszkole w domu z ogrodem
         </h3>

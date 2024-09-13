@@ -23,9 +23,9 @@ export default function Staff() {
   return (
     <section
       ref={targetRef}
-      className="flex min-h-screen flex-col items-center justify-center gap-8 overflow-hidden bg-white px-8 py-16 lg:flex-row lg:py-52"
+      className="grid min-h-screen items-center justify-center gap-8 bg-white px-8 py-16 lg:grid-flow-col lg:grid-cols-2"
     >
-      <div className="relative flex min-h-full w-full items-center justify-center">
+      <div className="relative flex w-full items-center justify-center">
         <motion.img
           className="w-3/4 origin-center lg:w-1/2"
           src="/images/staff-1.png"
@@ -38,11 +38,11 @@ export default function Staff() {
           style={{ y: y }}
         />
       </div>
-      <div className="flex w-full flex-col gap-6">
-        <h2 className="text-center font-display text-2xl text-slate-800 md:text-6xl lg:w-3/4 lg:text-left 2xl:text-7xl">
+      <div className="flex w-full flex-col items-center gap-8 px-12 py-16 lg:items-start 2xl:px-40">
+        <h2 className="text-center font-display text-2xl text-slate-800 md:text-6xl lg:text-left 2xl:text-7xl">
           Wykwalifikowana kadra
         </h2>
-        <p className="max-w-prose text-pretty text-center text-slate-600 lg:text-left 2xl:text-2xl">
+        <p className="text-pretty text-center text-slate-600 lg:text-left 2xl:text-2xl">
           Nasi nauczyciele posiadają nie tylko odpowiednie wykształcenie, ale
           także ogromne zaangażowanie w pracę z dziećmi. Regularnie uczestniczą
           w szkoleniach, aby wprowadzać najnowsze metody edukacyjne i wspierać

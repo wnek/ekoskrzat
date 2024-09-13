@@ -8,7 +8,7 @@ export default function SecondtFeature() {
         backgroundPosition: "center center",
       }}
     >
-      <div className="sticky top-[6rem] flex h-fit grid-cols-2 flex-col gap-12 rounded-2xl bg-white px-12 py-16 lg:w-1/3">
+      <div className="sticky top-[6rem] flex h-fit grid-cols-2 flex-col gap-8 rounded-2xl bg-white px-12 py-16 lg:w-1/3">
         <h3 className="text-2xl text-slate-900 2xl:text-4xl">
           Unikalne podejście do dzieci
         </h3>
