@@ -15,6 +15,15 @@ import SecondFeature from "~/components/homepage/SecondFeature";
 //   return json(articles);
 // }
 
+export const link = () => {
+  return [
+    {
+      rel: "stylesheet",
+      href: "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap",
+    },
+  ];
+};
+
 export const meta: MetaFunction = () => {
   return [
     {

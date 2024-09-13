@@ -9,7 +9,7 @@ export default function FirstFeature() {
       }}
     >
       <div className="sticky top-[6rem] flex flex-col gap-8 rounded-2xl bg-slate-900 px-12 py-16 lg:w-1/3">
-        <h3 className="text-2xl text-white 2xl:text-4xl">
+        <h3 className="font-display text-2xl text-white 2xl:text-4xl">
           Przedszkole w domu z ogrodem
         </h3>
         <p className="text-slate-400 2xl:text-2xl">
