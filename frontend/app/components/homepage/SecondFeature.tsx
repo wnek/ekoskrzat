@@ -10,7 +10,7 @@ export default function SecondFeature() {
         }}
       ></div>
       <div className="mx-4 py-4 lg:sticky lg:top-[5rem] lg:mx-8 lg:w-1/3">
-        <div className="flex flex-col gap-8 rounded-3xl bg-stone-200 px-12 py-16 lg:rounded-2xl">
+        <div className="flex flex-col gap-8 rounded-3xl bg-stone-100 px-12 py-16 lg:rounded-2xl">
           <h3 className="text-sla font-display text-2xl text-slate-800 2xl:text-4xl">
             <strong>Unikalne</strong> podejście do dzieci
           </h3>
