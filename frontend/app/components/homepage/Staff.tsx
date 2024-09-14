@@ -39,8 +39,8 @@ export default function Staff() {
         />
       </div>
       <div className="flex w-full flex-col items-center gap-8 px-12 py-16 lg:items-start 2xl:px-40">
-        <h2 className="text-center font-display text-2xl text-slate-800 md:text-6xl lg:text-left 2xl:text-7xl">
-          Wykwalifikowana kadra
+        <h2 className="text-center font-display text-3xl text-slate-800 md:text-6xl lg:text-left 2xl:text-7xl">
+          <strong>Wykwalifikowana</strong> kadra
         </h2>
         <p className="text-pretty text-center text-slate-600 lg:text-left 2xl:text-2xl">
           Nasi nauczyciele posiadają nie tylko odpowiednie wykształcenie, ale

@@ -11,3 +11,13 @@
     src: url(/fonts/VolteRounded-Regular.woff) format("woff");
   }
 }
+
+@layer base {
+  @font-face {
+    font-family: "Volte Rounded";
+    font-style: bold;
+    font-weight: 800;
+    font-display: swap;
+    src: url(/fonts/VolteRounded-Bold.woff) format("woff");
+  }
+}

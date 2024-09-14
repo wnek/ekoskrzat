@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://cloudconvert.com/
+HostUrl=https://eu-central.storage.cloudconvert.com/tasks/26dbfec0-c5ed-4638-9e85-2a92e9fbf3f9/VolteRounded-Bold-BF65bc55d33dd1f.woff2?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20240914%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20240914T174809Z&X-Amz-Expires=86400&X-Amz-Signature=85a414bd843b0cbd2d0d28ae5fe7fe9bb03deadb69e5dd2ade2d3627cd42b69a&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%22VolteRounded-Bold-BF65bc55d33dd1f.woff2%22&response-content-type=font%2Fwoff2&x-id=GetObject
