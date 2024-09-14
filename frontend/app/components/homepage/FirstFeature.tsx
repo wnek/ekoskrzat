@@ -10,7 +10,7 @@ export default function FirstFeature() {
         }}
       ></div>
       <div className="mx-4 py-4 lg:sticky lg:top-[5rem] lg:mx-8 lg:w-1/3">
-        <div className="flex flex-col gap-8 rounded-2xl bg-slate-900 px-12 py-16">
+        <div className="flex flex-col gap-8 rounded-3xl bg-slate-900 px-12 py-16 lg:rounded-2xl">
           <h3 className="font-display text-2xl text-white 2xl:text-4xl">
             Przedszkole w domu z ogrodem
           </h3>
