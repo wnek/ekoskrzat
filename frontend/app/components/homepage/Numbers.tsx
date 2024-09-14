@@ -1,6 +1,6 @@
 export default function Numbers() {
   return (
-    <section className="m-4 flex h-screen flex-col items-center py-16 text-center lg:py-52">
+    <section className="m-4 flex min-h-screen flex-col items-center py-16 text-center lg:py-52">
       <h3 className="py-12 font-display text-4xl text-slate-800 2xl:text-4xl">
         Ekoskrzat w <strong>liczbach</strong>
       </h3>
