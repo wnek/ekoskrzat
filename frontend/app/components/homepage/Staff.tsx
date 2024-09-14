@@ -23,7 +23,7 @@ export default function Staff() {
   return (
     <section
       ref={targetRef}
-      className="grid min-h-screen items-center justify-center gap-8 bg-white px-8 py-16 lg:grid-flow-col lg:grid-cols-2"
+      className="grid min-h-screen items-center justify-center gap-8 bg-white px-4 py-16 lg:grid-flow-col lg:grid-cols-2 lg:px-8"
     >
       <div className="relative flex w-full items-center justify-center">
         <motion.img

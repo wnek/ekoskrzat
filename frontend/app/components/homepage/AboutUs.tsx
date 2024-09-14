@@ -1,6 +1,6 @@
 export default function AboutUs() {
   return (
-    <section className="flex flex-col items-center gap-8 bg-stone-100 px-8 py-16 text-center lg:py-52 xl:px-32">
+    <section className="flex flex-col items-center gap-8 bg-stone-100 px-4 py-16 text-center lg:px-8 lg:py-52 xl:px-32">
       <h3 className="w-fit rounded-full border border-slate-300 px-4 py-2 text-blue-600">
         O nas
       </h3>

@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <div className="top-[5rem]">
       <section className="flex w-full flex-col bg-stone-100 text-center text-lg lg:flex-row lg:text-left">
-        <div className="top-[5rem] flex h-[80vh] flex-col items-center justify-center gap-8 px-16 lg:sticky lg:h-[calc(100vh-5rem)] lg:items-start 2xl:px-48">
+        <div className="top-[5rem] flex h-[80vh] flex-col items-center justify-center gap-8 px-4 lg:sticky lg:h-[calc(100vh-5rem)] lg:items-start lg:px-16 2xl:px-48">
           <h2 className="max-w-prose font-display text-4xl text-slate-800 md:text-6xl 2xl:text-8xl">
             <strong>Przestrzeń</strong> dla rozwoju Twojego dziecka
           </h2>
