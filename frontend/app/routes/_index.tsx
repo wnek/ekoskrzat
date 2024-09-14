@@ -10,6 +10,8 @@ import Staff from "~/components/homepage/Staff";
 import SecondFeature from "~/components/homepage/SecondFeature";
 import Numbers from "~/components/homepage/Numbers";
 import ThirdFeature from "~/components/homepage/ThirdFeature";
+import Testimonials from "~/components/homepage/Testimonials";
+import Join from "~/components/homepage/Join";
 
 // export const loader: LoaderFunction = async () => {
 //   const response = await fetch("http://localhost:1337/api/homepage?populate=*");
@@ -45,6 +47,8 @@ export default function Index() {
       <SecondFeature />
       <Numbers />
       <ThirdFeature />
+      <Testimonials />
+      <Join />
     </>
   );
 }

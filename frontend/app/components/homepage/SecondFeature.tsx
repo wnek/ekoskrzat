@@ -1,8 +1,8 @@
 export default function SecondFeature() {
   return (
-    <section className="my-4 h-[100vh] justify-end rounded-3xl lg:flex lg:h-screen">
+    <section className="my-4 min-h-screen justify-end rounded-3xl lg:flex lg:h-screen">
       <div
-        className="mx-4 h-1/2 rounded-3xl lg:absolute lg:h-full lg:w-[calc(100vw-3rem)]"
+        className="mx-4 h-screen rounded-3xl lg:absolute lg:h-full lg:w-[calc(100vw-3rem)]"
         style={{
           backgroundImage: "url(/images/feature-2.jpg)",
           backgroundSize: "cover",
