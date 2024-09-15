@@ -19,10 +19,10 @@ export default function Join() {
             doświadczenia. Sprawdź, jak możemy wspólnie odkrywać świat!
           </p>
           <a
-            href="mailto:ekoskrzat.przedszkole@gmail.com"
+            href="tel:+48535553599"
             className="flex items-center justify-between gap-6 rounded-full bg-green-500 py-2 pl-6 pr-2 text-white 2xl:text-xl"
           >
-            Napisz do nas
+            Porozmawiajmy
             <div className="flex h-8 w-8 rounded-full bg-white p-2">
               <img src="images/arrow.svg" alt="Strzałka" />
             </div>

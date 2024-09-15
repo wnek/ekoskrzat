@@ -17,10 +17,6 @@ export default function Hero() {
   const yCircle = useTransform(scrollYProgress, [0, 1], [0, 2000]);
   const rotation = useTransform(scrollYProgress, [0, 1], [0, 120]);
 
-  useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    console.log("Page scroll Y progress: ", latest);
-  });
-
   return (
     <div className="top-[5rem]">
       <motion.img
