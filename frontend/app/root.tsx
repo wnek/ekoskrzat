@@ -8,6 +8,7 @@ import {
 import "./tailwind.css";
 
 import Navbar from "./components/global/Navbar";
+import Footer from "./components/global/Footer";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -43,6 +44,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body>
         <Navbar />
         {children}
+        <Footer />
         <ScrollRestoration />
         <Scripts />
       </body>

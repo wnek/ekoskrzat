@@ -3,7 +3,6 @@ import {
   useScroll,
   useTransform,
   useMotionValueEvent,
-  transform,
 } from "framer-motion";
 
 import { useRef } from "react";
@@ -15,10 +14,6 @@ export default function Staff() {
     offset: ["start center", "end center"],
   });
   const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
-
-  useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    console.log("Page scroll Y progress: ", latest);
-  });
 
   return (
     <section

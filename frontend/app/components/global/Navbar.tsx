@@ -1,6 +1,6 @@
 export default function Navbar() {
   return (
-    <nav className="sticky top-0 z-10 flex h-20 items-center justify-between bg-white p-4 2xl:text-xl">
+    <nav className="sticky top-0 z-50 flex h-20 items-center justify-between bg-white p-4 2xl:text-xl">
       <h1>
         <a href="/">
           <img src="/images/logo.svg" alt="Logo" />
