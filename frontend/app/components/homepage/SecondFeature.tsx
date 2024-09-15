@@ -14,7 +14,7 @@ export default function SecondFeature() {
 
   return (
     <section
-      ref={targetRef}
+      // ref={targetRef}
       className="relative my-4 min-h-screen justify-end rounded-3xl lg:flex lg:h-screen"
     >
       {/* <motion.img
