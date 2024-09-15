@@ -49,6 +49,17 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta property="og:image" content="/og-image.jpg" />
         <meta property="og:url" content="https://ekoskrzat.vercel.app/" />
 
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Przedszkole Bieżanów - Prokocim - Ekologiczne Przedszkole Ekoskrzat"
+        />
+        <meta
+          name="twitter:description"
+          content="Prywatne przedszkole na terenie dzielnicy Bieżanów - Prokocim. Miejsce w którym dzieci mogą czuć się w pełni szczęśliwe, spokojne i bezpieczne. Poprzez kontakt z przyrodą, poznają najważniejsze wartości."
+        />
+        <meta name="twitter:image" content="/og-image.jpg" />
+
         <Meta />
         <Links />
       </head>
