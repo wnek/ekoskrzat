@@ -55,9 +55,15 @@ export default function Hero() {
             dzielnicy Bieżanów - Prokocim.
           </p>
           <div className="flex flex-col items-center gap-4 lg:flex-row">
-            <button className="rounded-full bg-green-500 px-6 py-3 text-white">
+            <a
+              href="mailto:ekoskrzat.przedszkole@gmail.com"
+              className="flex items-center justify-between gap-6 rounded-full bg-green-500 py-2 pl-6 pr-2 text-white 2xl:text-xl"
+            >
               Zapisz dziecko
-            </button>
+              <div className="flex h-8 w-8 rounded-full bg-white p-2">
+                <img src="images/arrow.svg" alt="Strzałka" />
+              </div>
+            </a>
             {/* <a href="/o-nas">Dowiedz się więcej</a> */}
           </div>
         </div>

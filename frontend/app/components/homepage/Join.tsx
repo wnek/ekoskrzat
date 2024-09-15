@@ -18,6 +18,15 @@ export default function Join() {
             Daj swojemu dziecku szansę na radosne i inspirujące przedszkolne
             doświadczenia. Sprawdź, jak możemy wspólnie odkrywać świat!
           </p>
+          <a
+            href="mailto:ekoskrzat.przedszkole@gmail.com"
+            className="flex items-center justify-between gap-6 rounded-full bg-green-500 py-2 pl-6 pr-2 text-white 2xl:text-xl"
+          >
+            Napisz do nas
+            <div className="flex h-8 w-8 rounded-full bg-white p-2">
+              <img src="images/arrow.svg" alt="Strzałka" />
+            </div>
+          </a>
         </div>
       </div>
     </section>
