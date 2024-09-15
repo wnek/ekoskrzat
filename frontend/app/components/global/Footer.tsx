@@ -74,7 +74,13 @@ export default function Footer() {
       <div className="w-full xl:px-32">
         <div className="flex items-center justify-end gap-4 border-t border-dashed border-slate-300 py-6 text-slate-800">
           <p>Polub nas na</p>
-          <img src="images/facebook.svg" alt="Facebook" className="w-8" />
+          <a
+            href="https://www.facebook.com/przedszkoleekoskrzat"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src="images/facebook.svg" alt="Facebook" className="w-8" />
+          </a>
         </div>
       </div>
       <div className="flex min-h-[60vh] w-full items-end xl:px-32">
