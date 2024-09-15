@@ -1,19 +1,23 @@
 export default function Join() {
   return (
-    <section className="my-4 min-h-screen rounded-3xl lg:h-screen">
+    <section className="my-4 min-h-screen rounded-3xl lg:grid lg:h-screen lg:grid-cols-2 lg:rounded-none lg:bg-slate-900 lg:py-4">
       <div
-        className="mx-4 h-screen rounded-3xl lg:absolute lg:h-full lg:w-[calc(100vw-3rem)]"
+        className="mx-4 h-screen rounded-3xl lg:h-full"
         style={{
           backgroundImage: "url(/images/join.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center center",
         }}
       ></div>
-      <div className="mx-4 py-4 lg:sticky lg:top-[5rem] lg:mx-8 lg:w-1/3">
-        <div className="flex flex-col gap-8 rounded-3xl bg-slate-900 px-12 py-16 lg:rounded-2xl">
-          <h3 className="font-display text-2xl text-white 2xl:text-4xl">
-            Dołącz do nas!
-          </h3>
+      <div className="2xl:px-30 mx-4 py-4 lg:mx-8 lg:flex lg:items-center lg:justify-center">
+        <div className="flex flex-col gap-8 rounded-3xl bg-slate-900 px-12 py-16 lg:flex lg:items-center lg:rounded-2xl lg:text-center">
+          <h2 className="font-display text-2xl text-white md:text-6xl 2xl:w-3/4 2xl:text-7xl">
+            <strong>Dołącz</strong> do nas!
+          </h2>
+          <p className="text-slate-400 2xl:px-32 2xl:text-2xl">
+            Daj swojemu dziecku szansę na radosne i inspirujące przedszkolne
+            doświadczenia. Sprawdź, jak możemy wspólnie odkrywać świat!
+          </p>
         </div>
       </div>
     </section>
