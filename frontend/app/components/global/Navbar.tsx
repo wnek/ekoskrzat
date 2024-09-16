@@ -28,10 +28,7 @@ export default function Navbar() {
           <a href="/dla-rodzicow">Dla rodziców</a>
         </li> */}
         <li>
-          <a
-            className="rounded-full border px-6 py-3"
-            href="mailto:ekoskrzat.przedszkole@gmail.com"
-          >
+          <a className="rounded-full border px-6 py-3" href="/form">
             Napisz do nas
           </a>
         </li>

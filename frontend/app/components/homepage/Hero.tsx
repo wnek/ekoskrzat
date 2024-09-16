@@ -52,7 +52,7 @@ export default function Hero() {
           </p>
           <div className="flex flex-col items-center gap-4 lg:flex-row">
             <a
-              href="mailto:ekoskrzat.przedszkole@gmail.com"
+              href="/form"
               className="flex items-center justify-between gap-6 rounded-full bg-green-500 py-2 pl-6 pr-2 text-white 2xl:text-xl"
             >
               Zapisz dziecko
