@@ -48,15 +48,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
         />
         <meta
           property="og:image"
-          content="https://ekoskrzat.vercel.app/og-image.jpg"
+          content="https://ekoskrzat.vercel.app/images/ogimage.jpg"
         />
         <meta
           property="og:image:secure_url"
-          content="https://ekoskrzat.vercel.app/og-image.jpg"
+          content="https://ekoskrzat.vercel.app/images/ogimage.jpg"
         />
-        <meta property="og:image:type" content="image/jpeg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+        <meta property="og:image:type" content="website" />
+
         <meta property="og:url" content="https://ekoskrzat.vercel.app/" />
 
         <meta name="twitter:card" content="summary_large_image" />
