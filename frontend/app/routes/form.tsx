@@ -14,6 +14,9 @@ export default function Form() {
       </div>
       <div className="w-full">
         <form className="flex flex-col gap-6">
+          <p className="text-pretty text-slate-600 2xl:max-w-prose 2xl:text-2xl">
+            Dane Dziecka
+          </p>
           <input
             className="rounded-xl border p-3"
             type="text"
@@ -28,6 +31,24 @@ export default function Form() {
             className="rounded-xl border p-3"
             type="text"
             placeholder="PESEL*"
+          />
+          <p className="text-pretty text-slate-600 2xl:max-w-prose 2xl:text-2xl">
+            Adres zamieszkania
+          </p>
+          <input
+            className="rounded-xl border p-3"
+            type="text"
+            placeholder="Ulica"
+          />
+          <input
+            className="rounded-xl border p-3"
+            type="text"
+            placeholder="Miasto"
+          />
+          <input
+            className="rounded-xl border p-3"
+            type="text"
+            placeholder="Województwo"
           />
         </form>
       </div>
