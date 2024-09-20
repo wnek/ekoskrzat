@@ -50,6 +50,14 @@ export default function Form() {
             type="text"
             placeholder="Województwo"
           />
+          <p className="text-pretty text-slate-600 2xl:max-w-prose 2xl:text-2xl">
+            Informacje o rodzicach lub opiekunach
+          </p>
+          <input
+            className="rounded-xl border p-3"
+            type="text"
+            placeholder="Imię i nazwsko*"
+          />
         </form>
       </div>
     </section>
