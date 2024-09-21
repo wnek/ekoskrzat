@@ -1,6 +1,6 @@
 export default function Form() {
   return (
-    <section className="flex flex-col gap-12 px-6 py-16 lg:flex-row xl:px-32 xl:py-32">
+    <section className="grid grid-cols-1 gap-12 px-6 py-16 lg:flex-row xl:grid-cols-2 xl:px-32 xl:py-32">
       <div className="flex flex-col gap-8">
         <h1 className="font-display text-4xl text-slate-800 md:text-6xl 2xl:text-7xl">
           Karta zgłoszenia
@@ -13,14 +13,17 @@ export default function Form() {
         </p>
       </div>
       <div className="w-full">
-        <form className="flex flex-col gap-6">
+        <form className="flex flex-col gap-4">
           <p className="text-pretty text-slate-600 2xl:max-w-prose 2xl:text-2xl">
             Dane Dziecka
           </p>
+          <label htmlFor="childName" className="text-sm text-slate-600">
+            Imię i nazwisko dziecka*
+          </label>
           <input
             className="rounded-xl border p-3"
             type="text"
-            placeholder="Imię i nazwisko dziecka*"
+            name="childName"
           />
           <input
             className="rounded-xl border p-3"
