@@ -57,7 +57,7 @@ export default function SubmitForm() {
           <input className="rounded-xl border p-3" type="text" name="street" />
 
           <label htmlFor="city" className="text-sm text-slate-600">
-            Miast
+            Miasto
           </label>
           <input className="rounded-xl border p-3" type="text" name="city" />
 

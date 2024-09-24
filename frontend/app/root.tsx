@@ -7,10 +7,19 @@ import {
 } from "@remix-run/react";
 import "./tailwind.css";
 
-import Navbar from "./components/global/Navbar";
-import Footer from "./components/global/Footer";
+import { useLocation } from "@remix-run/react";
+
+import Navbar from "~/components/global/Navbar";
+import Footer from "~/components/global/Footer";
 
 export function Layout({ children }: { children: React.ReactNode }) {
+  const location = useLocation();
+
+  const noNavigationRoutes = ["/form"];
+  const showNavigation = !noNavigationRoutes.includes(location.pathname);
+
+  console.log(location);
+
   return (
     <html lang="en">
       <head>
@@ -73,9 +82,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <Navbar />
+        {showNavigation && <Navbar />}
+
         {children}
-        <Footer />
+        {showNavigation && <Footer />}
+
         <ScrollRestoration />
         <Scripts />
       </body>
