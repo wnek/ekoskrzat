@@ -19,6 +19,7 @@ export default function SubmitForm() {
           <p className="text-pretty text-slate-600 2xl:max-w-prose 2xl:text-2xl">
             Dane Dziecka
           </p>
+
           <label htmlFor="childName" className="text-sm text-slate-600">
             Imię i nazwisko dziecka*
           </label>
@@ -27,34 +28,44 @@ export default function SubmitForm() {
             type="text"
             name="childName"
           />
+
+          <label htmlFor="childName" className="text-sm text-slate-600">
+            Data urodzenia*
+          </label>
           <input
             className="rounded-xl border p-3"
             type="text"
-            placeholder="Data urodzenia*"
+            name="childBirthDate"
           />
+
+          <label htmlFor="childPesel" className="text-sm text-slate-600">
+            PESEL*
+          </label>
           <input
             className="rounded-xl border p-3"
             type="text"
-            placeholder="PESEL*"
+            name="childPesel"
           />
+
           <p className="text-pretty text-slate-600 2xl:max-w-prose 2xl:text-2xl">
             Adres zamieszkania
           </p>
-          <input
-            className="rounded-xl border p-3"
-            type="text"
-            placeholder="Ulica"
-          />
-          <input
-            className="rounded-xl border p-3"
-            type="text"
-            placeholder="Miasto"
-          />
-          <input
-            className="rounded-xl border p-3"
-            type="text"
-            placeholder="Województwo"
-          />
+
+          <label htmlFor="street" className="text-sm text-slate-600">
+            Ulica
+          </label>
+          <input className="rounded-xl border p-3" type="text" name="street" />
+
+          <label htmlFor="city" className="text-sm text-slate-600">
+            Miast
+          </label>
+          <input className="rounded-xl border p-3" type="text" name="city" />
+
+          <label htmlFor="state" className="text-sm text-slate-600">
+            Województwo
+          </label>
+          <input className="rounded-xl border p-3" type="text" name="state" />
+
           <p className="text-pretty text-slate-600 2xl:max-w-prose 2xl:text-2xl">
             Informacje o rodzicach lub opiekunach
           </p>
