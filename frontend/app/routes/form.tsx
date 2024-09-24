@@ -15,112 +15,131 @@ export default function SubmitForm() {
         </p>
       </div>
       <div className="w-full">
-        <Form className="flex flex-col gap-4">
-          <p className="text-pretty text-slate-600 2xl:max-w-prose 2xl:text-2xl">
-            Dane Dziecka
-          </p>
+        <Form method="POST" className="flex flex-col gap-20">
+          <div className="flex flex-col gap-6">
+            <p className="text-pretty text-slate-600 2xl:max-w-prose 2xl:text-2xl">
+              Dane Dziecka
+            </p>
 
-          <label htmlFor="childName" className="text-sm text-slate-600">
-            Imię i nazwisko dziecka*
-          </label>
-          <input
-            className="rounded-xl border p-3"
-            type="text"
-            name="childName"
-          />
+            <label className="flex flex-col gap-1 text-sm text-slate-600">
+              Imię i nazwisko dziecka*
+              <input
+                className="rounded-xl border p-3"
+                type="text"
+                name="childName"
+              />
+            </label>
 
-          <label htmlFor="childName" className="text-sm text-slate-600">
-            Data urodzenia*
-          </label>
-          <input
-            className="rounded-xl border p-3"
-            type="text"
-            name="childBirthDate"
-          />
+            <label className="flex flex-col gap-1 text-sm text-slate-600">
+              Data urodzenia*
+              <input
+                className="rounded-xl border p-3"
+                type="text"
+                name="childBirthDate"
+              />
+            </label>
 
-          <label htmlFor="childPesel" className="text-sm text-slate-600">
-            PESEL*
-          </label>
-          <input
-            className="rounded-xl border p-3"
-            type="text"
-            name="childPesel"
-          />
+            <label className="flex flex-col gap-1 text-sm text-slate-600">
+              PESEL*
+              <input
+                className="rounded-xl border p-3"
+                type="text"
+                name="childPesel"
+              />
+            </label>
+          </div>
 
-          <p className="text-pretty text-slate-600 2xl:max-w-prose 2xl:text-2xl">
-            Adres zamieszkania
-          </p>
+          <div className="flex flex-col gap-6">
+            <p className="text-pretty text-slate-600 2xl:max-w-prose 2xl:text-2xl">
+              Adres zamieszkania
+            </p>
 
-          <label htmlFor="street" className="text-sm text-slate-600">
-            Ulica
-          </label>
-          <input className="rounded-xl border p-3" type="text" name="street" />
+            <label className="flex flex-col gap-1 text-sm text-slate-600">
+              Ulica
+              <input
+                className="rounded-xl border p-3"
+                type="text"
+                name="street"
+              />
+            </label>
 
-          <label htmlFor="city" className="text-sm text-slate-600">
-            Miasto
-          </label>
-          <input className="rounded-xl border p-3" type="text" name="city" />
+            <label className="flex flex-col gap-1 text-sm text-slate-600">
+              Miasto
+              <input
+                className="rounded-xl border p-3"
+                type="text"
+                name="city"
+              />
+            </label>
 
-          <label htmlFor="state" className="text-sm text-slate-600">
-            Województwo
-          </label>
-          <input className="rounded-xl border p-3" type="text" name="state" />
+            <label className="flex flex-col gap-1 text-sm text-slate-600">
+              Województwo
+              <input
+                className="rounded-xl border p-3"
+                type="text"
+                name="state"
+              />
+            </label>
+          </div>
 
-          <p className="text-pretty text-slate-600 2xl:max-w-prose 2xl:text-2xl">
-            Informacje o rodzicach lub opiekunach
-          </p>
+          <div className="flex flex-col gap-6">
+            <p className="text-pretty text-slate-600 2xl:max-w-prose 2xl:text-2xl">
+              Informacje o rodzicach lub opiekunach
+            </p>
 
-          <label htmlFor="parentName" className="text-sm text-slate-600">
-            Imię i nazwisko*
-          </label>
-          <input
-            className="rounded-xl border p-3"
-            type="text"
-            name="parentName"
-          />
+            <label className="flex flex-col gap-1 text-sm text-slate-600">
+              Imię i nazwisko*
+              <input
+                className="rounded-xl border p-3"
+                type="text"
+                name="parentName"
+              />
+            </label>
 
-          <label htmlFor="parentPhone" className="text-sm text-slate-600">
-            Telefon*
-          </label>
-          <input
-            className="rounded-xl border p-3"
-            type="text"
-            name="parentPhone"
-          />
+            <label className="flex flex-col gap-1 text-sm text-slate-600">
+              Telefon*
+              <input
+                className="rounded-xl border p-3"
+                type="text"
+                name="parentPhone"
+              />
+            </label>
 
-          <label htmlFor="parentEmail" className="text-sm text-slate-600">
-            E-mail*
-          </label>
-          <input
-            className="rounded-xl border p-3"
-            type="text"
-            name="parentEmail"
-          />
+            <label className="flex flex-col gap-1 text-sm text-slate-600">
+              E-mail*
+              <input
+                className="rounded-xl border p-3"
+                type="text"
+                name="parentEmail"
+              />
+            </label>
 
-          <label htmlFor="startDate" className="text-sm text-slate-600">
-            Data rozpoczęcia
-          </label>
-          <input
-            className="rounded-xl border p-3"
-            type="date"
-            name="startDate"
-          />
+            <label className="flex flex-col gap-1 text-sm text-slate-600">
+              Data rozpoczęcia
+              <input
+                className="rounded-xl border p-3"
+                type="date"
+                name="startDate"
+              />
+            </label>
 
-          <label htmlFor="parentComments" className="text-sm text-slate-600">
-            Uwagi
-          </label>
-          <input
-            className="rounded-xl border p-3"
-            type="text"
-            name="parentComments"
-          />
+            <label className="flex flex-col gap-1 text-sm text-slate-600">
+              Uwagi
+              <input
+                className="rounded-xl border p-3"
+                type="text"
+                name="parentComments"
+              />
+            </label>
+          </div>
 
-          <label htmlFor="terms" className="text-sm text-slate-600">
-            Akceptuję regulamin przedszkola i wyrażam zgodę na przetwarzanie
-          </label>
-          <input type="checkbox" name="terms" required />
-
-          <input type="submit" value="Wyślij" />
+          <div className="flex flex-col gap-6">
+            <label className="flex flex-row-reverse justify-end gap-2 text-sm text-slate-600">
+              Akceptuję regulamin przedszkola i wyrażam zgodę na przetwarzanie
+              <input type="checkbox" name="terms" required />
+            </label>
+            <input type="submit" value="Wyślij" />
+          </div>
         </Form>
       </div>
     </section>
