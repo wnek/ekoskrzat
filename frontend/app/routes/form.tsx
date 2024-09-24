@@ -2,7 +2,7 @@ import { Form } from "@remix-run/react";
 
 export default function SubmitForm() {
   return (
-    <section className="grid grid-cols-1 gap-12 px-6 py-16 lg:flex-row xl:grid-cols-2 xl:px-32 xl:py-32">
+    <section className="m-auto grid grid-cols-1 gap-12 px-6 py-16 lg:flex-row lg:justify-center xl:w-3/5 xl:grid-cols-2 xl:gap-32 xl:py-32">
       <div className="flex flex-col gap-8">
         <h1 className="font-display text-4xl text-slate-800 md:text-6xl 2xl:text-7xl">
           Karta zgłoszenia
@@ -138,7 +138,11 @@ export default function SubmitForm() {
               Akceptuję regulamin przedszkola i wyrażam zgodę na przetwarzanie
               <input type="checkbox" name="terms" required />
             </label>
-            <input type="submit" value="Wyślij" />
+            <input
+              className="flex cursor-pointer items-center justify-between gap-6 rounded-full bg-green-500 py-2 pl-6 pr-2 text-white 2xl:text-xl"
+              type="submit"
+              value="Wyślij"
+            />
           </div>
         </Form>
       </div>
