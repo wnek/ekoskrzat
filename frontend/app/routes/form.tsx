@@ -4,10 +4,10 @@ import { action } from "remix";
 export async function action({ request }) {
   const formData = await request.formData();
 
-  const response = await fetch(`http://127.0.0.1:1337/form`, {
+  const message = "Test";
+  const response = await fetch(`http://127.0.0.1:1337/api/form`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({}),
   });
 
   return null;
