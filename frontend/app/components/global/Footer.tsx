@@ -1,6 +1,9 @@
 export default function Footer() {
   return (
-    <section className="mx-4 flex min-h-screen flex-col items-center gap-12 pt-16 text-center lg:pt-52">
+    <section
+      id="footer"
+      className="mx-4 flex min-h-screen flex-col items-center gap-12 pt-16 text-center lg:pt-52"
+    >
       <div className="flex w-full flex-col items-center gap-12 lg:flex-row lg:items-start xl:px-32">
         <div className="w-full xl:w-1/3 2xl:w-1/2">
           <img src="images/logo.svg" alt="Logo" className="w-8" />

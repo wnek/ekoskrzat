@@ -1,6 +1,5 @@
 module.exports = ({ env }) => {
   return {
-    // ...
     backup: {
       enabled: true,
       config: {
@@ -27,6 +26,17 @@ module.exports = ({ env }) => {
         },
       },
     },
-    // ...
+    email: {
+      config: {
+        provider: "sendgrid",
+        providerOptions: {
+          apiKey: env("SENDGRID_API_KEY"),
+        },
+        settings: {
+          defaultFrom: "hi@wnek.design",
+          defaultReplyTo: "ekoskrzat.przedszkole@gmail.com",
+        },
+      },
+    },
   };
 };

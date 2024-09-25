@@ -28,7 +28,7 @@ export default function Navbar() {
           <a href="/dla-rodzicow">Dla rodziców</a>
         </li> */}
         <li>
-          <a className="rounded-full border px-6 py-3" href="/form">
+          <a className="rounded-full border px-6 py-3" href="#footer">
             Napisz do nas
           </a>
         </li>
