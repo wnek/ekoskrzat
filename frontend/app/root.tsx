@@ -9,6 +9,8 @@ import "./tailwind.css";
 
 import { useLocation } from "@remix-run/react";
 
+import { ReactLenis, useLenis } from "lenis/react";
+
 import Navbar from "~/components/global/Navbar";
 import Footer from "~/components/global/Footer";
 
@@ -18,7 +20,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
   const noNavigationRoutes = ["/form", "/thank-you"];
   const showNavigation = !noNavigationRoutes.includes(location.pathname);
 
-  console.log(location);
+  const lenis = useLenis(({ scroll }) => {
+    // called every scroll
+  });
 
   return (
     <html lang="en">
@@ -83,10 +87,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         {showNavigation && <Navbar />}
-
-        {children}
-        {showNavigation && <Footer />}
-
+        <ReactLenis root>
+          {children}
+          {showNavigation && <Footer />}
+        </ReactLenis>
         <ScrollRestoration />
         <Scripts />
       </body>
