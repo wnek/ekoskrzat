@@ -15,7 +15,7 @@ import Footer from "~/components/global/Footer";
 export function Layout({ children }: { children: React.ReactNode }) {
   const location = useLocation();
 
-  const noNavigationRoutes = ["/form"];
+  const noNavigationRoutes = ["/form", "/thank-you"];
   const showNavigation = !noNavigationRoutes.includes(location.pathname);
 
   console.log(location);
