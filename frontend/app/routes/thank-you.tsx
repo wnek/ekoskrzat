@@ -9,6 +9,7 @@ export default function ThankYou() {
         </h1>
       </nav>
       <section className="flex h-[calc(100vh-5rem)] flex-col items-center justify-center gap-8">
+        <img src="/images/thank-you.jpg" alt="Dziękujemy" className="h-32" />
         <h1 className="font-display text-4xl text-slate-800 md:text-6xl 2xl:text-7xl">
           Dziękujemy za zgłoszenie!
         </h1>

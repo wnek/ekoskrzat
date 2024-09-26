@@ -19,7 +19,7 @@ export default function Join() {
             doświadczenia. Sprawdź, jak możemy wspólnie odkrywać świat!
           </p>
           <a
-            href="tel:+48535553599"
+            href="#footer"
             className="flex items-center justify-between gap-6 rounded-full bg-green-500 py-2 pl-6 pr-2 text-white 2xl:text-xl"
           >
             Porozmawiajmy

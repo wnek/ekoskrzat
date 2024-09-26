@@ -39,7 +39,7 @@ export default function ThirdFeature() {
             Chętnie na każde odpowiemy
           </h3>
           <a
-            href="tel:+48535553599"
+            href="#footer"
             className="flex w-fit items-center gap-6 rounded-full bg-green-500 py-2 pl-6 pr-2 text-white 2xl:text-xl"
           >
             Zadzwoń
