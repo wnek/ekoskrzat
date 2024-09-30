@@ -3,35 +3,20 @@ import { Form, redirect, json } from "@remix-run/react";
 export async function action({ request }: { request: Request }) {
   const formData = await request.formData();
 
-  const childName = String(formData.get("childName"));
-  const childBirthDate = String(formData.get("childBirthDate"));
-  const childPesel = String(formData.get("childPesel"));
-  const street = String(formData.get("street"));
-  const city = String(formData.get("city"));
-  const state = String(formData.get("state"));
-  const parentName = String(formData.get("parentName"));
-  const parentPhone = String(formData.get("parentPhone"));
-  const parentEmail = String(formData.get("parentEmail"));
-  const startDate = String(formData.get("startDate"));
-  const parentComments = String(formData.get("parentComments"));
+  const formFields = [
+    "childName", "childBirthDate", "childPesel", "street", "city", "state",
+    "parentName", "parentPhone", "parentEmail", "startDate", "parentComments"
+  ] as const;
+
+  const formValues = Object.fromEntries(
+    formFields.map(field => [field, formData.get(field)])
+  ) as Record<typeof formFields[number], string>;
 
   try {
     const response = await fetch(`http://127.0.0.1:1337/api/form`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        childName,
-        childBirthDate,
-        childPesel,
-        street,
-        city,
-        state,
-        parentName,
-        parentPhone,
-        parentEmail,
-        startDate,
-        parentComments,
-      }),
+      body: JSON.stringify(formValues),
     });
     if (!response.ok) {
       return json({ error: "Failed to send email." }, { status: 500 });

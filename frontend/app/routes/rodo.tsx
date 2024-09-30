@@ -154,6 +154,7 @@ export default function Rodo() {
           Podanie przez Państwa danych jest dobrowolne, ale niezbędne do udziału
           Państwa dziecka w rekrutacji do przedszkola.
         </p>
+
       </div>
     </section>
   );
