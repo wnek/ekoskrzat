@@ -14,7 +14,7 @@ export default function Rodo() {
         </p>
       </div>
       <div className="flex w-full flex-col gap-4 text-slate-600">
-        <ol>
+        <ol className="list-decimal">
           <li>
             <strong>Administrator danych osobowych</strong>
           </li>
@@ -28,7 +28,7 @@ export default function Rodo() {
         <p>&#8211; przez e-mail: przedszkole@ekoskrzat.edu.pl</p>
         <p>&#8211; telefonicznie: 535-553-599.</p>
 
-        <ol start="2">
+        <ol start="2" className="list-decimal">
           <li>
             <strong>
               Cele przetwarzania oraz podstawa prawna przetwarzania
@@ -44,7 +44,7 @@ export default function Rodo() {
           osobowych Państwa dzieci jest art. 6 ust 1 lit a RODO.
         </p>
 
-        <ol start="3">
+        <ol start="3" className="list-decimal">
           <li>
             <strong>Okres przechowywania danych osobowych</strong>
           </li>
@@ -55,7 +55,7 @@ export default function Rodo() {
           formularzu zgłoszenia.
         </p>
 
-        <ol start="4">
+        <ol start="4" className="list-decimal">
           <li>
             <strong>Kategorie danych</strong>
           </li>
@@ -69,15 +69,15 @@ export default function Rodo() {
           dziecka: imię i nazwisko, data urodzenia.
         </p>
 
-        <p>
-          <strong>5. Odbiorcy danych</strong>
-        </p>
+        <ol start="5" className="list-decimal">
+          <li><strong>Odbiorcy danych</strong></li>
+        </ol>
         <p>
           Nie powierzamy Państwa danych osobowych i danych osobowych Państwa
           dzieci innym podmiotom.
         </p>
 
-        <ol start="6">
+        <ol start="6" className="list-decimal">
           <li>
             <strong>
               Państwa prawa związane z przetwarzaniem danych osobowych{" "}
@@ -131,7 +131,7 @@ export default function Rodo() {
           Urzędu Ochrony Danych Osobowych.
         </p>
 
-        <ol start="7">
+        <ol start="7" className="list-decimal">
           <li>
             <strong>
               Przekazywanie danych do państw trzecich lub organizacji
@@ -145,7 +145,7 @@ export default function Rodo() {
           organizacjom międzynarodowym.
         </p>
 
-        <ol start="8">
+        <ol start="8" className="list-decimal">
           <li>
             <strong>Informacja o wymogu podania danych.</strong>
           </li>
