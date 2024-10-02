@@ -2,16 +2,16 @@ import type { MetaFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import { json, LoaderFunction } from "@remix-run/node";
 
-import Hero from "~/routes/_index/Hero";
-import AboutUs from "~/routes/_index/AboutUs";
-import Mission from "~/routes/_index/Mission";
-import FirstFeature from "~/routes/_index/FirstFeature";
-import Staff from "~/routes/_index/Staff";
-import SecondFeature from "~/routes/_index/SecondFeature";
-import Numbers from "~/routes/_index/Numbers";
-import ThirdFeature from "~/routes/_index/ThirdFeature";
-import Testimonials from "~/routes/_index/Testimonials";
-import Join from "~/routes/_index/Join";
+import Hero from "~/components/homepage/Hero";
+import AboutUs from "~/components/homepage/AboutUs";
+import Mission from "~/components/homepage/Mission";
+import FirstFeature from "~/components/homepage/FirstFeature";
+import Staff from "~/components/homepage/Staff";
+import SecondFeature from "~/components/homepage/SecondFeature";
+import Numbers from "~/components/homepage/Numbers";
+import ThirdFeature from "~/components/homepage/ThirdFeature";
+import Testimonials from "~/components/homepage/Testimonials";
+import Join from "~/components/homepage/Join";
 
 
 export const meta: MetaFunction = () => {
