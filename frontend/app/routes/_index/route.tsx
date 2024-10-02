@@ -13,11 +13,6 @@ import ThirdFeature from "~/routes/_index/ThirdFeature";
 import Testimonials from "~/routes/_index/Testimonials";
 import Join from "~/routes/_index/Join";
 
-// export const loader: LoaderFunction = async () => {
-//   const response = await fetch("http://localhost:1337/api/homepage?populate=*");
-//   const articles = await response.json();
-//   return json(articles);
-// }
 
 export const meta: MetaFunction = () => {
   return [
@@ -34,8 +29,7 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
-  // const articles = useLoaderData();
-  // console.log(articles);
+
 
   return (
     <>
@@ -51,4 +45,8 @@ export default function Index() {
       <Join />
     </>
   );
+}
+
+export function getStaticPaths() {
+  return ["/"];
 }
