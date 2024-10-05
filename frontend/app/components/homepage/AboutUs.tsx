@@ -4,7 +4,7 @@ export default function AboutUs() {
       <h3 className="w-fit rounded-full border border-slate-300 px-4 py-2 text-blue-600">
         O nas
       </h3>
-      <h2 className="font-display text-2xl text-slate-800 md:text-6xl 2xl:w-3/4 2xl:text-7xl">
+      <h2 className="font-display l text-slate-800 ~text-[2rem]/[4.5rem] ~leading-[2rem]/[4rem]">
         Ekoskrzat to przedszkole w domu z <strong>wielkim ogrodem</strong> w
         cichym zakątku dzielnicy Bieżanów - Prokocim.
       </h2>
