@@ -1,13 +1,15 @@
+import { H2 } from "../global/ui/Typography";
+
 export default function AboutUs() {
   return (
     <section className="flex flex-col items-center gap-8 bg-stone-100 px-4 py-16 text-center lg:px-8 lg:py-52 xl:px-24">
       <h3 className="w-fit rounded-full border border-slate-300 px-4 py-2 text-blue-600">
         O nas
       </h3>
-      <h2 className="font-display l text-slate-800 ~text-[2rem]/[4.5rem] ~leading-[2rem]/[4rem]">
+      <H2>
         Ekoskrzat to przedszkole w domu z <strong>wielkim ogrodem</strong> w
         cichym zakątku dzielnicy Bieżanów - Prokocim.
-      </h2>
+      </H2>
       <p className="max-w-prose text-slate-600 2xl:text-2xl">
         Tutaj dzieci mogą czuć się szczęśliwe, spokojne i bezpieczne, a poprzez
         kontakt z przyrodą i przebywanie z dala od miejskiego smogu mają
