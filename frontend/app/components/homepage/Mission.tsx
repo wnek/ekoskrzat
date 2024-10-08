@@ -29,10 +29,9 @@ export default function Mission() {
           </h3>
 
           <h2 className="font-display text-2xl text-slate-800 md:text-6xl lg:w-3/4 xl:w-full 2xl:text-8xl">
-            Drogi Rodzicu, naszą misją jest, by Twoje dziecko mogło rozwijać się
-            pod opieką <strong>najlepszych specjalistów</strong>, wśród natury w
-            pięknym ogrodzie.
+            Drogi Rodzicu, naszą misją jest <strong>wspomaganie i ukierunkowanie rozwoju dziecka zgodnie z jego wrodzonym potencjałem</strong> pod opieką najlepszych specjalistów, w naturalnym i inspirującym środowisku.
           </h2>
+
           <div className="flex items-center gap-4">
             <img src="/images/logo.svg" alt="Logo" />
             <p className="italic text-slate-500">

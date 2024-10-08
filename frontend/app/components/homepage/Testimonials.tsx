@@ -10,62 +10,47 @@ export default function Testimonials() {
       <div className="flex w-full flex-col gap-4 text-left lg:flex-row xl:px-32">
         <div className="flex flex-col justify-between gap-24 rounded-3xl bg-stone-100 p-8 text-slate-800">
           <p className="2xl:text-2xl">
-            Ekoskrzat to przedszkole, które przerosło nasze oczekiwania. Zosia
-            uwielbia tam chodzić, a my jesteśmy spokojni, wiedząc, że jest w
-            dobrych rękach. <strong>Czyste powietrze, zdrowe jedzenie</strong> i
-            mnóstwo czasu na świeżym powietrzu – to wszystko sprawia, że Zosia
-            wraca do domu z uśmiechem na twarzy.
+            Przedszkole to miejsce, które łączy doskonałą opiekę z silnym naciskiem na rozwój edukacyjny dzieci. Zwróciliśmy uwagę na <strong>różnorodne zajęcia dodatkowe, takie jak nauka gry na bębnach czy robotyka</strong>. To wyjątkowe, że przedszkole oferuje tak szeroką gamę aktywności, co pozwala dzieciom rozwijać się w wielu dziedzinach, oszczędzając rodzicom czas i wysiłek w organizacji dodatkowych zajęć.
           </p>
-          <div className="flex gap-4">
+          <div className="flex gap-4 items-center">
             <img
               className="h-12 w-12 rounded-full"
               src="images/parent-1.jpg"
               alt="Rodzice 4-letniej Zosi"
             />
             <div>
-              <p>Marta i Tomek</p>
-              <p className="text-sm text-slate-400">rodzice 4-letniej Zosi</p>
+              <p>Rodzice Leosia i Neli</p>
+
             </div>
           </div>
         </div>
         <div className="flex flex-col justify-between gap-24 rounded-3xl bg-slate-100 p-6 text-slate-800">
           <p className="2xl:text-2xl">
-            Jesteśmy bardzo zadowoleni z wyboru Ekoskrzata. Jaś codziennie
-            opowiada nam o nowych przygodach i zabawach. Przedszkole kładzie
-            duży nacisk na <strong>ekologię</strong>, co bardzo nam się podoba.
-            Jaś nauczył się tam, jak dbać o środowisko i teraz sam przypomina
-            nam o segregacji śmieci.
+            Trzy lata w przedszkolu wspominamy cudownie, córka każdego dnia wychodziła z przedszkola zadowolona, a my rodzice mieliśmy poczucie, że dziecko trafiło do odpowiedniego, bezpiecznego i bardzo atrakcyjnego dla dziecka miejsca! <strong>Cudowne panie, świetne zaplecze</strong>, a program to po prostu rewelacja! Polecamy gorąco!
           </p>
-          <div className="flex gap-4">
+          <div className="flex gap-4 items-center">
             <img
               className="h-12 w-12 rounded-full"
               src="images/parent-2.jpg"
               alt="Rodzice 5-letniego Jasia"
             />
             <div>
-              <p>Kasia i Marek</p>
-              <p className="text-sm text-slate-400">rodzice 5-letniego Jasia</p>
+              <p>Rodzice Ali</p>
             </div>
           </div>
         </div>
         <div className="flex flex-col justify-between gap-24 rounded-3xl bg-green-100 p-6 text-slate-800">
           <p className="2xl:text-2xl">
-            Ola jest zachwycona przedszkolem Ekoskrzat. Pracownicy są serdeczni
-            i zaangażowani, a program edukacyjny jest bogaty i zróżnicowany. Ola
-            nauczyła się tam wiele nowych rzeczy, a my widzimy, jak szybko się
-            rozwija. Polecamy Ekoskrzat wszystkim rodzicom, którzy chcą, aby ich
-            dziecko rozwijało się w zdrowym i{" "}
-            <strong>bezpiecznym środowisku</strong>.
+            <strong>Bardzo dobre przedszkole świetna opieka</strong> i edukacja mnóstwo zajęć dodatkowych Zuzia zachwycona 2 lata po których możemy ocenić i gorąco polecić wszystkim którzy chcą oddać swoje pociechy do przedszkola a nie mogą się zdecydować gdzie. 5 gwiazdek naprawdę nie ma do czego się przyczepić. Pozdrawiamy!
           </p>
-          <div className="flex gap-4">
+          <div className="flex gap-4 items-center">
             <img
               className="h-12 w-12 rounded-full"
-              src="images/parent-2.jpg"
+              src="images/parent-3.jpg"
               alt="Rodzice 5-letniego Jasia"
             />
             <div>
-              <p>Anna i Piotr</p>
-              <p className="text-sm text-slate-400">rodzice 5-letniej Oli</p>
+              <p>Rodzice Zuzi</p>
             </div>
           </div>
         </div>
