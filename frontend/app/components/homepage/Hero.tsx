@@ -41,12 +41,11 @@ export default function Hero() {
       >
         <div className="top-[5rem] z-40 flex h-[80vh] flex-col items-center justify-center gap-8 px-4 lg:sticky lg:h-[calc(100vh-5rem)] lg:items-start lg:px-16 2xl:px-48">
           <H2>
-            <strong>Ekoskrzat</strong> to nowoczesne, przyjazne i innowacyjne przedszkole w cichym zakątku Krakowa
+            <strong>Przestrzeń</strong> dla rozwoju Twojego dziecka
 
           </H2>
           <p className="text-pretty text-slate-600 2xl:max-w-prose 2xl:text-2xl">
-            Ekoskrzat to przedszkole w domu z wielkim ogrodem w cichym zakątku
-            dzielnicy Bieżanów - Prokocim.
+            Ekoskrzat to nowoczesne, przyjazne i innowacyjne przedszkole w cichym zakątku Krakowa
           </p>
           <div className="flex flex-col items-center gap-4 lg:flex-row">
             <a
