@@ -45,7 +45,7 @@ export default function Hero() {
 
           </H2>
           <p className="text-pretty text-slate-600 2xl:max-w-prose 2xl:text-2xl">
-            Ekoskrzat to nowoczesne, przyjazne i innowacyjne przedszkole w cichym zakątku Krakowa
+            Ekoskrzat to nowoczesne i przyjazne przedszkole w cichym zakątku Krakowa
           </p>
           <div className="flex flex-col items-center gap-4 lg:flex-row">
             <a
