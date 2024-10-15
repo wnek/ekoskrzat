@@ -15,18 +15,16 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "4.25.5",
-    "@strapi/plugin-i18n": "4.25.5",
-    "@strapi/plugin-users-permissions": "4.25.5",
-    "@strapi/provider-email-sendgrid": "^5.0.0",
-    "@strapi/strapi": "4.25.5",
+    "@strapi/plugin-cloud": "5.0.6",
+    "@strapi/plugin-users-permissions": "5.0.6",
+    "@strapi/provider-email-sendgrid": "^5.0.6",
+    "@strapi/strapi": "5.0.6",
     "pg": "^8.13.0",
     "pg-connection-string": "^2.7.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-router-dom": "5.3.4",
-    "strapi": "^3.6.11",
-    "styled-components": "5.3.3"
+    "react-router-dom": "^6.0.0",
+    "styled-components": "^6.0.0"
   },
   "engines": {
     "node": ">=18.0.0 <=20.x.x",
