@@ -13,11 +13,11 @@ import ThirdFeature from "~/components/homepage/ThirdFeature";
 import Testimonials from "~/components/homepage/Testimonials";
 import Join from "~/components/homepage/Join";
 
-// export const loader: LoaderFunction = async () => {
-//   const response = await fetch("http://localhost:1337/api/homepage?populate=*");
-//   const articles = await response.json();
-//   return json(articles);
-// }
+export const loader: LoaderFunction = async () => {
+  const response = await fetch("http://localhost:1337/api/homepage?populate=*");
+  const homepageData = await response.json();
+  return json(homepageData);
+}
 
 export const meta: MetaFunction = () => {
   return [
@@ -34,12 +34,15 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
-  // const articles = useLoaderData();
-  // console.log(articles);
+  const homepageData = useLoaderData();
+  console.log(homepageData)
+  const heroTitle = homepageData.data.Hero.title;
+  const heroDescription = homepageData.data.Hero.description;
+
 
   return (
     <>
-      <Hero />
+      <Hero title={heroTitle} description={heroDescription} />
       <AboutUs />
       <Mission />
       <FirstFeature />

@@ -4,12 +4,15 @@ import { H2 } from "../global/ui/Typography";
 
 import { useRef } from "react";
 
-export default function Hero() {
+export default function Hero({ title, description, image1, image2, image3 }) {
+
   const targetRef = useRef(null);
+
   const { scrollYProgress } = useScroll({
     target: targetRef,
     offset: ["start center", "end center"],
   });
+
   const ySquare = useTransform(scrollYProgress, [0, 1], [-700, 700]);
   const yCircle = useTransform(scrollYProgress, [0, 1], [0, 2000]);
   const rotation = useTransform(scrollYProgress, [0, 1], [0, 120]);
@@ -40,12 +43,10 @@ export default function Hero() {
         className="grid min-h-full flex-col bg-stone-100 text-center text-lg lg:grid-cols-2 lg:flex-row lg:text-left"
       >
         <div className="top-[5rem] z-40 flex h-[80vh] flex-col items-center justify-center gap-8 px-4 lg:sticky lg:h-[calc(100vh-5rem)] lg:items-start lg:px-16 2xl:px-48">
-          <H2>
-            <strong>Przestrzeń</strong> dla rozwoju Twojego dziecka
+          <H2 html={title} />
 
-          </H2>
           <p className="text-pretty text-slate-600 2xl:max-w-prose 2xl:text-2xl">
-            Ekoskrzat to nowoczesne i przyjazne przedszkole w cichym zakątku Krakowa
+            {description}
           </p>
           <div className="flex flex-col items-center gap-4 lg:flex-row">
             <a
