@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_homepage_heroes",
+  "info": {
+    "displayName": "Hero",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "description2": {
+      "type": "blocks"
+    }
+  }
+}

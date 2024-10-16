@@ -16,12 +16,17 @@
       "type": "string"
     },
     "Image": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.hero"
     }
   }
 }
