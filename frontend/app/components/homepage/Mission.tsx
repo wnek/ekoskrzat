@@ -17,9 +17,7 @@ export default function Mission() {
   const rectRotation = useTransform(scrollYProgress, [0, 1], [0, 120]);
   const rectY = useTransform(scrollYProgress, [0, 1], [0, -400]);
 
-  useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    console.log("Page scroll Y progress: ", latest);
-  });
+
   return (
     <div ref={targetRef} className="relative">
       <section className="flex min-h-screen bg-white px-8 py-16 xl:px-40 2xl:py-52">
