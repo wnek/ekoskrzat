@@ -1,16 +1,16 @@
-export function H1({ children, html }: { children: React.ReactNode }) {
+export function H1({ html }: { html: string }) {
     return (
-        <h1 className="font-display ~text-[2.4rem]/[6rem] ~leading-[2rem]/[6rem] text-slate-800"
+        <h1 className="font-display ~text-[1.8rem]/[3.8rem] ~leading-[2rem]/[4.7rem] text-slate-800"
             dangerouslySetInnerHTML={{ __html: html }}
 
-        >{children}</h1>
+        ></h1>
     )
 }
 
 
 export function H2({ html }: { html: string }) {
     return (
-        <h2 className="font-display ~text-[2rem]/[4.5rem] ~leading-[2rem]/[4rem] text-slate-800"
+        <h2 className="font-display ~text-[1.8rem]/[3rem] ~leading-[2rem]/[3.5rem] text-slate-800"
             dangerouslySetInnerHTML={{ __html: html }}
         ></h2>
     )

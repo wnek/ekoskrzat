@@ -7,6 +7,7 @@ import {
 
 import { useRef } from "react";
 
+import { H1 } from "../global/ui/Typography";
 export default function Mission() {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -20,15 +21,14 @@ export default function Mission() {
 
   return (
     <div ref={targetRef} className="relative">
-      <section className="flex min-h-screen bg-white px-8 py-16 xl:px-40 2xl:py-52">
-        <div className="z-10 flex flex-col items-start justify-center gap-8">
+      <section className="flex min-h-screen bg-white px-8 py-16 xl:px-16 2xl:py-52 justify-center">
+        <div className="z-10 flex flex-col items-start justify-center gap-8 2xl:w-3/4">
           <h3 className="w-fit rounded-full border border-slate-300 px-4 py-2 text-blue-600">
             Nasza misja
           </h3>
 
-          <h2 className="font-display text-2xl text-slate-800 md:text-6xl lg:w-3/4 xl:w-full 2xl:text-8xl">
-            Drogi Rodzicu, naszą misją jest <strong>wspomaganie i ukierunkowanie rozwoju dziecka zgodnie z jego wrodzonym potencjałem</strong> pod opieką najlepszych specjalistów, w naturalnym i inspirującym środowisku.
-          </h2>
+          <H1 html={"Drogi Rodzicu, naszą misją jest <strong>wspomaganie i ukierunkowanie rozwoju dziecka zgodnie z jego wrodzonym potencjałem</strong> pod opieką najlepszych specjalistów, w naturalnym i inspirującym środowisku."} />
+
 
           <div className="flex items-center gap-4">
             <img src="/images/logo.svg" alt="Logo" />

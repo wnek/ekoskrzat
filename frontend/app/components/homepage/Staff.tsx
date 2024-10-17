@@ -29,7 +29,7 @@ export default function Staff() {
         />
 
       </div>
-      <div className="flex w-full flex-col items-center gap-8 px-12 py-16 lg:items-start 2xl:px-40">
+      <div className="flex w-full flex-col items-center gap-8 px-12 py-16 lg:items-start 2xl:px-40 text-center">
         <H3>
           <strong>Wykwalifikowana</strong> kadra
         </H3>
