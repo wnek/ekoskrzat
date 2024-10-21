@@ -41,8 +41,8 @@ module.exports = {
 
     try {
       await strapi.plugins["email"].services.email.send({
-        to: "wnek.mariusz@gmail.com",
-        from: "hi@wnek.design",
+        to: "ekoskrzat.przedszkole@gmail.com",
+        from: "przedszkole@ekoskrzat.edu.pl",
         subject:
           "Karta zgłoszenia dziecka - " +
           ctx.request.body.childName +
