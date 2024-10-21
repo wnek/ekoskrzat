@@ -7,7 +7,7 @@ module.exports = ({ env }) => {
           apiKey: env("SENDGRID_API_KEY"),
         },
         settings: {
-          defaultFrom: "hi@wnek.design",
+          defaultFrom: "przedszkole@ekoskrzat.edu.pl",
           defaultReplyTo: "ekoskrzat.przedszkole@gmail.com",
         },
       },
