@@ -4,7 +4,7 @@ import { H2 } from "../global/ui/Typography";
 
 import { useRef } from "react";
 
-export default function Hero({ title, description, image1, image2, image3 }) {
+export default function Hero({ data }: { data: object }) {
 
   const targetRef = useRef(null);
 
@@ -43,10 +43,10 @@ export default function Hero({ title, description, image1, image2, image3 }) {
         className="grid min-h-full flex-col bg-stone-100 text-center text-lg lg:grid-cols-2 lg:flex-row lg:text-left"
       >
         <div className="top-[5rem] z-40 flex h-[80vh] flex-col items-center justify-center gap-8 px-4 lg:sticky lg:h-[calc(100vh-5rem)] lg:items-start lg:px-16 2xl:px-48">
-          <H2 html={title} />
+          <H2 html={data.title} />
 
           <p className="text-pretty text-slate-600 2xl:max-w-prose 2xl:text-2xl">
-            {description}
+            {data.description}
           </p>
           <div className="flex flex-col items-center gap-4 lg:flex-row">
             <a

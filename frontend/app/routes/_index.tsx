@@ -12,6 +12,7 @@ import Numbers from "~/components/homepage/Numbers";
 import ThirdFeature from "~/components/homepage/ThirdFeature";
 import Testimonials from "~/components/homepage/Testimonials";
 import Join from "~/components/homepage/Join";
+import { AppData } from "@remix-run/react/dist/data";
 
 export const loader: LoaderFunction = async () => {
   const response = await fetch("http://localhost:1337/api/homepage?populate=*");
@@ -33,16 +34,19 @@ export const meta: MetaFunction = () => {
   ];
 };
 
+interface HomepageData {
+  data: {
+    hero: object
+  }
+}
+
 export default function Index() {
-  const homepageData = useLoaderData();
-  console.log(homepageData)
-  const heroTitle = homepageData.data.Hero.title;
-  const heroDescription = homepageData.data.Hero.description;
+  const homepageData: HomepageData = useLoaderData();
 
 
   return (
     <>
-      <Hero title={heroTitle} description={heroDescription} />
+      <Hero data={homepageData.data.hero} />
       <AboutUs />
       <Mission />
       <FirstFeature />

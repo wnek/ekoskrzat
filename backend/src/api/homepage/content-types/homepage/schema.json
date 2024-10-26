@@ -12,10 +12,10 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Text": {
+    "text": {
       "type": "string"
     },
-    "Image": {
+    "image": {
       "type": "media",
       "multiple": false,
       "required": true,
@@ -23,7 +23,7 @@
         "images"
       ]
     },
-    "Hero": {
+    "hero": {
       "type": "component",
       "repeatable": false,
       "component": "homepage.hero"

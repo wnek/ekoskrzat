@@ -12,9 +12,9 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    Text: Schema.Attribute.String;
-    Image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
-    Hero: Schema.Attribute.Component<'homepage.hero', false>;
+    text: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    hero: Schema.Attribute.Component<'homepage.hero', false>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

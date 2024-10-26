@@ -3,7 +3,7 @@ import type { Struct, Schema } from '@strapi/strapi';
 export interface HomepageHero extends Struct.ComponentSchema {
   collectionName: 'components_homepage_heroes';
   info: {
-    displayName: 'Hero';
+    displayName: 'hero';
     description: '';
   };
   attributes: {
