@@ -6,6 +6,7 @@ import { useRef } from "react";
 
 export default function Hero({ data }: { data: object }) {
 
+
   const targetRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -65,7 +66,7 @@ export default function Hero({ data }: { data: object }) {
           <div className="h-[calc(100vh-5rem)]">
             <img
               className="h-full w-full object-cover"
-              src="/images/hero-1.jpg"
+              src={"http://localhost:1337/" + data.image1.formats.large.url}
               alt="Hero 1"
             />
           </div>

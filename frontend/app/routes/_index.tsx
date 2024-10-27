@@ -1,6 +1,7 @@
 import type { MetaFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import { json, LoaderFunction } from "@remix-run/node";
+import qs from "qs";
 
 import Hero from "~/components/homepage/Hero";
 import AboutUs from "~/components/homepage/AboutUs";
@@ -14,8 +15,17 @@ import Testimonials from "~/components/homepage/Testimonials";
 import Join from "~/components/homepage/Join";
 import { AppData } from "@remix-run/react/dist/data";
 
+
+const query = qs.stringify({
+  populate: {
+    hero: {
+      populate: "*",
+    },
+  },
+});
+
 export const loader: LoaderFunction = async () => {
-  const response = await fetch("http://localhost:1337/api/homepage?populate=*");
+  const response = await fetch("http://localhost:1337/api/homepage?" + query);
   const homepageData = await response.json();
   return json(homepageData);
 }
@@ -39,6 +49,7 @@ interface HomepageData {
     hero: object
   }
 }
+
 
 export default function Index() {
   const homepageData: HomepageData = useLoaderData();

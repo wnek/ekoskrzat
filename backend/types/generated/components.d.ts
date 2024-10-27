@@ -9,7 +9,9 @@ export interface HomepageHero extends Struct.ComponentSchema {
   attributes: {
     title: Schema.Attribute.String;
     description: Schema.Attribute.String;
-    description2: Schema.Attribute.Blocks;
+    image1: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    image2: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    image3: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 

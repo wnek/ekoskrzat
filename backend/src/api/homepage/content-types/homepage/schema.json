@@ -12,17 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "text": {
-      "type": "string"
-    },
-    "image": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images"
-      ]
-    },
     "hero": {
       "type": "component",
       "repeatable": false,
