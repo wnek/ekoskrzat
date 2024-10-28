@@ -64,11 +64,18 @@ export default function Hero({ data }: { data: object }) {
         </div>
         <div className="z-30">
           <div className="h-[calc(100vh-5rem)]">
-            <img
-              className="h-full w-full object-cover"
-              src={"http://localhost:1337/" + data.image1.formats.large.url}
-              alt="Hero 1"
-            />
+            <picture>
+              <source
+                media="(max-width: 799px)"
+                srcSet={"http://localhost:1337/" + data.image1.formats.small.url}
+
+              />
+              <img
+                className="h-full w-full object-cover"
+                src={"http://localhost:1337/" + data.image1.formats.large.url}
+                alt="Hero 1"
+              />
+            </picture>
           </div>
           <div className="h-[calc(100vh-5rem)]">
             <img

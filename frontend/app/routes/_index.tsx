@@ -13,7 +13,7 @@ import Numbers from "~/components/homepage/Numbers";
 import ThirdFeature from "~/components/homepage/ThirdFeature";
 import Testimonials from "~/components/homepage/Testimonials";
 import Join from "~/components/homepage/Join";
-import { AppData } from "@remix-run/react/dist/data";
+
 
 
 const query = qs.stringify({
