@@ -13,6 +13,7 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
   };
   attributes: {
     hero: Schema.Attribute.Component<'homepage.hero', false>;
+    aboutus: Schema.Attribute.Component<'homepage.about-us', false>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

@@ -21,6 +21,9 @@ const query = qs.stringify({
     hero: {
       populate: "*",
     },
+    aboutus: {
+      populate: "*",
+    },
   },
 });
 
@@ -58,7 +61,7 @@ export default function Index() {
   return (
     <>
       <Hero data={homepageData.data.hero} />
-      <AboutUs />
+      <AboutUs data={homepageData.data.aboutus} />
       <Mission />
       <FirstFeature />
       <Staff />

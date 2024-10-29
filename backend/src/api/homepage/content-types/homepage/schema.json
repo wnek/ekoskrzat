@@ -16,6 +16,11 @@
       "type": "component",
       "repeatable": false,
       "component": "homepage.hero"
+    },
+    "aboutus": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.about-us"
     }
   }
 }
