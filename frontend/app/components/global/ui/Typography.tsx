@@ -16,8 +16,10 @@ export function H2({ html }: { html: string }) {
     )
 }
 
-export function H3({ children }: { children: React.ReactNode }) {
+export function H3({ html }: { html: string }) {
     return (
-        <h3 className="font-display ~text-[2rem]/[3rem] ~leading-[2rem]/[3rem] text-slate-800">{children}</h3>
+        <h3 className="font-display ~text-[2rem]/[3rem] ~leading-[2rem]/[3rem] text-slate-800"
+            dangerouslySetInnerHTML={{ __html: html }}
+        ></h3>
     )
 }

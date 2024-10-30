@@ -16,6 +16,14 @@ import Join from "~/components/homepage/Join";
 
 
 
+interface HomepageData {
+  data: {
+    hero: object
+    aboutus: object
+  }
+}
+
+
 const query = qs.stringify({
   populate: {
     hero: {
@@ -47,11 +55,7 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-interface HomepageData {
-  data: {
-    hero: object
-  }
-}
+
 
 
 export default function Index() {
