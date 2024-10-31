@@ -30,13 +30,14 @@ export default function Staff() {
 
       </div>
       <div className="flex w-full flex-col items-center gap-8 px-12 py-16 lg:items-start 2xl:px-40 text-center">
-        <H3>
-          <strong>Wykwalifikowana</strong> kadra
-        </H3>
-        <p className="text-pretty text-center text-slate-600 lg:text-left 2xl:text-2xl">
-          Nasi nauczyciele posiadają nie tylko odpowiednie wykształcenie, ale także wykazują ogromne zaangażowanie w pracę z dziećmi. Regularnie uczestniczą w szkoleniach, aby wprowadzać najnowsze metody edukacyjne i wspierać indywidualny rozwój każdego przedszkolaka.
-        </p>
-      </div>
-    </section>
+        <H3
+          html={"<strong>Wykwalifikowana</strong> kadra"
+          }
+        />
+        <p p className="text-pretty text-center text-slate-600 lg:text-left 2xl:text-2xl" >
+          Nasi nauczyciele posiadają nie tylko odpowiednie wykształcenie, ale także wykazują ogromne zaangażowanie w pracę z dziećmi.Regularnie uczestniczą w szkoleniach, aby wprowadzać najnowsze metody edukacyjne i wspierać indywidualny rozwój każdego przedszkolaka.
+        </p >
+      </div >
+    </section >
   );
 }
