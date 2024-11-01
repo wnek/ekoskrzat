@@ -34,7 +34,7 @@ export default function Staff() {
           html={"<strong>Wykwalifikowana</strong> kadra"
           }
         />
-        <p p className="text-pretty text-center text-slate-600 lg:text-left 2xl:text-2xl" >
+        <p className="text-pretty text-center text-slate-600 lg:text-left 2xl:text-2xl" >
           Nasi nauczyciele posiadają nie tylko odpowiednie wykształcenie, ale także wykazują ogromne zaangażowanie w pracę z dziećmi.Regularnie uczestniczą w szkoleniach, aby wprowadzać najnowsze metody edukacyjne i wspierać indywidualny rozwój każdego przedszkolaka.
         </p >
       </div >
