@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 
 import { useRef } from "react";
-
+import { H3 } from "../global/ui/Typography";
 export default function ThirdFeature() {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -33,11 +33,9 @@ export default function ThirdFeature() {
       ></div>
       <div className="mx-4 py-4 lg:sticky lg:top-[5rem] lg:mx-8 lg:w-1/3">
         <div className="flex flex-col gap-24 rounded-3xl bg-slate-900 px-12 py-16 lg:rounded-2xl">
-          <h3 className="font-display text-2xl text-white 2xl:text-4xl">
-            <strong>Masz pytania?</strong>
-            <br />
-            Chętnie na każde odpowiemy
-          </h3>
+          <H3
+            html="<strong>Masz pytania?</strong><br />Chętnie na każde odpowiemy"
+          />
           <a
             href="#footer"
             className="flex w-fit items-center gap-6 rounded-full bg-green-500 py-2 pl-6 pr-2 text-white 2xl:text-xl"
