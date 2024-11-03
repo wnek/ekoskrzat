@@ -1,3 +1,5 @@
+import { H2 } from "../global/ui/Typography";
+
 export default function Join() {
   return (
     <section className="my-4 min-h-screen rounded-3xl lg:grid lg:h-screen lg:grid-cols-2 lg:rounded-none lg:bg-slate-900 lg:py-4">
@@ -11,9 +13,9 @@ export default function Join() {
       ></div>
       <div className="2xl:px-30 mx-4 py-4 lg:mx-8 lg:flex lg:items-center lg:justify-center">
         <div className="flex flex-col gap-8 rounded-3xl bg-slate-900 px-12 py-16 lg:flex lg:items-center lg:rounded-2xl lg:text-center">
-          <h2 className="font-display text-2xl text-white md:text-6xl 2xl:w-3/4 2xl:text-7xl">
-            <strong>Dołącz</strong> do nas!
-          </h2>
+          <H2 html="<strong>Dołącz</strong> do nas!" />
+
+
           <p className="text-slate-400 2xl:px-32 2xl:text-2xl">
             Daj swojemu dziecku szansę na radosne i inspirujące przedszkolne
             doświadczenia. Sprawdź, jak możemy wspólnie odkrywać świat!
