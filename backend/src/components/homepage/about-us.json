@@ -1,7 +1,8 @@
 {
   "collectionName": "components_homepage_about_uses",
   "info": {
-    "displayName": "about-us"
+    "displayName": "about-us",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -9,7 +10,7 @@
       "type": "string"
     },
     "description": {
-      "type": "string"
+      "type": "text"
     }
   }
 }

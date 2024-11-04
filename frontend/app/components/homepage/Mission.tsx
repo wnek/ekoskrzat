@@ -8,7 +8,9 @@ import {
 import { useRef } from "react";
 
 import { H1 } from "../global/ui/Typography";
-export default function Mission() {
+
+
+export default function Mission({ data }: { data: MissionData }) {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -27,7 +29,7 @@ export default function Mission() {
             Nasza misja
           </h3>
 
-          <H1 html={"Drogi Rodzicu, naszą misją jest <strong>wspomaganie i ukierunkowanie rozwoju dziecka zgodnie z jego wrodzonym potencjałem</strong> pod opieką najlepszych specjalistów, w naturalnym i inspirującym środowisku."} />
+          <H1 html={data.text} />
 
 
           <div className="flex items-center gap-4">

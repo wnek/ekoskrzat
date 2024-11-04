@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_homepage_missions",
+  "info": {
+    "displayName": "mission",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text"
+    }
+  }
+}

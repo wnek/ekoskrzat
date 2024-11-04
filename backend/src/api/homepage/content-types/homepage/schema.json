@@ -21,6 +21,11 @@
       "type": "component",
       "repeatable": false,
       "component": "homepage.about-us"
+    },
+    "mission": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.mission"
     }
   }
 }
