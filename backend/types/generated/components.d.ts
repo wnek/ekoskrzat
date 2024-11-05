@@ -26,6 +26,17 @@ export interface HomepageHero extends Struct.ComponentSchema {
   };
 }
 
+export interface HomepageFirstFeature extends Struct.ComponentSchema {
+  collectionName: 'components_homepage_first_features';
+  info: {
+    displayName: 'firstFeature';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+  };
+}
+
 export interface HomepageAboutUs extends Struct.ComponentSchema {
   collectionName: 'components_homepage_about_uses';
   info: {
@@ -43,6 +54,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'homepage.mission': HomepageMission;
       'homepage.hero': HomepageHero;
+      'homepage.first-feature': HomepageFirstFeature;
       'homepage.about-us': HomepageAboutUs;
     }
   }

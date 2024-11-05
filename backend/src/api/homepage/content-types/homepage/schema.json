@@ -26,6 +26,11 @@
       "type": "component",
       "repeatable": false,
       "component": "homepage.mission"
+    },
+    "firstFeature": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.first-feature"
     }
   }
 }

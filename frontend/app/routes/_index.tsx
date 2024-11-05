@@ -36,6 +36,9 @@ const query = qs.stringify({
     mission: {
       populate: "*",
     },
+    firstFeature: {
+      populate: "*",
+    },
   },
 });
 
@@ -71,7 +74,7 @@ export default function Index() {
       <Hero data={homepageData.data.hero} />
       <AboutUs data={homepageData.data.aboutus} />
       <Mission data={homepageData.data.mission} />
-      <FirstFeature />
+      <FirstFeature data={homepageData.data.firstFeature} />
       <Staff />
       <SecondFeature />
       <Numbers />

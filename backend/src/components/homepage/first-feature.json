@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_homepage_first_features",
+  "info": {
+    "displayName": "firstFeature"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}
