@@ -1,13 +1,15 @@
+import { H2 } from "../global/ui/Typography";
+
+
 export default function Testimonials() {
   return (
     <section className="m-4 flex min-h-screen flex-col items-center py-16 text-center lg:py-52">
-      <h3 className="w-fit rounded-full border border-slate-300 px-4 py-2 text-blue-600">
+      <h3 className="w-fit rounded-full border border-slate-300 px-4 py-2 text-blue-600 my-4">
         O nas
       </h3>
-      <h2 className="py-12 font-display text-4xl text-slate-800 2xl:text-4xl">
-        <strong>Co mówią rodzice</strong> o naszym przedszkolu
-      </h2>
-      <div className="flex w-full flex-col gap-4 text-left lg:flex-row xl:px-32">
+      <H2 html="Co mówią rodzice o naszym przedszkolu" />
+
+      <div className="flex w-full flex-col gap-4 text-left lg:flex-row xl:px-32 py-12">
         <div className="flex flex-col justify-between gap-24 rounded-3xl bg-stone-100 p-8 text-slate-800">
           <p className="2xl:text-2xl">
             Przedszkole to miejsce, które łączy doskonałą opiekę z silnym naciskiem na rozwój edukacyjny dzieci. Zwróciliśmy uwagę na <strong>różnorodne zajęcia dodatkowe, takie jak nauka gry na bębnach czy robotyka</strong>. To wyjątkowe, że przedszkole oferuje tak szeroką gamę aktywności, co pozwala dzieciom rozwijać się w wielu dziedzinach, oszczędzając rodzicom czas i wysiłek w organizacji dodatkowych zajęć.
