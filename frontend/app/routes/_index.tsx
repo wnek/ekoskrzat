@@ -15,12 +15,12 @@ import Testimonials from "~/components/homepage/Testimonials";
 import Join from "~/components/homepage/Join";
 
 
-
 interface HomepageData {
   data: {
     hero: object
     aboutus: object
     mission: object
+    firstFeature: object
   }
 }
 
