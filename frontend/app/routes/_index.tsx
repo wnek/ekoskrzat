@@ -18,7 +18,7 @@ import Join from "~/components/homepage/Join";
 interface HomepageData {
   data: {
     hero: object
-    aboutus: object
+    aboutUs: object
     mission: object
     firstFeature: object
   }
@@ -30,7 +30,7 @@ const query = qs.stringify({
     hero: {
       populate: "*",
     },
-    aboutus: {
+    aboutUs: {
       populate: "*",
     },
     mission: {
@@ -43,9 +43,11 @@ const query = qs.stringify({
 });
 
 export const loader: LoaderFunction = async () => {
+
   const response = await fetch("http://localhost:1337/api/homepage?" + query);
   const homepageData = await response.json();
   return json(homepageData);
+
 }
 
 export const meta: MetaFunction = () => {
@@ -62,6 +64,17 @@ export const meta: MetaFunction = () => {
   ];
 };
 
+export function ErrorBoundary() {
+  return (
+    <div className="flex min-h-screen items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-2xl font-bold">Oops!</h1>
+        <p>Niestety wystąpił błąd podczas ładowania strony.</p>
+      </div>
+    </div>
+  );
+}
+
 
 
 
@@ -72,7 +85,7 @@ export default function Index() {
   return (
     <>
       <Hero data={homepageData.data.hero} />
-      <AboutUs data={homepageData.data.aboutus} />
+      <AboutUs data={homepageData.data.aboutUs} />
       <Mission data={homepageData.data.mission} />
       <FirstFeature data={homepageData.data.firstFeature} />
       <Staff />
