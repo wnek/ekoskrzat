@@ -17,7 +17,7 @@
       "repeatable": false,
       "component": "homepage.hero"
     },
-    "aboutus": {
+    "aboutUs": {
       "type": "component",
       "repeatable": false,
       "component": "homepage.about-us"
@@ -31,6 +31,11 @@
       "type": "component",
       "repeatable": false,
       "component": "homepage.first-feature"
+    },
+    "staff": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.staff"
     }
   }
 }

@@ -1,5 +1,16 @@
 import type { Struct, Schema } from '@strapi/strapi';
 
+export interface HomepageStaff extends Struct.ComponentSchema {
+  collectionName: 'components_homepage_staff';
+  info: {
+    displayName: 'staff';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+  };
+}
+
 export interface HomepageMission extends Struct.ComponentSchema {
   collectionName: 'components_homepage_missions';
   info: {
@@ -40,7 +51,7 @@ export interface HomepageFirstFeature extends Struct.ComponentSchema {
 export interface HomepageAboutUs extends Struct.ComponentSchema {
   collectionName: 'components_homepage_about_uses';
   info: {
-    displayName: 'about-us';
+    displayName: 'aboutUs';
     description: '';
   };
   attributes: {
@@ -52,6 +63,7 @@ export interface HomepageAboutUs extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'homepage.staff': HomepageStaff;
       'homepage.mission': HomepageMission;
       'homepage.hero': HomepageHero;
       'homepage.first-feature': HomepageFirstFeature;
