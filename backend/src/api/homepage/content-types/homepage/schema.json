@@ -36,6 +36,11 @@
       "type": "component",
       "repeatable": false,
       "component": "homepage.staff"
+    },
+    "secondFeature": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.second-feature"
     }
   }
 }

@@ -17,6 +17,7 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
     mission: Schema.Attribute.Component<'homepage.mission', false>;
     firstFeature: Schema.Attribute.Component<'homepage.first-feature', false>;
     staff: Schema.Attribute.Component<'homepage.staff', false>;
+    secondFeature: Schema.Attribute.Component<'homepage.second-feature', false>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

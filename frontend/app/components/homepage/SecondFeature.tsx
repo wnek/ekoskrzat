@@ -1,6 +1,6 @@
 import { H3 } from "../global/ui/Typography";
 
-export default function SecondFeature() {
+export default function SecondFeature({ data }: { data: any }) {
 
   return (
     <section
@@ -19,11 +19,9 @@ export default function SecondFeature() {
 
       <div className="mx-4 h-fit py-4 lg:sticky lg:top-[5rem] lg:mx-8 lg:w-1/3">
         <div className="flex flex-col gap-8 rounded-3xl bg-stone-100 px-12 py-16 lg:rounded-2xl">
-          <H3 html="<strong>Unikalne</strong> podejście do dzieci" />
+          <H3 html={"<strong>" + data.title + "</strong>"} />
           <p className="text-slate-600 2xl:text-2xl">
-            Wierzymy, że każde dziecko jest wyjątkowe i zasługuje na
-            indywidualne podejście, które uwzględnia jego potrzeby,
-            zainteresowania i tempo rozwoju.
+            {data.description}
           </p>
         </div>
       </div>

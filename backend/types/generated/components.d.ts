@@ -11,6 +11,17 @@ export interface HomepageStaff extends Struct.ComponentSchema {
   };
 }
 
+export interface HomepageSecondFeature extends Struct.ComponentSchema {
+  collectionName: 'components_homepage_second_features';
+  info: {
+    displayName: 'secondFeature';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+  };
+}
+
 export interface HomepageMission extends Struct.ComponentSchema {
   collectionName: 'components_homepage_missions';
   info: {
@@ -64,6 +75,7 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'homepage.staff': HomepageStaff;
+      'homepage.second-feature': HomepageSecondFeature;
       'homepage.mission': HomepageMission;
       'homepage.hero': HomepageHero;
       'homepage.first-feature': HomepageFirstFeature;

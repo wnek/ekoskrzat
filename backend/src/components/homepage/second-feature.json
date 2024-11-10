@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_homepage_second_features",
+  "info": {
+    "displayName": "secondFeature"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}
