@@ -23,6 +23,7 @@ interface HomepageData {
     firstFeature: object
     staff: object
     secondFeature: object
+    numbers: object
   }
 }
 
@@ -45,6 +46,9 @@ const query = qs.stringify({
       populate: "*",
     },
     secondFeature: {
+      populate: "*",
+    },
+    numbers: {
       populate: "*",
     },
   },
@@ -98,7 +102,7 @@ export default function Index() {
       <FirstFeature data={homepageData.data.firstFeature} />
       <Staff data={homepageData.data.staff} />
       <SecondFeature data={homepageData.data.secondFeature} />
-      <Numbers />
+      <Numbers data={homepageData.data.numbers} />
       <ThirdFeature />
       <Testimonials />
       <Join />
