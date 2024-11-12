@@ -80,7 +80,7 @@ export function ErrorBoundary() {
   return (
     <div className="flex min-h-screen items-center justify-center">
       <div className="text-center">
-        <h1 className="text-2xl font-bold">Oops!</h1>
+        <h1 className="text-4xl font-bold font-display">Oops!</h1>
         <p>Niestety wystąpił błąd podczas ładowania strony.</p>
       </div>
     </div>
