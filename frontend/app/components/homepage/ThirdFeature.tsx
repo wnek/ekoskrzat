@@ -38,7 +38,7 @@ export default function ThirdFeature() {
           />
           <a
             href="#footer"
-            className="flex w-fit items-center gap-6 rounded-full bg-green-500 py-2 pl-6 pr-2 text-white 2xl:text-xl"
+            className="flex w-fit items-center gap-6 rounded-full bg-green-500 py-2 pl-6 pr-2 text-white 2xl:text-xl hover:bg-green-600"
           >
             Zadzwoń
             <div className="flex h-8 w-8 rounded-full bg-white p-2">
