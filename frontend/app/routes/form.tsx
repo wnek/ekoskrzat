@@ -203,7 +203,7 @@ export default function SubmitForm() {
                 />
               </label>
               <button
-                className="flex cursor-pointer items-center justify-between gap-6 rounded-full bg-green-500 py-2 pl-6 pr-2 text-white 2xl:text-xl"
+                className="flex cursor-pointer items-center justify-between gap-6 rounded-full bg-green-500 py-2 pl-6 pr-2 text-white 2xl:text-xl hover:bg-green-600"
                 type="submit"
               >
                 Wyślij
