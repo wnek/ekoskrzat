@@ -63,6 +63,7 @@ export default function Hero({ data }: { data: object }) {
           </div>
         </div>
         <div className="z-30">
+
           <div className="h-[calc(100vh-5rem)]">
             <picture>
               <source
@@ -77,19 +78,33 @@ export default function Hero({ data }: { data: object }) {
               />
             </picture>
           </div>
+
           <div className="h-[calc(100vh-5rem)]">
-            <img
-              className="h-full w-full object-cover"
-              src="/images/hero-2.jpg"
-              alt="Hero 2"
-            />
+            <picture>
+              <source
+                media="(max-width: 799px)"
+                srcSet={"http://localhost:1337/" + data.image2.formats.small.url}
+              />
+              <img
+                className="h-full w-full object-cover"
+                src={"http://localhost:1337/" + data.image2.formats.large.url}
+                alt="Hero 2"
+              />
+            </picture>
           </div>
+
           <div className="h-[calc(100vh-5rem)]">
-            <img
-              className="h-full w-full object-cover"
-              src="/images/hero-3.jpg"
-              alt="Hero 3"
-            />
+            <picture>
+              <source
+                media="(max-width: 799px)"
+                srcSet={"http://localhost:1337/" + data.image3.formats.small.url}
+              />
+              <img
+                className="h-full w-full object-cover"
+                src={"http://localhost:1337/" + data.image3.formats.large.url}
+                alt="Hero 3"
+              />
+            </picture>
           </div>
         </div>
       </section>
