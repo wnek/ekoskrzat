@@ -5,7 +5,7 @@ export default function Testimonials() {
   return (
     <section className="m-4 flex min-h-screen flex-col items-center py-16 text-center lg:py-52">
       <h3 className="w-fit rounded-full border border-slate-300 px-4 py-2 text-blue-600 my-4">
-        O nas
+        Mówią o nas
       </h3>
       <H2 html="Co mówią rodzice o naszym przedszkolu" />
 
