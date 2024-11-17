@@ -51,6 +51,9 @@ const query = qs.stringify({
     numbers: {
       populate: "*",
     },
+    testimonials: {
+      populate: "*",
+    },
   },
 });
 
@@ -104,7 +107,7 @@ export default function Index() {
       <SecondFeature data={homepageData.data.secondFeature} />
       <Numbers data={homepageData.data.numbers} />
       <ThirdFeature />
-      <Testimonials />
+      <Testimonials data={homepageData.data.testimonials} />
       <Join />
     </>
   );

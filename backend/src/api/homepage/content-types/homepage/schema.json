@@ -41,6 +41,16 @@
       "type": "component",
       "repeatable": false,
       "component": "homepage.second-feature"
+    },
+    "numbers": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.numbers"
+    },
+    "testimonials": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.testimonials"
     }
   }
 }

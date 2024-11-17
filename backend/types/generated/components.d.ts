@@ -1,5 +1,21 @@
 import type { Struct, Schema } from '@strapi/strapi';
 
+export interface HomepageTestimonials extends Struct.ComponentSchema {
+  collectionName: 'components_homepage_testimonials';
+  info: {
+    displayName: 'testimonials';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    firstTestimonial: Schema.Attribute.Text;
+    firstParents: Schema.Attribute.String;
+    secondTestimonial: Schema.Attribute.Text;
+    secondParents: Schema.Attribute.String;
+    thirdTestimonial: Schema.Attribute.Text;
+    thirdParents: Schema.Attribute.String;
+  };
+}
+
 export interface HomepageStaff extends Struct.ComponentSchema {
   collectionName: 'components_homepage_staff';
   info: {
@@ -19,6 +35,24 @@ export interface HomepageSecondFeature extends Struct.ComponentSchema {
   attributes: {
     title: Schema.Attribute.String;
     description: Schema.Attribute.Text;
+  };
+}
+
+export interface HomepageNumbers extends Struct.ComponentSchema {
+  collectionName: 'components_homepage_numbers';
+  info: {
+    displayName: 'numbers';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    firstNumber: Schema.Attribute.Integer;
+    firstLabel: Schema.Attribute.String;
+    secondNumber: Schema.Attribute.Integer;
+    secondLabel: Schema.Attribute.String;
+    thirdNumber: Schema.Attribute.Integer;
+    thirdLabel: Schema.Attribute.String;
+    fourthNumber: Schema.Attribute.Integer;
+    fourthLabel: Schema.Attribute.String;
   };
 }
 
@@ -74,8 +108,10 @@ export interface HomepageAboutUs extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'homepage.testimonials': HomepageTestimonials;
       'homepage.staff': HomepageStaff;
       'homepage.second-feature': HomepageSecondFeature;
+      'homepage.numbers': HomepageNumbers;
       'homepage.mission': HomepageMission;
       'homepage.hero': HomepageHero;
       'homepage.first-feature': HomepageFirstFeature;

@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_homepage_testimonials",
+  "info": {
+    "displayName": "testimonials"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "firstTestimonial": {
+      "type": "text"
+    },
+    "firstParents": {
+      "type": "string"
+    },
+    "secondTestimonial": {
+      "type": "text"
+    },
+    "secondParents": {
+      "type": "string"
+    },
+    "thirdTestimonial": {
+      "type": "text"
+    },
+    "thirdParents": {
+      "type": "string"
+    }
+  }
+}
