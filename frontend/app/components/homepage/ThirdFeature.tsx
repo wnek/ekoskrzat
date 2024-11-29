@@ -35,6 +35,7 @@ export default function ThirdFeature() {
         <div className="flex flex-col gap-24 rounded-3xl bg-slate-900 px-12 py-16 lg:rounded-2xl">
           <H3
             html="<strong>Masz pytania?</strong><br />Chętnie na każde odpowiemy"
+            color="white"
           />
           <a
             href="#footer"

@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { H2 } from "../global/ui/Typography";
+import { H2, P } from "../global/ui/Typography";
 
 
 import { useRef } from "react";
@@ -46,9 +46,8 @@ export default function Hero({ data }: { data: object }) {
         <div className="top-[5rem] z-40 flex h-[80vh] flex-col items-center justify-center gap-8 px-4 lg:sticky lg:h-[calc(100vh-5rem)] lg:items-start lg:px-16 2xl:px-48">
           <H2 html={data.title} />
 
-          <p className="text-pretty text-slate-600 2xl:max-w-prose 2xl:text-2xl">
-            {data.description}
-          </p>
+          <P html={data.description} className="lg:text-left" />
+
           <div className="flex flex-col items-center gap-4 lg:flex-row">
             <a
               href="/form"

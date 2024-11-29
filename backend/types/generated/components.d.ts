@@ -86,10 +86,12 @@ export interface HomepageFirstFeature extends Struct.ComponentSchema {
   collectionName: 'components_homepage_first_features';
   info: {
     displayName: 'firstFeature';
+    description: '';
   };
   attributes: {
     title: Schema.Attribute.String;
     description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 

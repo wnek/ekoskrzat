@@ -19,7 +19,7 @@ export default function SecondFeature({ data }: { data: any }) {
 
       <div className="mx-4 h-fit py-4 lg:sticky lg:top-[5rem] lg:mx-8 lg:w-1/3">
         <div className="flex flex-col gap-8 rounded-3xl bg-stone-100 px-12 py-16 lg:rounded-2xl">
-          <H3 html={"<strong>" + data.title + "</strong>"} />
+          <H3 html={data.title} />
           <p className="text-slate-600 2xl:text-2xl">
             {data.description}
           </p>

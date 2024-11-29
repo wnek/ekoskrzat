@@ -13,7 +13,7 @@ export default function Join() {
       ></div>
       <div className="2xl:px-30 mx-4 py-4 lg:mx-8 lg:flex lg:items-center lg:justify-center">
         <div className="flex flex-col gap-8 rounded-3xl bg-slate-900 px-12 py-16 lg:flex lg:items-center lg:rounded-2xl lg:text-center">
-          <H2 html="<strong>Dołącz</strong> do nas!" />
+          <H2 html="<strong>Dołącz</strong> do nas!" color="white" />
 
 
           <p className="text-slate-400 2xl:px-32 2xl:text-2xl">

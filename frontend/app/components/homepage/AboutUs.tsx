@@ -1,4 +1,4 @@
-import { H2 } from "../global/ui/Typography";
+import { H2, P } from "../global/ui/Typography";
 
 export default function AboutUs({ data }: { data: any }) {
   return (
@@ -10,9 +10,7 @@ export default function AboutUs({ data }: { data: any }) {
         <H2 html={data.title}>
 
         </H2>
-        <p className="max-w-prose text-slate-600 2xl:text-2xl">
-          {data.description}
-        </p>
+        <P html={data.description} />
         <img
           className="lg:w-1/2"
           src="/images/about-img.png"

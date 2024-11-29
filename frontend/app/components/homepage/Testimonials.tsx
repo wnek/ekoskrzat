@@ -1,4 +1,4 @@
-import { H2 } from "../global/ui/Typography";
+import { H2, P } from "../global/ui/Typography";
 
 
 export default function Testimonials({ data }: { data: TestimonialsData }) {
@@ -11,9 +11,7 @@ export default function Testimonials({ data }: { data: TestimonialsData }) {
 
       <div className="flex w-full flex-col gap-4 text-left lg:flex-row xl:px-32 py-12">
         <div className="flex flex-col justify-between gap-24 rounded-3xl bg-stone-100 p-8 text-slate-800">
-          <p className="2xl:text-2xl">
-            {data.firstTestimonial}
-          </p>
+          <P html={data.firstTestimonial} align="left" />
           <div className="flex gap-4 items-center">
             <img
               className="h-12 w-12 rounded-full"
@@ -27,9 +25,7 @@ export default function Testimonials({ data }: { data: TestimonialsData }) {
           </div>
         </div>
         <div className="flex flex-col justify-between gap-24 rounded-3xl bg-slate-100 p-6 text-slate-800">
-          <p className="2xl:text-2xl">
-            {data.secondTestimonial}
-          </p>
+          <P html={data.secondTestimonial} align="left" />
           <div className="flex gap-4 items-center">
             <img
               className="h-12 w-12 rounded-full"
@@ -42,9 +38,7 @@ export default function Testimonials({ data }: { data: TestimonialsData }) {
           </div>
         </div>
         <div className="flex flex-col justify-between gap-24 rounded-3xl bg-green-100 p-6 text-slate-800">
-          <p className="2xl:text-2xl">
-            {data.thirdTestimonial}
-          </p>
+          <P html={data.thirdTestimonial} align="left" />
           <div className="flex gap-4 items-center">
             <img
               className="h-12 w-12 rounded-full"
