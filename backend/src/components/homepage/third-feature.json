@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_homepage_third_features",
+  "info": {
+    "displayName": "thirdFeature"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}

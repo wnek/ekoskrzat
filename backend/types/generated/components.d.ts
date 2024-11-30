@@ -1,5 +1,15 @@
 import type { Struct, Schema } from '@strapi/strapi';
 
+export interface HomepageThirdFeature extends Struct.ComponentSchema {
+  collectionName: 'components_homepage_third_features';
+  info: {
+    displayName: 'thirdFeature';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface HomepageTestimonials extends Struct.ComponentSchema {
   collectionName: 'components_homepage_testimonials';
   info: {
@@ -110,6 +120,7 @@ export interface HomepageAboutUs extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'homepage.third-feature': HomepageThirdFeature;
       'homepage.testimonials': HomepageTestimonials;
       'homepage.staff': HomepageStaff;
       'homepage.second-feature': HomepageSecondFeature;

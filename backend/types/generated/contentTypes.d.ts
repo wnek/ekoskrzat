@@ -20,6 +20,7 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
     secondFeature: Schema.Attribute.Component<'homepage.second-feature', false>;
     numbers: Schema.Attribute.Component<'homepage.numbers', false>;
     testimonials: Schema.Attribute.Component<'homepage.testimonials', false>;
+    thirdFeature: Schema.Attribute.Component<'homepage.third-feature', false>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

@@ -51,6 +51,11 @@
       "type": "component",
       "repeatable": false,
       "component": "homepage.testimonials"
+    },
+    "thirdFeature": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.third-feature"
     }
   }
 }
