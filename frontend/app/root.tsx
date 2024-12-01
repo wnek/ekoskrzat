@@ -21,7 +21,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
   const showNavigation = !noNavigationRoutes.includes(location.pathname);
 
   const lenis = useLenis(({ scroll }) => {
-    // called every scroll
+
   });
 
   return (
