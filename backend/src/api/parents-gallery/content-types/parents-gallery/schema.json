@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "parents_galleries",
+  "info": {
+    "singularName": "parents-gallery",
+    "pluralName": "parents-galleries",
+    "displayName": "Parents Gallery"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

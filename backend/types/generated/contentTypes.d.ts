@@ -1,41 +1,5 @@
 import type { Struct, Schema } from '@strapi/strapi';
 
-export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
-  collectionName: 'homepages';
-  info: {
-    singularName: 'homepage';
-    pluralName: 'homepages';
-    displayName: 'Homepage';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    hero: Schema.Attribute.Component<'homepage.hero', false>;
-    aboutUs: Schema.Attribute.Component<'homepage.about-us', false>;
-    mission: Schema.Attribute.Component<'homepage.mission', false>;
-    firstFeature: Schema.Attribute.Component<'homepage.first-feature', false>;
-    staff: Schema.Attribute.Component<'homepage.staff', false>;
-    secondFeature: Schema.Attribute.Component<'homepage.second-feature', false>;
-    numbers: Schema.Attribute.Component<'homepage.numbers', false>;
-    testimonials: Schema.Attribute.Component<'homepage.testimonials', false>;
-    thirdFeature: Schema.Attribute.Component<'homepage.third-feature', false>;
-    createdAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    publishedAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::homepage.homepage'
-    >;
-  };
-}
-
 export interface PluginUploadFile extends Struct.CollectionTypeSchema {
   collectionName: 'files';
   info: {
@@ -521,6 +485,74 @@ export interface PluginUsersPermissionsUser
   };
 }
 
+export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
+  collectionName: 'homepages';
+  info: {
+    singularName: 'homepage';
+    pluralName: 'homepages';
+    displayName: 'Homepage';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    hero: Schema.Attribute.Component<'homepage.hero', false>;
+    aboutUs: Schema.Attribute.Component<'homepage.about-us', false>;
+    mission: Schema.Attribute.Component<'homepage.mission', false>;
+    firstFeature: Schema.Attribute.Component<'homepage.first-feature', false>;
+    staff: Schema.Attribute.Component<'homepage.staff', false>;
+    secondFeature: Schema.Attribute.Component<'homepage.second-feature', false>;
+    numbers: Schema.Attribute.Component<'homepage.numbers', false>;
+    testimonials: Schema.Attribute.Component<'homepage.testimonials', false>;
+    thirdFeature: Schema.Attribute.Component<'homepage.third-feature', false>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::homepage.homepage'
+    >;
+  };
+}
+
+export interface ApiParentsGalleryParentsGallery
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'parents_galleries';
+  info: {
+    singularName: 'parents-gallery';
+    pluralName: 'parents-galleries';
+    displayName: 'Parents Gallery';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    images: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::parents-gallery.parents-gallery'
+    >;
+  };
+}
+
 export interface AdminPermission extends Struct.CollectionTypeSchema {
   collectionName: 'admin_permissions';
   info: {
@@ -886,7 +918,6 @@ export interface AdminTransferTokenPermission
 declare module '@strapi/strapi' {
   export module Public {
     export interface ContentTypeSchemas {
-      'api::homepage.homepage': ApiHomepageHomepage;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::i18n.locale': PluginI18NLocale;
@@ -897,6 +928,8 @@ declare module '@strapi/strapi' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::homepage.homepage': ApiHomepageHomepage;
+      'api::parents-gallery.parents-gallery': ApiParentsGalleryParentsGallery;
       'admin::permission': AdminPermission;
       'admin::user': AdminUser;
       'admin::role': AdminRole;
