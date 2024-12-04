@@ -528,6 +528,7 @@ export interface ApiParentsGalleryParentsGallery
     singularName: 'parents-gallery';
     pluralName: 'parents-galleries';
     displayName: 'Parents Gallery';
+    description: '';
   };
   options: {
     draftAndPublish: true;

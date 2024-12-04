@@ -4,7 +4,8 @@
   "info": {
     "singularName": "parents-gallery",
     "pluralName": "parents-galleries",
-    "displayName": "Parents Gallery"
+    "displayName": "Parents Gallery",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,14 +17,15 @@
       "required": true
     },
     "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     }
   }
 }
