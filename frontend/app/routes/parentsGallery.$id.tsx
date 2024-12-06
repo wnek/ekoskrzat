@@ -23,10 +23,11 @@ export default function Gallery() {
     console.log(gallery);
     return (
         <div className="p-8 text-center">
-            <Link to="/parentsGallery" className="rounded-full border px-6 py-3 hover:bg-slate-50">
-                ← Wróć do galerii
-            </Link>
-
+            <div className="flex justify-center">
+                <Link to="/parentsGallery" className="rounded-full border px-6 py-3 hover:bg-slate-50">
+                    ← Wróć do galerii
+                </Link>
+            </div>
             <H1 html={gallery.data.title} className="my-8" />
             <div className="columns-1 md:columns-4 gap-4 space-y-4">
                 {gallery.data.images.map((image: any) => (
