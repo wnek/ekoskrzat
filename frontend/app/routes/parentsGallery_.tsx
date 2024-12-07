@@ -28,7 +28,7 @@ export default function ParentsGallery() {
     console.log(galleriesData);
     return (
         <section
-            className="bg-stone-100 text-center p-4 xl:py-16 xl:px-16">
+            className="bg-stone-100 text-center p-4 py-8 xl:py-16 xl:px-16">
             <H1 html="Galeria dla rodziców" className="mb-8" />
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
                 {galleriesData.data.map((gallery: any) => (
