@@ -38,7 +38,7 @@ export default function Login() {
                     type="submit"
                     className="items-center justify-between gap-6 rounded-full bg-green-500 py-2 p-8 text-white 2xl:text-xl hover:bg-green-600"
                 >
-                    Enter
+                    Dalej
                 </button>
             </Form>
         </div>
