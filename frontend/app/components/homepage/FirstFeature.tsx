@@ -6,7 +6,7 @@ export default function FirstFeature({ data }: { data: any }) {
       <div
         className="mx-4 h-screen rounded-3xl lg:absolute lg:h-full lg:w-[calc(100vw-3rem)]"
         style={{
-          backgroundImage: "url(http://localhost:1337/" + data.image.formats.large.url + ")",
+          backgroundImage: "url(https://api.ekoskrzat.edu.pl" + data.image.formats.large.url + ")",
           backgroundSize: "cover",
           backgroundPosition: "center center",
         }}
