@@ -40,7 +40,7 @@ export default function ParentsGallery() {
                         {gallery.images[0] && gallery.images[0].formats.large && (
                             <img
                                 className="rounded-md aspect-square object-cover"
-                                src={"http://localhost:1337/" + gallery.images[0].formats.large.url} />
+                                src={"http://localhost:1337" + gallery.images[0].formats.large.url} />
                         )}
                         <div className="flex flex-col gap-1 px-2 py-3">
                             <h4 className="text-left text-xl">{gallery.title}</h4>
