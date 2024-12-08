@@ -30,11 +30,18 @@ export default function Gallery() {
     const [index, setIndex] = React.useState(-1);
     const gallery = useLoaderData();
 
-    const photos = [
-        { src: `http://localhost:1337${gallery.data.images[0].formats?.large?.url}`, width: gallery.data.images[0].formats?.large?.width, height: gallery.data.images[0].formats?.large?.height },
-        { src: `http://localhost:1337${gallery.data.images[1].formats?.large?.url}`, width: gallery.data.images[1].formats?.large?.width, height: gallery.data.images[1].formats?.large?.height },
-        { src: `http://localhost:1337${gallery.data.images[2].formats?.large?.url}`, width: gallery.data.images[2].formats?.large?.width, height: gallery.data.images[2].formats?.large?.height }
-    ];
+    // const photos = [
+    //     { src: `http://localhost:1337${gallery.data.images[0].formats?.large?.url}`, width: gallery.data.images[0].formats?.large?.width, height: gallery.data.images[0].formats?.large?.height },
+    //     { src: `http://localhost:1337${gallery.data.images[1].formats?.large?.url}`, width: gallery.data.images[1].formats?.large?.width, height: gallery.data.images[1].formats?.large?.height },
+    //     { src: `http://localhost:1337${gallery.data.images[2].formats?.large?.url}`, width: gallery.data.images[2].formats?.large?.width, height: gallery.data.images[2].formats?.large?.height }
+    // ];
+
+
+    const photos = gallery.data.images.map((image: any) => ({
+        src: `http://localhost:1337${image.formats?.large?.url}`,
+        width: image.formats?.large?.width,
+        height: image.formats?.large?.height
+    }));
 
     return (
         <div className="p-8 text-center">
@@ -47,6 +54,15 @@ export default function Gallery() {
 
             <MasonryPhotoAlbum
                 photos={photos}
+                render={{
+                    image: (props) => <img {...props} className="rounded-lg" />,
+                }}
+
+                columns={(containerWidth) => {
+                    if (containerWidth < 400) return 1;
+                    if (containerWidth < 800) return 3;
+                    return 4;
+                }}
                 onClick={({ index }) => setIndex(index)}
             />
 
