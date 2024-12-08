@@ -67,12 +67,12 @@ export default function Hero({ data }: { data: object }) {
             <picture>
               <source
                 media="(max-width: 799px)"
-                srcSet={"https://localhost:1337/" + data.image1.formats.small.url}
+                srcSet={"http://159.69.114.206:1337" + data.image1.formats.small.url}
 
               />
               <img
                 className="h-full w-full object-cover"
-                src={"https://localhost:1337/" + data.image1.formats.large.url}
+                src={"http://159.69.114.206:1337" + data.image1.formats.large.url}
                 alt="Hero 1"
               />
             </picture>
