@@ -67,12 +67,12 @@ export default function Hero({ data }: { data: object }) {
             <picture>
               <source
                 media="(max-width: 799px)"
-                srcSet={"http://localhost:1337/" + data.image1.formats.small.url}
+                srcSet={"https://localhost:1337/" + data.image1.formats.small.url}
 
               />
               <img
                 className="h-full w-full object-cover"
-                src={"http://localhost:1337/" + data.image1.formats.large.url}
+                src={"https://localhost:1337/" + data.image1.formats.large.url}
                 alt="Hero 1"
               />
             </picture>
@@ -82,11 +82,11 @@ export default function Hero({ data }: { data: object }) {
             <picture>
               <source
                 media="(max-width: 799px)"
-                srcSet={"http://localhost:1337/" + data.image2.formats.small.url}
+                srcSet={"https://localhost:1337/" + data.image2.formats.small.url}
               />
               <img
                 className="h-full w-full object-cover"
-                src={"http://localhost:1337/" + data.image2.formats.large.url}
+                src={"https://localhost:1337/" + data.image2.formats.large.url}
                 alt="Hero 2"
               />
             </picture>
@@ -96,11 +96,11 @@ export default function Hero({ data }: { data: object }) {
             <picture>
               <source
                 media="(max-width: 799px)"
-                srcSet={"http://localhost:1337/" + data.image3.formats.small.url}
+                srcSet={"https://localhost:1337/" + data.image3.formats.small.url}
               />
               <img
                 className="h-full w-full object-cover"
-                src={"http://localhost:1337/" + data.image3.formats.large.url}
+                src={"https://localhost:1337/" + data.image3.formats.large.url}
                 alt="Hero 3"
               />
             </picture>
