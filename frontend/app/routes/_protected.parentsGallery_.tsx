@@ -25,6 +25,7 @@ export default function ParentsGallery() {
 
     const galleriesData = useLoaderData();
 
+    console.log(galleriesData);
     return (
         <section
             className="bg-stone-100 text-center p-4 py-8 xl:py-16 xl:px-16">

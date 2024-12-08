@@ -1,9 +1,13 @@
 import { json, LoaderFunction } from "@remix-run/node";
 import { useLoaderData, Link } from "@remix-run/react";
-
+import React from "react";
 import { MasonryPhotoAlbum } from "react-photo-album";
+
 import "react-photo-album/masonry.css";
 
+
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 
 import qs from "qs";
 import { H1 } from "~/components/global/ui/Typography";
@@ -23,11 +27,13 @@ export const loader: LoaderFunction = async ({ params }) => {
 }
 
 export default function Gallery() {
+    const [index, setIndex] = React.useState(-1);
     const gallery = useLoaderData();
 
     const photos = [
-        { src: `http://localhost:1337${gallery.data.images[0].formats?.large?.url}`, width: 800, height: 1200 },
-        { src: `http://localhost:1337${gallery.data.images[1].formats?.large?.url}`, width: 800, height: 1200 },
+        { src: `http://localhost:1337${gallery.data.images[0].formats?.large?.url}`, width: gallery.data.images[0].formats?.large?.width, height: gallery.data.images[0].formats?.large?.height },
+        { src: `http://localhost:1337${gallery.data.images[1].formats?.large?.url}`, width: gallery.data.images[1].formats?.large?.width, height: gallery.data.images[1].formats?.large?.height },
+        { src: `http://localhost:1337${gallery.data.images[2].formats?.large?.url}`, width: gallery.data.images[2].formats?.large?.width, height: gallery.data.images[2].formats?.large?.height }
     ];
 
     return (
@@ -39,17 +45,18 @@ export default function Gallery() {
             </div>
             <H1 html={gallery.data.title} className="my-8" />
 
-            <MasonryPhotoAlbum photos={photos} />
-            <div className="columns-1 md:columns-4 gap-4 space-y-4">
-                {gallery.data.images.map((image: any) => (
-                    <img
-                        key={image.id}
-                        src={`http://localhost:1337${image.formats?.large?.url}`}
-                        alt=""
-                        className="w-full h-auto object-cover rounded-lg"
-                    />
-                ))}
-            </div>
+            <MasonryPhotoAlbum
+                photos={photos}
+                onClick={({ index }) => setIndex(index)}
+            />
+
+            <Lightbox
+                index={index}
+                slides={photos}
+                open={index >= 0}
+                close={() => setIndex(-1)}
+            />
+
         </div>
 
     );
