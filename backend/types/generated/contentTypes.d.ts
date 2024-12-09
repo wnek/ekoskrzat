@@ -535,10 +535,7 @@ export interface ApiParentsGalleryParentsGallery
   };
   attributes: {
     title: Schema.Attribute.String & Schema.Attribute.Required;
-    images: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
+    images: Schema.Attribute.Media<'images' | 'files' | 'videos', true>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

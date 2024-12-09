@@ -15,7 +15,8 @@ import { H1 } from "~/components/global/ui/Typography";
 
 export const loader: LoaderFunction = async ({ params }) => {
     const query = qs.stringify({
-        populate: "*"
+        populate: "*",
+        sort: "createdAt"
     });
 
     const { id } = params;
