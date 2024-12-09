@@ -7,7 +7,8 @@ import { H1, H2, H3 } from "~/components/global/ui/Typography";
 
 
 const query = qs.stringify({
-    populate: "*"
+    populate: "*",
+    sort: "createdAt:desc"
 });
 
 
