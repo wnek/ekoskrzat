@@ -32,8 +32,9 @@ export default function Staff({ data }: { data: any }) {
       <div className="flex w-full flex-col items-center gap-8 px-12 py-16 lg:items-start 2xl:px-40 text-center">
         <H3
           html={data.title}
+          className="lg:text-left"
         />
-        <p className="text-pretty text-center text-slate-600 lg:text-left 2xl:text-2xl" >
+        <p className="lg:text-left" >
           {data.description}
         </p >
       </div >
