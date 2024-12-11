@@ -92,7 +92,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="flex min-h-[60vh] w-full items-end xl:px-32">
+      <div className="flex min-h-[40vh] w-full items-end xl:px-32">
         <img src="images/footer.jpg" alt="Footer" className="w-full" />
       </div>
     </section>
