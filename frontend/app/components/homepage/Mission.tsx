@@ -7,7 +7,7 @@ import {
 
 import { useRef } from "react";
 
-import { H1 } from "../global/ui/Typography";
+import { H1, H2 } from "../global/ui/Typography";
 
 
 export default function Mission({ data }: { data: MissionData }) {
@@ -29,7 +29,7 @@ export default function Mission({ data }: { data: MissionData }) {
             Nasza misja
           </h3>
 
-          <H1 html={data.text} />
+          <H2 html={data.text} />
 
 
           <div className="flex items-center gap-4">
