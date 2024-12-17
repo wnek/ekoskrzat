@@ -57,7 +57,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         />
         <meta
           property="og:description"
-          content="Prywatne przedszkole na terenie dzielnicy Bieżanów - Prokocim. Miejsce w którym dzieci mogą czuć się w pełni szczęśliwe, spokojne i bezpieczne. Poprzez kontakt z przyrodą, poznają najważniejsze wartości."
+          content="Prywatne przedszkole na terenie dzielnicy Bieżanów - Prokocim. Miejsce w którym dzieci mogą czuć się w pełni szczęśliwe, spokojne i bezpieczne."
         />
         <meta
           property="og:image"
