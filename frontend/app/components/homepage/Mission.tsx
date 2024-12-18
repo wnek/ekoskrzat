@@ -33,7 +33,7 @@ export default function Mission({ data }: { data: MissionData }) {
 
 
           <div className="flex items-center gap-4">
-            <img src="/images/logo.svg" alt="Logo" />
+            <img src="/images/logo.svg" alt="Logo Ekoskrzat" />
             <p className="italic text-slate-500">
               Zespół Przedszkola Ekoskrzat
             </p>
