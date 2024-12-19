@@ -551,6 +551,30 @@ export interface ApiParentsGalleryParentsGallery
   };
 }
 
+export interface ApiStaffStaff extends Struct.SingleTypeSchema {
+  collectionName: 'staffs';
+  info: {
+    singularName: 'staff';
+    pluralName: 'staffs';
+    displayName: 'Staff';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::staff.staff'>;
+  };
+}
+
 export interface AdminPermission extends Struct.CollectionTypeSchema {
   collectionName: 'admin_permissions';
   info: {
@@ -928,6 +952,7 @@ declare module '@strapi/strapi' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::homepage.homepage': ApiHomepageHomepage;
       'api::parents-gallery.parents-gallery': ApiParentsGalleryParentsGallery;
+      'api::staff.staff': ApiStaffStaff;
       'admin::permission': AdminPermission;
       'admin::user': AdminUser;
       'admin::role': AdminRole;
