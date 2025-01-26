@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import { Link, useLocation } from "@remix-run/react";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   return (
     <nav className="sticky top-0 z-50 bg-white p-4">
@@ -37,16 +39,16 @@ export default function Navbar() {
         <div className="hidden lg:flex lg:items-center lg:gap-8 lg:w-full">
           <ul className="flex space-x-6 text-slate-900 mx-auto">
             <li>
-              <a href="/o-nas" className="hover:text-slate-600">O nas</a>
+              <Link to="/o-nas" className={`hover:text-slate-600 ${location.pathname === '/o-nas' ? 'underline' : ''}`}>O nas</Link>
             </li>
             <li>
-              <a href="/oferta" className="hover:text-slate-600">Oferta</a>
+              <Link to="/oferta" className={`hover:text-slate-600 ${location.pathname === '/oferta' ? 'underline' : ''}`}>Oferta</Link>
             </li>
             <li>
-              <a href="/nasza-kadra" className="hover:text-slate-600">Nasza kadra</a>
+              <Link to="/nasza-kadra" className={`hover:text-slate-600 ${location.pathname === '/nasza-kadra' ? 'underline' : ''}`}>Nasza kadra</Link>
             </li>
             <li>
-              <a href="/galeria" className="hover:text-slate-600">Galeria</a>
+              <Link to="/galeria" className={`hover:text-slate-600 ${location.pathname === '/galeria' ? 'underline' : ''}`}>Galeria</Link>
             </li>
           </ul>
 
@@ -67,19 +69,19 @@ export default function Navbar() {
       <div className={`${isMenuOpen ? 'block' : 'hidden'} lg:hidden`}>
         <ul className="space-y-4 pt-4 pb-3">
           <li>
-            <a href="/o-nas" className="block hover:text-slate-600">O nas</a>
+            <Link to="/o-nas" className={`block hover:text-slate-600 ${location.pathname === '/o-nas' ? 'underline' : ''}`}>O nas</Link>
           </li>
           <li>
-            <a href="/oferta" className="block hover:text-slate-600">Oferta</a>
+            <Link to="/oferta" className={`block hover:text-slate-600 ${location.pathname === '/oferta' ? 'underline' : ''}`}>Oferta</Link>
           </li>
           <li>
-            <a href="/nasza-kadra" className="block hover:text-slate-600">Nasza kadra</a>
+            <Link to="/nasza-kadra" className={`block hover:text-slate-600 ${location.pathname === '/nasza-kadra' ? 'underline' : ''}`}>Nasza kadra</Link>
           </li>
           <li>
-            <a href="/galeria" className="block hover:text-slate-600">Galeria</a>
+            <Link to="/galeria" className={`block hover:text-slate-600 ${location.pathname === '/galeria' ? 'underline' : ''}`}>Galeria</Link>
           </li>
           <li>
-            <a href="/rekrutacja" className="block hover:text-slate-600">Rekrutacja</a>
+            <Link to="/rekrutacja" className={`block hover:text-slate-600 ${location.pathname === '/rekrutacja' ? 'underline' : ''}`}>Rekrutacja</Link>
           </li>
           <li>
             <a className="block rounded-full border px-6 py-3 text-center hover:bg-slate-50" href="#footer">
