@@ -5,6 +5,11 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
+  // Add this function to handle link clicks
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav className="sticky top-0 z-50 bg-white p-4">
       <div className="flex h-12 items-center justify-between lg:h-20 2xl:text-xl">
@@ -42,7 +47,7 @@ export default function Navbar() {
               <Link to="/o-nas" className={`hover:text-slate-600 ${location.pathname === '/o-nas' ? 'underline' : ''}`}>O nas</Link>
             </li>
             <li>
-              <Link to="/oferta" className={`hover:text-slate-600 ${location.pathname === '/oferta' ? 'underline' : ''}`}>Oferta</Link>
+              <Link to="/oferta" className={`hover:text-slate-600 ${location.pathname.startsWith('/oferta') ? 'underline' : ''}`}>Oferta</Link>
             </li>
             <li>
               <Link to="/nasza-kadra" className={`hover:text-slate-600 ${location.pathname === '/nasza-kadra' ? 'underline' : ''}`}>Nasza kadra</Link>
@@ -53,8 +58,9 @@ export default function Navbar() {
           </ul>
 
           <ul className="flex space-x-6 lg:absolute lg:right-4">
+
             <li>
-              <a href="/rekrutacja" className="hover:text-slate-600">Rekrutacja</a>
+              <Link to="/rekrutacja" className={`hover:text-slate-600 ${location.pathname.startsWith('/rekrutacja') ? 'underline' : ''}`}>Rekrutacja</Link>
             </li>
             <li>
               <a className="rounded-full border px-6 py-3 hover:bg-slate-50" href="#footer">
@@ -69,22 +75,22 @@ export default function Navbar() {
       <div className={`${isMenuOpen ? 'block' : 'hidden'} lg:hidden`}>
         <ul className="space-y-4 pt-4 pb-3">
           <li>
-            <Link to="/o-nas" className={`block hover:text-slate-600 ${location.pathname === '/o-nas' ? 'underline' : ''}`}>O nas</Link>
+            <Link onClick={handleLinkClick} to="/o-nas" className={`block hover:text-slate-600 ${location.pathname === '/o-nas' ? 'underline' : ''}`}>O nas</Link>
           </li>
           <li>
-            <Link to="/oferta" className={`block hover:text-slate-600 ${location.pathname === '/oferta' ? 'underline' : ''}`}>Oferta</Link>
+            <Link onClick={handleLinkClick} to="/oferta" className={`block hover:text-slate-600 ${location.pathname.startsWith('/oferta') ? 'underline' : ''}`}>Oferta</Link>
           </li>
           <li>
-            <Link to="/nasza-kadra" className={`block hover:text-slate-600 ${location.pathname === '/nasza-kadra' ? 'underline' : ''}`}>Nasza kadra</Link>
+            <Link onClick={handleLinkClick} to="/nasza-kadra" className={`block hover:text-slate-600 ${location.pathname === '/nasza-kadra' ? 'underline' : ''}`}>Nasza kadra</Link>
           </li>
           <li>
-            <Link to="/galeria" className={`block hover:text-slate-600 ${location.pathname === '/galeria' ? 'underline' : ''}`}>Galeria</Link>
+            <Link onClick={handleLinkClick} to="/galeria" className={`block hover:text-slate-600 ${location.pathname === '/galeria' ? 'underline' : ''}`}>Galeria</Link>
           </li>
           <li>
-            <Link to="/rekrutacja" className={`block hover:text-slate-600 ${location.pathname === '/rekrutacja' ? 'underline' : ''}`}>Rekrutacja</Link>
+            <Link onClick={handleLinkClick} to="/rekrutacja" className={`block hover:text-slate-600 ${location.pathname.startsWith('/rekrutacja') ? 'underline' : ''}`}>Rekrutacja</Link>
           </li>
           <li>
-            <a className="block rounded-full border px-6 py-3 text-center hover:bg-slate-50" href="#footer">
+            <a onClick={handleLinkClick} className="block rounded-full border px-6 py-3 text-center hover:bg-slate-50" href="#footer">
               Napisz do nas
             </a>
           </li>
