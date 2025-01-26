@@ -27,19 +27,28 @@ export default function AboutUs() {
                         </div>
                     </div>
 
-                    <div className="bg-slate-100 rounded-3xl p-8 flex flex-col gap-4 xl:p-16">
-                        <h4 className="text-2xl font-display text-slate-900 xl:text-4xl ">Wyjątkowa kadra</h4>
-                        <P
-                            className="text-left"
-                            html="Tworzymy zgrany, profesjonalny zespół, który stawia na wzajemny szacunek i budowanie silnych relacji z dziećmi. Stosujemy nowoczesne metody pracy pedagogicznej, dostosowane do wieku i potrzeb dzieci, co pozwala na indywidualne podejście do każdego przedszkolaka." />
+
+                    <div className="bg-slate-100 rounded-3xl p-8 flex-col gap-4 xl:col-span-2 grid grid-cols-2">
+                        <img src="/images/o-nas/o-nas-wyjatkowa-kadra.jpg" alt="Wyjątkowa kadra" className="w-full h-auto rounded-lg col-span-2 xl:col-span-1 order-1 xl:order-2" />
+
+                        <div className="flex flex-col gap-4 col-span-2 xl:col-span-1  order-2 xl:order-1 xl:p-8">
+                            <h4 className="text-2xl xl:text-4xl font-display text-slate-900">Wyjątkowa kadra</h4>
+                            <P
+                                className="text-left"
+                                html="Tworzymy zgrany, profesjonalny zespół, który stawia na wzajemny szacunek i budowanie silnych relacji z dziećmi. Stosujemy nowoczesne metody pracy pedagogicznej, dostosowane do wieku i potrzeb dzieci, co pozwala na indywidualne podejście do każdego przedszkolaka." />
+                        </div>
                     </div>
 
-                    <div className="bg-slate-100 rounded-3xl p-8 flex flex-col gap-4 xl:p-16">
-                        <h4 className="text-2xl font-display text-slate-900 xl:text-4xl">Unikalne podejście do dzieci</h4>
-                        <P
-                            className="text-left"
-                            html="Naszym priorytetem jest, by dzieci czuły się u nas szczęśliwe, bezpieczne i kochane. Każde dziecko traktujemy indywidualnie, dbając o komunikację opartą na szacunku, zrozumieniu i życzliwości. Wspieramy rozwój samodzielności i niezależności, zachęcając dzieci do podejmowania codziennych aktywności." />
+                    <div className="bg-slate-100 rounded-3xl p-8 flex-col gap-4 xl:col-span-2 grid grid-cols-2">
+                        <img src="/images/o-nas/o-nas-unikalne-podejscie-do-dzieci.jpg" alt="Unikalne podejście do dzieci" className="w-full h-auto rounded-lg col-span-2 xl:col-span-1" />
+                        <div className="flex flex-col gap-4 col-span-2 xl:col-span-1 xl:p-8">
+                            <h4 className="text-2xl xl:text-4xl font-display text-slate-900">Unikalne podejście do dzieci</h4>
+                            <P
+                                className="text-left"
+                                html="Naszym priorytetem jest, by dzieci czuły się u nas szczęśliwe, bezpieczne i kochane. Każde dziecko traktujemy indywidualnie, dbając o komunikację opartą na szacunku, zrozumieniu i życzliwości. Wspieramy rozwój samodzielności i niezależności, zachęcając dzieci do podejmowania codziennych aktywności." />
+                        </div>
                     </div>
+
 
                     <div className="bg-slate-100 rounded-3xl p-8 flex-col gap-4 xl:col-span-2 grid grid-cols-2">
                         <img src="/images/o-nas/o-nas-bogata-oferta.jpg" alt="Bogata oferta zajęć" className="w-full h-auto rounded-lg col-span-2 xl:col-span-1 order-1 xl:order-2" />
@@ -85,30 +94,39 @@ export default function AboutUs() {
                         </div>
                     </div>
 
-                    <div className="bg-green-50 rounded-3xl p-8 flex flex-col gap-4 xl:p-16">
-                        <h4 className="text-2xl font-display text-slate-900 xl:text-4xl ">Ekologiczne rozwiązania technologiczne</h4>
-                        <P
-                            className="text-left"
-                            html="Dbamy o jakość powietrza w pomieszczeniach przedszkolnych, stosując oczyszczacze powietrza. Stosujemy również odnawialne źródła energii, by zmniejszyć nasz wpływ na środowisko naturalne i przekazać dzieciom wartości związane z odpowiedzialnym korzystaniem z zasobów naszej planety." />
-                    </div>
 
-                    <div className="bg-green-50 rounded-3xl p-8 flex flex-col gap-4 xl:p-16">
-                        <h4 className="text-2xl font-display text-slate-900 xl:text-4xl">Ogród sensoryczny</h4>
-                        <P
-                            className="text-left"
-                            html="Nasza przestrzeń ogrodu sensoryczno-edukacyjnego to miejsce, w którym dzieci mogą bawić się, relaksować i odkrywać świat przyrody wszystkimi zmysłami. Ogród ten został zaprojektowany w taki sposób, by umożliwić dzieciom interakcję z naturą przez cały rok, stymulując ich rozwój poprzez różnorodne doświadczenia sensoryczne." />
+                    <div className="bg-green-50 rounded-3xl p-8 flex-col gap-4 xl:col-span-2 grid grid-cols-2">
+                        <img src="/images/o-nas/o-nas-ekologiczne-rozwiazania.jpg" alt="Ekologiczne rozwiązania technologiczne" className="w-full h-auto rounded-lg col-span-2 xl:col-span-1" />
+                        <div className="flex flex-col gap-4 col-span-2 xl:col-span-1 xl:p-8">
+                            <h4 className="text-2xl xl:text-4xl font-display text-slate-900">Ekologiczne rozwiązania technologiczne</h4>
+                            <P
+                                className="text-left"
+                                html="Dbamy o to, by nasze przedszkolaki każdego dnia spędzały czas na świeżym powietrzu. Korzystamy z urokliwego ogrodu przedszkolnego pełnego zieleni i aktywnie bawimy się na placu zabaw. Regularnie wychodzimy na spacery po okolicy, z dala od zgiełku miasta, gdzie dzieci mają okazję do obserwacji przyrody i poznawania jej w naturalnym środowisku." />
+                        </div>
                     </div>
 
                     <div className="bg-green-50 rounded-3xl p-8 flex-col gap-4 xl:col-span-2 grid grid-cols-2">
-                        <img src="/images/o-nas/o-nas-bogata-oferta.jpg" alt="Bogata oferta zajęć" className="w-full h-auto rounded-lg col-span-2 xl:col-span-1 order-1 xl:order-2" />
+                        <img src="/images/o-nas/o-nas-ogrod-sensoryczny.jpg" alt="Ogród sensoryczny" className="w-full h-auto rounded-lg col-span-2 xl:col-span-1 order-1 xl:order-2" />
 
                         <div className="flex flex-col gap-4 col-span-2 xl:col-span-1  order-2 xl:order-1 xl:p-8">
+                            <h4 className="text-2xl xl:text-4xl font-display text-slate-900">Ogród sensoryczny</h4>
+                            <P
+                                className="text-left"
+                                html="Nasza przestrzeń ogrodu sensoryczno-edukacyjnego to miejsce, w którym dzieci mogą bawić się, relaksować i odkrywać świat przyrody wszystkimi zmysłami. Ogród ten został zaprojektowany w taki sposób, by umożliwić dzieciom interakcję z naturą przez cały rok, stymulując ich rozwój poprzez różnorodne doświadczenia sensoryczne." />
+                        </div>
+                    </div>
+
+                    <div className="bg-green-50 rounded-3xl p-8 flex-col gap-4 xl:col-span-2 grid grid-cols-2">
+                        <img src="/images/o-nas/o-nas-uprawa-wlasnego-ogrodka.jpg" alt="Uprawa własnego ogródka" className="w-full h-auto rounded-lg col-span-2 xl:col-span-1" />
+                        <div className="flex flex-col gap-4 col-span-2 xl:col-span-1 xl:p-8">
                             <h4 className="text-2xl xl:text-4xl font-display text-slate-900">Uprawa własnego ogródka</h4>
                             <P
                                 className="text-left"
                                 html="Od najmłodszych lat uczymy dzieci, jak dbać o rośliny. Samodzielnie tworzymy i pielęgnujemy własne grządki, a radość zebranych plonów to dla nas wspólna nagroda. Obserwujemy, jak rośliny rosną, rozwijają się i zmieniają, a przy tym uczymy się odpowiedzialności za ich pielęgnację." />
                         </div>
                     </div>
+
+
                 </section>
             </section>
         </section>

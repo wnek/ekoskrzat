@@ -6,13 +6,13 @@ export default function NaszaKadra() {
     return (
         <section className="flex flex-col gap-16">
 
-            <section className="p-4 xl:px-32 flex flex-col gap-8">
+            <section className="p-4 xl:px-32 flex flex-col gap-16">
 
                 <div className="flex flex-col gap-4 items-center">
 
                     <H1 html="Nasza Kadra" />
                     <P
-                        className="w-[10rem]"
+                        className="w-[40rem]"
                         html="W naszym przedszkolu pracuje zespół wykwalifikowanych specjalistów, których pasja i zaangażowanie w edukację sprawiają, że dzieci mogą rozwijać się w bezpiecznej, pełnej radości i wsparcia atmosferze." />
                 </div>
 
