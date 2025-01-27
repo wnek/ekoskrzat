@@ -40,19 +40,18 @@ export default function NaszaKadra() {
                         html="W naszym przedszkolu pracuje zespół wykwalifikowanych specjalistów, których pasja i zaangażowanie w edukację sprawiają, że dzieci mogą rozwijać się w bezpiecznej, pełnej radości i wsparcia atmosferze." />
                 </div>
 
-                <section className="grid xl:grid-cols-4 md:grid-cols-2 gap-4">
-
+                <section className="grid gap-4 xl:grid-cols-2">
 
                     {staffData.data.map((staff: any) => (
-                        <div key={staff.id} className="bg-slate-100 rounded-3xl p-8 flex-col gap-4 xl:col-span-2 grid grid-cols-2">
+                        <div key={staff.id} className="bg-slate-100 rounded-3xl p-8 gap-4 grid md:grid-cols-5 grid-cols-1 xl:grid-cols-1 2xl:grid-cols-6 ">
                             {staff.image?.url && (
                                 <img
                                     src={`https://api.ekoskrzat.edu.pl${staff.image.url}`}
                                     alt={staff.name}
-                                    className="w-full h-auto rounded-lg col-span-2 xl:col-span-1"
+                                    className="w-full h-auto rounded-lg col-span-2 2xl:col-span-2"
                                 />
                             )}
-                            <div className={`flex flex-col gap-4 col-span-2 xl:${staff.image?.url ? 'col-span-1' : 'col-span-2'} xl:p-8`}>
+                            <div className={`flex flex-col gap-4 col-span-2 md:col-span-3 2xl:col-span-4 xl:${staff.image?.url ? 'col-span-1' : 'col-span-2'} xl:p-8`}>
                                 <h4 className="text-2xl xl:text-4xl font-display text-slate-900">
                                     {staff.name}
                                 </h4>
