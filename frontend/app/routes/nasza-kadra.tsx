@@ -47,7 +47,7 @@ export default function NaszaKadra() {
                         <div key={staff.id} className="bg-slate-100 rounded-3xl p-8 flex-col gap-4 xl:col-span-2 grid grid-cols-2">
                             {staff.image?.url && (
                                 <img
-                                    src={`http://localhost:1337${staff.image.url}`}
+                                    src={`https://api.ekoskrzat.edu.pl${staff.image.url}`}
                                     alt={staff.name}
                                     className="w-full h-auto rounded-lg col-span-2 xl:col-span-1"
                                 />
