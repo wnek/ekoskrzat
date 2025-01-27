@@ -101,7 +101,7 @@ export default function AboutUs() {
                             <h4 className="text-2xl xl:text-4xl font-display text-slate-900 xl:text-center">Ekologiczne rozwiązania technologiczne</h4>
                             <P
                                 className="text-left xl:text-center"
-                                html="Dbamy o to, by nasze przedszkolaki każdego dnia spędzały czas na świeżym powietrzu. Korzystamy z urokliwego ogrodu przedszkolnego pełnego zieleni i aktywnie bawimy się na placu zabaw. Regularnie wychodzimy na spacery po okolicy, z dala od zgiełku miasta, gdzie dzieci mają okazję do obserwacji przyrody i poznawania jej w naturalnym środowisku." />
+                                html="Dbamy o jakość powietrza w pomieszczeniach przedszkolnych, stosując oczyszczacze powietrza. Stosujemy również odnawialne źródła energii, by zmniejszyć nasz wpływ na środowisko naturalne i przekazać dzieciom wartości związane z odpowiedzialnym korzystaniem z zasobów naszej planety." />
                         </div>
                     </div>
 
