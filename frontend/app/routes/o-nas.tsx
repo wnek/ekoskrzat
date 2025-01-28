@@ -45,7 +45,7 @@ export default function AboutUs() {
                     {data.firstSectionItems.map((item, index) => (
                         <div key={item.id} className="bg-slate-100 rounded-3xl p-8 flex-col gap-4 xl:col-span-2 grid grid-cols-2">
                             <img
-                                src={'http://localhost:1337' + item.image.url}
+                                src={'https://api.ekoskrzat.edu.pl' + item.image.url}
                                 alt={item.title}
                                 className={`w-full h-auto rounded-lg col-span-2 xl:col-span-1 ${index % 2 !== 0 ? 'order-1 xl:order-2' : ''}`}
                             />
@@ -76,7 +76,7 @@ export default function AboutUs() {
                     {data.secondSectionItems.map((item, index) => (
                         <div key={item.id} className="bg-green-50 rounded-3xl p-8 flex-col gap-4 xl:col-span-2 grid grid-cols-2">
                             <img
-                                src={'http://localhost:1337' + item.image.url}
+                                src={'https://api.ekoskrzat.edu.pl' + item.image.url}
                                 alt={item.title}
                                 className={`w-full h-auto rounded-lg col-span-2 xl:col-span-1 ${index % 2 !== 0 ? 'order-1 xl:order-2' : ''}`}
                             />
