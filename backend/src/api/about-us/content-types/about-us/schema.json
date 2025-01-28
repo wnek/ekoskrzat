@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_uses",
+  "info": {
+    "singularName": "about-us",
+    "pluralName": "about-uses",
+    "displayName": "About Us",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstSectionTitle": {
+      "type": "string"
+    },
+    "firstSectionItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "aboutus.one-item"
+    },
+    "secondSectionTitle": {
+      "type": "string"
+    },
+    "secondSectionItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "aboutus.one-item"
+    }
+  }
+}

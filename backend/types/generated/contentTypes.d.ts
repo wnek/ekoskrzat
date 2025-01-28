@@ -485,6 +485,37 @@ export interface PluginUsersPermissionsUser
   };
 }
 
+export interface ApiAboutUsAboutUs extends Struct.SingleTypeSchema {
+  collectionName: 'about_uses';
+  info: {
+    singularName: 'about-us';
+    pluralName: 'about-uses';
+    displayName: 'About Us';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    firstSectionTitle: Schema.Attribute.String;
+    firstSectionItems: Schema.Attribute.Component<'aboutus.one-item', true>;
+    secondSectionTitle: Schema.Attribute.String;
+    secondSectionItems: Schema.Attribute.Component<'aboutus.one-item', true>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::about-us.about-us'
+    >;
+  };
+}
+
 export interface ApiGalleryGallery extends Struct.SingleTypeSchema {
   collectionName: 'galleries';
   info: {
@@ -1038,6 +1069,7 @@ declare module '@strapi/strapi' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::about-us.about-us': ApiAboutUsAboutUs;
       'api::gallery.gallery': ApiGalleryGallery;
       'api::homepage.homepage': ApiHomepageHomepage;
       'api::offer.offer': ApiOfferOffer;

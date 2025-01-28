@@ -117,6 +117,19 @@ export interface HomepageAboutUs extends Struct.ComponentSchema {
   };
 }
 
+export interface AboutusOneItem extends Struct.ComponentSchema {
+  collectionName: 'components_aboutus_one_items';
+  info: {
+    displayName: 'OneItem';
+    description: '';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -129,6 +142,7 @@ declare module '@strapi/strapi' {
       'homepage.hero': HomepageHero;
       'homepage.first-feature': HomepageFirstFeature;
       'homepage.about-us': HomepageAboutUs;
+      'aboutus.one-item': AboutusOneItem;
     }
   }
 }
