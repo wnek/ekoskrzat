@@ -29,6 +29,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow"></meta>
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="apple-touch-icon"
@@ -78,7 +79,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
         />
         <meta
           name="twitter:description"
-          content="Prywatne przedszkole na terenie dzielnicy Bieżanów - Prokocim. Miejsce w którym dzieci mogą czuć się w pełni szczęśliwe, spokojne i bezpieczne. Poprzez kontakt z przyrodą, poznają najważniejsze wartości."
+          content="Prywatne przedszkole na terenie dzielnicy Bieżanów - Prokocim. Miejsce w którym dzieci mogą czuć
+się w pełni szczęśliwe, spokojne i bezpieczne."
         />
         <meta name="twitter:image" content="/og-image.jpg" />
 
