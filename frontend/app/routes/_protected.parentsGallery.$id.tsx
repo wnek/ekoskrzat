@@ -32,7 +32,7 @@ export default function Gallery() {
 
 
     const photos = gallery.data.images.map((image: any) => ({
-        src: `https://api.ekoskrzat.edu.pl/${image.formats?.large?.url}`,
+        src: `https://api.ekoskrzat.edu.pl${image.formats?.large?.url}`,
         width: image.formats?.large?.width,
         height: image.formats?.large?.height
     }));
