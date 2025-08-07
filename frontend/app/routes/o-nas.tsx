@@ -1,9 +1,24 @@
 import type { LoaderFunctionArgs } from "@remix-run/node";
-import { json, useLoaderData } from "@remix-run/react";
+import { json, MetaFunction, useLoaderData } from "@remix-run/react";
 import qs from "qs";
-import { H1, H3, P } from "~/components/global/ui/Typography";
+import { H1, H2, H3, P } from "~/components/global/ui/Typography";
 
-
+export const meta: MetaFunction = () => {
+    return [
+        {
+            name: "title",
+            content: "O nas",
+        },
+        {
+            name: "description",
+            content: "Prywatne przedszkole na terenie dzielnicy Bieżanów - Prokocim. Miejsce w którym dzieci mogą czuć się w pełni szczęśliwe, spokojne i bezpieczne. Poprzez kontakt z przyrodą, poznają najważniejsze wartości.",
+        },
+        {
+            name: "robots",
+            content: "index, follow",
+        },
+    ];
+};
 const query = qs.stringify({
     populate: {
         firstSectionItems: {
@@ -69,7 +84,7 @@ export default function AboutUs() {
                     <h3 className="w-fit rounded-full border border-slate-300 px-4 py-2 text-blue-600 ">
                         O nas
                     </h3>
-                    <H1 html={data.secondSectionTitle} />
+                    <H2 html={data.secondSectionTitle} />
                 </div>
 
                 <section className="grid xl:grid-cols-2 gap-4">

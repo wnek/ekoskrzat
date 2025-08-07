@@ -15,6 +15,26 @@ import Testimonials from "~/components/homepage/Testimonials";
 import Join from "~/components/homepage/Join";
 
 
+
+export const meta: MetaFunction = () => {
+  return [
+    {
+      title:
+        "Przedszkole Bieżanów - Prokocim - Ekologiczne Przedszkole Ekoskrzat",
+    },
+    {
+      name: "description",
+      content:
+        "Prywatne przedszkole na terenie dzielnicy Bieżanów - Prokocim. Miejsce w którym dzieci mogą czuć się w pełni szczęśliwe, spokojne i bezpieczne. Poprzez kontakt z przyrodą, poznają najważniejsze wartości.",
+    },
+    {
+      name: "robots",
+      content: "index, follow",
+    },
+  ];
+};
+
+
 interface HomepageData {
   data: {
     hero: object
@@ -69,19 +89,7 @@ export const loader: LoaderFunction = async () => {
 
 }
 
-export const meta: MetaFunction = () => {
-  return [
-    {
-      title:
-        "Przedszkole Bieżanów - Prokocim - Ekologiczne Przedszkole Ekoskrzat",
-    },
-    {
-      name: "description",
-      content:
-        "Prywatne przedszkole na terenie dzielnicy Bieżanów - Prokocim. Miejsce w którym dzieci mogą czuć się w pełni szczęśliwe, spokojne i bezpieczne. Poprzez kontakt z przyrodą, poznają najważniejsze wartości.",
-    },
-  ];
-};
+
 
 export function ErrorBoundary() {
   return (

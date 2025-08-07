@@ -14,7 +14,7 @@ export function H1({ html, color = 'dark', className }: { html: string, color?: 
 
 export function H2({ html, color = 'dark', className }: { html: string, color?: 'dark' | 'white', className?: string }) {
     return (
-        <h2 className={cn("font-display ~text-[1.8rem]/[3rem] ~leading-[2rem]/[3.5rem] text-slate-800",
+        <h2 className={cn("font-display ~text-[1.8rem]/[3.8rem] ~leading-[2rem]/[4.7rem] text-slate-800",
             { 'text-white': color === 'white' },
             className)}
             dangerouslySetInnerHTML={{ __html: html }}

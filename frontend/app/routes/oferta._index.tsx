@@ -1,9 +1,27 @@
 import { json, LoaderFunction } from "@remix-run/node";
-import { useLoaderData, Link } from "@remix-run/react";
+import { useLoaderData, Link, MetaFunction } from "@remix-run/react";
 import { BlocksRenderer } from '@strapi/blocks-react-renderer';
 import qs from "qs";
 
 import { H1, H2 } from "~/components/global/ui/Typography";
+
+
+export const meta: MetaFunction = () => {
+    return [
+        {
+            name: "title",
+            content: "Oferta",
+        },
+        {
+            name: "description",
+            content: "Prywatne przedszkole na terenie dzielnicy Bieżanów - Prokocim. Miejsce w którym dzieci mogą czuć się w pełni szczęśliwe, spokojne i bezpieczne. Poprzez kontakt z przyrodą, poznają najważniejsze wartości.",
+        },
+        {
+            name: "robots",
+            content: "index, follow",
+        },
+    ];
+};
 
 const query = qs.stringify({
     populate: "*",

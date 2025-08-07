@@ -1,6 +1,16 @@
 import { ActionFunction, json } from "@remix-run/node";
-import { Form, useActionData } from "@remix-run/react";
+import { Form, useActionData, MetaFunction } from "@remix-run/react";
 import { createUserSession } from "~/lib/utils/auth.servers";
+
+export const meta: MetaFunction = () => {
+    return [
+        {
+            name: "robots",
+            content: "index, no-follow",
+        },
+    ];
+};
+
 
 export const action: ActionFunction = async ({ request }) => {
     const formData = await request.formData();

@@ -1,4 +1,18 @@
 import { Form, redirect, json } from "@remix-run/react";
+import type { MetaFunction } from "@remix-run/node";
+
+export const meta: MetaFunction = () => {
+  return [
+    {
+      name: "description",
+      content: "Serdecznie zapraszamy do dokonywania zapisów dziecka do przedszkola za pośrednictwem formularza.",
+    },
+    {
+      name: "robots",
+      content: "index, follow",
+    },
+  ];
+};
 
 export async function action({ request }: { request: Request }) {
   const formData = await request.formData();

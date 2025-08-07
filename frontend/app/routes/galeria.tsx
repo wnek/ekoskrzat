@@ -1,4 +1,5 @@
 import { json, LoaderFunction } from "@remix-run/node";
+import type { MetaFunction } from "@remix-run/node";
 import { useLoaderData, Link } from "@remix-run/react";
 import React from "react";
 import { MasonryPhotoAlbum } from "react-photo-album";
@@ -12,6 +13,23 @@ import "yet-another-react-lightbox/styles.css";
 import qs from "qs";
 import { H1 } from "~/components/global/ui/Typography";
 
+
+export const meta: MetaFunction = () => {
+    return [
+        {
+            name: "title",
+            content: "Galeria",
+        },
+        {
+            name: "description",
+            content: "Prywatne przedszkole na terenie dzielnicy Bieżanów - Prokocim. Miejsce w którym dzieci mogą czuć się w pełni szczęśliwe, spokojne i bezpieczne. Poprzez kontakt z przyrodą, poznają najważniejsze wartości.",
+        },
+        {
+            name: "robots",
+            content: "index, follow",
+        },
+    ];
+};
 
 export const loader: LoaderFunction = async ({ params }) => {
     const query = qs.stringify({
@@ -28,7 +46,7 @@ export const loader: LoaderFunction = async ({ params }) => {
 
 export default function Gallery() {
     const [index, setIndex] = React.useState(-1);
-    const gallery = useLoaderData();
+    const gallery = useLoaderData<typeof loader>();
 
     console.log(gallery.data.images[0].formats.large.url);
 

@@ -1,3 +1,14 @@
+import { MetaFunction } from "@remix-run/react";
+
+export const meta: MetaFunction = () => {
+  return [
+    {
+      name: "robots",
+      content: "index, no-follow",
+    },
+  ];
+};
+
 export default function Rodo() {
   return (
     <section className="m-auto grid grid-cols-1 gap-12 px-6 py-16 lg:flex-row lg:justify-center xl:w-3/5 xl:grid-cols-2 xl:gap-32 xl:py-32">

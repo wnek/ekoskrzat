@@ -1,8 +1,25 @@
 import { H1, H3, P } from "~/components/global/ui/Typography";
-import { useLoaderData, Link, Outlet, useLocation } from "@remix-run/react";
+import { useLoaderData, Link, Outlet, useLocation, MetaFunction } from "@remix-run/react";
 import qs from "qs";
 import { json, type LoaderFunctionArgs } from "@remix-run/node";
 
+
+export const meta: MetaFunction = () => {
+    return [
+        {
+            name: "title",
+            content: "Nasza Kadra",
+        },
+        {
+            name: "description",
+            content: "Prywatne przedszkole na terenie dzielnicy Bieżanów - Prokocim. Miejsce w którym dzieci mogą czuć się w pełni szczęśliwe, spokojne i bezpieczne. Poprzez kontakt z przyrodą, poznają najważniejsze wartości.",
+        },
+        {
+            name: "robots",
+            content: "index, follow",
+        },
+    ];
+};
 
 const query = qs.stringify({
     populate: "*",
