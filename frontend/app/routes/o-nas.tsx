@@ -2,6 +2,7 @@ import type { LoaderFunctionArgs } from "@remix-run/node";
 import { json, MetaFunction, useLoaderData } from "@remix-run/react";
 import qs from "qs";
 import { H1, H2, H3, P } from "~/components/global/ui/Typography";
+import ResponsiveImage from "~/components/global/ui/ResponsiveImage";
 
 export const meta: MetaFunction = () => {
     return [
@@ -32,7 +33,7 @@ const query = qs.stringify({
 });
 
 export async function loader({ request }: LoaderFunctionArgs) {
-    const response = await fetch("http://localhost:1337/api/about-us?" + query);
+    const response = await fetch("https://api.ekoskrzat.edu.pl/api/about-us?" + query);
     const aboutUsData = await response.json();
     return json(aboutUsData);
 }
@@ -40,7 +41,7 @@ export async function loader({ request }: LoaderFunctionArgs) {
 
 
 export default function AboutUs() {
-    const { data } = useLoaderData<typeof loader>();
+    const { data } = useLoaderData<any>();
 
     console.log(data);
     console.log(data.firstSectionTitle);
@@ -57,12 +58,15 @@ export default function AboutUs() {
                 </div>
 
                 <section className="grid xl:grid-cols-2 gap-4">
-                    {data.firstSectionItems.map((item, index) => (
+                    {data.firstSectionItems.map((item: any, index: number) => (
                         <div key={item.id} className="bg-slate-100 rounded-3xl p-8 flex-col gap-4 xl:col-span-2 grid grid-cols-2">
-                            <img
-                                src={'https://api.ekoskrzat.edu.pl' + item.image.url}
+                            <ResponsiveImage
+                                baseUrl="https://api.ekoskrzat.edu.pl"
+                                image={item.image}
                                 alt={item.title}
-                                className={`w-full h-auto rounded-lg col-span-2 xl:col-span-1 ${index % 2 !== 0 ? 'order-1 xl:order-2' : ''}`}
+                                className={`w-full h-auto rounded-lg col-span-2 xl:col-span-1 object-cover ${index % 2 !== 0 ? 'order-1 xl:order-2' : ''}`}
+                                sizes="(min-width: 1280px) 50vw, 100vw"
+                                fallbackSrc={item.image?.url ? `https://api.ekoskrzat.edu.pl${item.image.url}` : undefined}
                             />
                             <div className={`flex flex-col gap-4 col-span-2 xl:col-span-1 xl:p-16 xl:justify-center ${index % 2 !== 0 ? 'order-2 xl:order-1' : ''}`}>
                                 <h4 className="text-2xl xl:text-4xl font-display text-slate-900 xl:text-center">
@@ -88,12 +92,15 @@ export default function AboutUs() {
                 </div>
 
                 <section className="grid xl:grid-cols-2 gap-4">
-                    {data.secondSectionItems.map((item, index) => (
+                    {data.secondSectionItems.map((item: any, index: number) => (
                         <div key={item.id} className="bg-green-50 rounded-3xl p-8 flex-col gap-4 xl:col-span-2 grid grid-cols-2">
-                            <img
-                                src={'https://api.ekoskrzat.edu.pl' + item.image.url}
+                            <ResponsiveImage
+                                baseUrl="https://api.ekoskrzat.edu.pl"
+                                image={item.image}
                                 alt={item.title}
-                                className={`w-full h-auto rounded-lg col-span-2 xl:col-span-1 ${index % 2 !== 0 ? 'order-1 xl:order-2' : ''}`}
+                                className={`w-full h-auto rounded-lg col-span-2 xl:col-span-1 object-cover ${index % 2 !== 0 ? 'order-1 xl:order-2' : ''}`}
+                                sizes="(min-width: 1280px) 50vw, 100vw"
+                                fallbackSrc={item.image?.url ? `https://api.ekoskrzat.edu.pl${item.image.url}` : undefined}
                             />
                             <div className={`flex flex-col gap-4 col-span-2 xl:col-span-1 xl:p-8 xl:justify-center ${index % 2 !== 0 ? 'order-2 xl:order-1' : ''}`}>
                                 <h4 className="text-2xl xl:text-4xl font-display text-slate-900 xl:text-center">
