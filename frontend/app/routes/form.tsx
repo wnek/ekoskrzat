@@ -217,9 +217,10 @@ export default function SubmitForm() {
                 />
               </label>
               <button
-                className="flex cursor-pointer items-center justify-between gap-6 rounded-full bg-green-500 py-2 pl-6 pr-2 text-white 2xl:text-xl hover:bg-green-600"
+                className="flex cursor-pointer items-center justify-between gap-6 rounded-full bg-green-600 py-2 pl-6 pr-2 text-white 2xl:text-xl hover:bg-green-800"
                 type="submit"
               >
+
                 Wyślij
                 <div className="flex h-8 w-8 rounded-full bg-white p-2">
                   <img src="images/arrow.svg" alt="Strzałka" />
