@@ -42,7 +42,7 @@ export default function ParentsGallery() {
                             className="rounded-md aspect-square object-cover w-full h-auto"
                             baseUrl="https://api.ekoskrzat.edu.pl"
                             image={gallery.images?.[0]}
-                            sizes="(min-width: 1280px) 16.66vw, (min-width: 1024px) 33.33vw, (min-width: 768px) 50vw, 100vw"
+                            sizes="(min-width: 1536px) 16.66vw, (min-width: 1280px) 16.66vw, (min-width: 1024px) 33.33vw, (min-width: 768px) 50vw, 100vw"
                         />
                         <div className="flex flex-col gap-1 px-2 py-3">
                             <h4 className="text-left text-xl">{gallery.title}</h4>

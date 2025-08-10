@@ -9,7 +9,7 @@ export default function FirstFeature({ data }: { data: any }) {
           baseUrl="https://api.ekoskrzat.edu.pl"
           image={data.image}
           className="h-full w-full object-cover"
-          sizes="(min-width: 1024px) calc(100vw - 3rem), 100vw"
+          sizes="(min-width: 1280px) calc(100vw - 3rem), (min-width: 1024px) calc(100vw - 3rem), 100vw"
           alt=""
           loading="eager"
           decoding="async"

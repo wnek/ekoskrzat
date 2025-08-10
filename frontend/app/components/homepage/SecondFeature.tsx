@@ -13,7 +13,7 @@ export default function SecondFeature({ data }: { data: any }) {
         <ResponsiveImage
           image={{ url: "/images/feature-2.jpg" }}
           className="h-full w-full object-cover"
-          sizes="(min-width: 1024px) calc(100vw - 3rem), 100vw"
+          sizes="(min-width: 1536px) calc(100vw - 3rem), (min-width: 1280px) calc(100vw - 3rem), (min-width: 1024px) calc(100vw - 3rem), 100vw"
           alt=""
         />
       </div>

@@ -8,7 +8,7 @@ export default function Join() {
         <ResponsiveImage
           image={{ url: "/images/join.jpg" }}
           className="h-full w-full object-cover"
-          sizes="(min-width: 1024px) 50vw, 100vw"
+          sizes="(min-width: 1280px) 50vw, (min-width: 1024px) 50vw, 100vw"
           alt=""
         />
       </div>

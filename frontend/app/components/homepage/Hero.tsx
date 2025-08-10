@@ -69,7 +69,7 @@ export default function Hero({ data }: { data: any }) {
               baseUrl="https://api.ekoskrzat.edu.pl"
               image={data.image1}
               className="h-full w-full object-cover"
-              sizes="100vw"
+              sizes="(min-width: 1024px) 50vw, 100vw"
               alt="Hero 1"
               loading="eager"
             />
@@ -80,7 +80,7 @@ export default function Hero({ data }: { data: any }) {
               baseUrl="https://api.ekoskrzat.edu.pl"
               image={data.image2}
               className="h-full w-full object-cover"
-              sizes="100vw"
+              sizes="(min-width: 1024px) 50vw, 100vw"
               alt="Hero 2"
               loading="eager"
             />
@@ -91,7 +91,7 @@ export default function Hero({ data }: { data: any }) {
               baseUrl="https://api.ekoskrzat.edu.pl"
               image={data.image3}
               className="h-full w-full object-cover"
-              sizes="100vw"
+              sizes="(min-width: 1024px) 50vw, 100vw"
               alt="Hero 3"
               loading="eager"
             />

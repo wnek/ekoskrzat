@@ -25,7 +25,7 @@ export default function ThirdFeature({ data }: { data: ThirdFeatureData }) {
         <ResponsiveImage
           image={{ url: "/images/feature-3.jpg" }}
           className="h-full w-full object-cover"
-          sizes="(min-width: 1024px) calc(100vw - 3rem), 100vw"
+          sizes="(min-width: 1536px) calc(100vw - 3rem), (min-width: 1280px) calc(100vw - 3rem), (min-width: 1024px) calc(100vw - 3rem), 100vw"
           alt=""
         />
       </div>

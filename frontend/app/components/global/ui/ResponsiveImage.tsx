@@ -4,6 +4,7 @@ type StrapiImageFormat = {
     url: string;
     width: number;
     height: number;
+    mime?: string;
 };
 
 export type StrapiImage = {
@@ -44,23 +45,31 @@ export function ResponsiveImage({
     decoding = "async",
     fallbackSrc,
 }: ResponsiveImageProps) {
-    const availableCandidates: Array<StrapiImageFormat> = [];
+    const candidateMapByWidth: Map<number, StrapiImageFormat> = new Map();
 
     if (image?.formats) {
-        Object.values(image.formats)
-            .filter((f): f is StrapiImageFormat => Boolean(f && f.url && typeof f.width === "number"))
-            .forEach((format) => availableCandidates.push(format));
+        for (const maybeFormat of Object.values(image.formats)) {
+            if (!maybeFormat || !maybeFormat.url || typeof maybeFormat.width !== "number") continue;
+            if (!candidateMapByWidth.has(maybeFormat.width)) {
+                candidateMapByWidth.set(maybeFormat.width, maybeFormat);
+            }
+        }
     }
 
-    if (image?.url) {
-        availableCandidates.push({
-            url: image.url,
-            width: typeof image.width === "number" ? image.width : 99999,
-            height: typeof image.height === "number" ? image.height : 0,
-        });
+    // Include original only if width is known; otherwise keep it as fallback src, not in srcSet
+    if (image?.url && typeof image.width === "number") {
+        if (!candidateMapByWidth.has(image.width)) {
+            candidateMapByWidth.set(image.width, {
+                url: image.url,
+                width: image.width,
+                height: typeof image.height === "number" ? image.height : 0,
+            });
+        }
     }
 
-    availableCandidates.sort((a, b) => a.width - b.width);
+    const availableCandidates: Array<StrapiImageFormat> = Array.from(candidateMapByWidth.values()).sort(
+        (a, b) => a.width - b.width
+    );
 
     const srcSet = availableCandidates
         .map((c) => `${toAbsoluteUrl(c.url, baseUrl)} ${c.width}w`)
@@ -77,6 +86,9 @@ export function ResponsiveImage({
         height = selected.height;
     } else if (fallbackSrc) {
         src = toAbsoluteUrl(fallbackSrc, baseUrl);
+    } else if (image?.url) {
+        // Fallback to original even if width is unknown (no srcSet in that case)
+        src = toAbsoluteUrl(image.url, baseUrl);
     }
 
     const resolvedAlt = alt ?? image?.alternativeText ?? "";
