@@ -4,6 +4,7 @@ import { useLoaderData, Link } from "@remix-run/react";
 import qs from "qs";
 
 import { H1, H2, H3 } from "~/components/global/ui/Typography";
+import ResponsiveImage from "~/components/global/ui/ResponsiveImage";
 
 
 const query = qs.stringify({
@@ -24,7 +25,7 @@ export const loader: LoaderFunction = async () => {
 
 export default function ParentsGallery() {
 
-    const galleriesData = useLoaderData();
+    const galleriesData = useLoaderData<any>();
 
     return (
         <section
@@ -37,11 +38,12 @@ export default function ParentsGallery() {
                         key={gallery.id}
                         className="border border-stone-200 rounded-xl p-2 bg-white hover:shadow-lg transition-shadow"
                     >
-                        {gallery.images[0] && gallery.images[0].formats.large && (
-                            <img
-                                className="rounded-md aspect-square object-cover"
-                                src={"https://api.ekoskrzat.edu.pl" + gallery.images[0].formats.large.url} />
-                        )}
+                        <ResponsiveImage
+                            className="rounded-md aspect-square object-cover w-full h-auto"
+                            baseUrl="https://api.ekoskrzat.edu.pl"
+                            image={gallery.images?.[0]}
+                            sizes="(min-width: 1280px) 16.66vw, (min-width: 1024px) 33.33vw, (min-width: 768px) 50vw, 100vw"
+                        />
                         <div className="flex flex-col gap-1 px-2 py-3">
                             <h4 className="text-left text-xl">{gallery.title}</h4>
                             <p className="text-sm text-gray-500 text-left">
