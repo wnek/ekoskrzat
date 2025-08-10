@@ -24,6 +24,7 @@ export type ResponsiveImageProps = {
     loading?: "lazy" | "eager";
     decoding?: "async" | "sync" | "auto";
     fallbackSrc?: string;
+    fetchPriority?: "high" | "low" | "auto";
 };
 
 function toAbsoluteUrl(url: string, baseUrl?: string): string {
@@ -44,6 +45,7 @@ export function ResponsiveImage({
     loading = "lazy",
     decoding = "async",
     fallbackSrc,
+    fetchPriority,
 }: ResponsiveImageProps) {
     const candidateMapByWidth: Map<number, StrapiImageFormat> = new Map();
 
@@ -114,6 +116,7 @@ export function ResponsiveImage({
             alt={resolvedAlt}
             loading={loading}
             decoding={decoding}
+            fetchPriority={fetchPriority}
             width={width}
             height={height}
         />

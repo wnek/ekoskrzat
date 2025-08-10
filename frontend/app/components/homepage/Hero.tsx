@@ -52,7 +52,7 @@ export default function Hero({ data }: { data: any }) {
           <div className="flex flex-col items-center gap-4 lg:flex-row">
             <a
               href="/form"
-              className="flex items-center justify-between gap-6 rounded-full bg-green-600 py-2 pl-6 pr-2 text-white 2xl:text-xl hover:bg-green-800"
+              className="flex items-center justify-between gap-6 rounded-full bg-green-300 py-2 pl-6 pr-2 text-green-900 2xl:text-xl hover:bg-green-400"
             >
               Zapisz dziecko
               <div className="flex h-8 w-8 rounded-full bg-white p-2">
@@ -72,6 +72,7 @@ export default function Hero({ data }: { data: any }) {
               sizes="(min-width: 1024px) 50vw, 100vw"
               alt="Hero 1"
               loading="eager"
+              fetchPriority="high"
             />
           </div>
 
@@ -82,7 +83,7 @@ export default function Hero({ data }: { data: any }) {
               className="h-full w-full object-cover"
               sizes="(min-width: 1024px) 50vw, 100vw"
               alt="Hero 2"
-              loading="eager"
+              loading="lazy"
             />
           </div>
 
@@ -93,7 +94,7 @@ export default function Hero({ data }: { data: any }) {
               className="h-full w-full object-cover"
               sizes="(min-width: 1024px) 50vw, 100vw"
               alt="Hero 3"
-              loading="eager"
+              loading="lazy"
             />
           </div>
         </div>
