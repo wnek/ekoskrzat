@@ -10,7 +10,7 @@ import { useRef } from "react";
 import { H1, H2 } from "../global/ui/Typography";
 
 
-export default function Mission({ data }: { data: MissionData }) {
+export default function Mission({ data }: { data: any }) {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -25,9 +25,9 @@ export default function Mission({ data }: { data: MissionData }) {
     <div ref={targetRef} className="relative">
       <section className="flex min-h-screen bg-white px-8 py-16 xl:px-16 2xl:py-52 justify-center">
         <div className="z-10 flex flex-col items-start justify-center gap-8 2xl:w-3/4">
-          <h3 className="w-fit rounded-full border border-slate-300 px-4 py-2 text-blue-600">
+          <p className="w-fit rounded-full border border-slate-300 px-4 py-2 text-blue-600" aria-hidden="true">
             Nasza misja
-          </h3>
+          </p>
 
           <H2 html={data.text} />
 

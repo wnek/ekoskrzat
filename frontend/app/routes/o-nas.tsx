@@ -51,9 +51,9 @@ export default function AboutUs() {
             <section className="p-4 xl:px-32 flex flex-col gap-8">
 
                 <div className="flex flex-col gap-4 items-center">
-                    <h3 className="w-fit rounded-full border border-slate-300 px-4 py-2 text-blue-600 ">
+                    <p className="w-fit rounded-full border border-slate-300 px-4 py-2 text-blue-600 " aria-hidden="true">
                         O nas
-                    </h3>
+                    </p>
                     <H1 html={data.firstSectionTitle} />
                 </div>
 
@@ -85,9 +85,9 @@ export default function AboutUs() {
             <section className="p-4 xl:px-32 flex flex-col gap-8">
 
                 <div className="flex flex-col gap-4 items-center">
-                    <h3 className="w-fit rounded-full border border-slate-300 px-4 py-2 text-blue-600 ">
+                    <p className="w-fit rounded-full border border-slate-300 px-4 py-2 text-blue-600 " aria-hidden="true">
                         O nas
-                    </h3>
+                    </p>
                     <H2 html={data.secondSectionTitle} />
                 </div>
 
