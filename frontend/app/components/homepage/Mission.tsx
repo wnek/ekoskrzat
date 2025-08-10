@@ -44,12 +44,14 @@ export default function Mission({ data }: { data: MissionData }) {
           alt="Linia"
           className="absolute left-0 top-1/4 w-full"
           style={{ y: y }}
+          fetchPriority="high"
         />
         <motion.img
           src="images/yellow-rect.png"
           alt="Żółty prostokąt"
           className="absolute right-[20%] top-1/4 w-12 lg:w-48"
           style={{ y: rectY, rotate: rectRotation }}
+          fetchPriority="high"
         />
       </section>
     </div>

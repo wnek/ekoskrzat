@@ -26,6 +26,7 @@ export default function Hero({ data }: { data: any }) {
         alt="Niebieski kwadrat"
         className="absolute bottom-[-20%] left-[1%] z-[31] h-8 w-8 lg:left-[45%] lg:top-[70%] lg:h-32 lg:w-32"
         style={{ y: ySquare, rotate: rotation }}
+        fetchPriority="high"
       />
 
       <motion.img
@@ -33,12 +34,14 @@ export default function Hero({ data }: { data: any }) {
         alt="Linia"
         className="absolute left-[-50%] top-3/4 w-full"
         style={{ y: ySquare }}
+        fetchPriority="high"
       />
       <motion.img
         src="/images/green-circle.png"
         alt="Zielone koło"
         className="lg:w8 absolute right-[10%] top-[50%] h-8 w-8 lg:bottom-0 lg:left-20 lg:h-8"
         style={{ y: yCircle, rotate: rotation }}
+        fetchPriority="high"
       />
       <section
         ref={targetRef}
