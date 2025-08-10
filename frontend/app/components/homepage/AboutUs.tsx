@@ -13,7 +13,7 @@ export default function AboutUs({ data }: { data: any }) {
         <P html={data.description} />
         <img
           className="lg:w-1/2"
-          src="/images/about-img.png"
+          src="/images/about-img.jpg"
           alt="Obrazek skrzata"
         />
       </div>

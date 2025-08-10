@@ -1,4 +1,5 @@
 import { H2, P } from "../global/ui/Typography";
+import ResponsiveImage from "~/components/global/ui/ResponsiveImage";
 
 
 export default function Testimonials({ data }: { data: TestimonialsData }) {
@@ -13,11 +14,7 @@ export default function Testimonials({ data }: { data: TestimonialsData }) {
         <div className="flex flex-col justify-between gap-24 rounded-3xl bg-stone-100 p-8 text-slate-800">
           <P html={data.firstTestimonial} align="left" />
           <div className="flex gap-4 items-center">
-            <img
-              className="h-12 w-12 rounded-full"
-              src="images/parent-1.jpg"
-              alt="Rodzice 4-letniej Zosi"
-            />
+            <ResponsiveImage className="h-12 w-12 rounded-full" image={{ url: "images/parent-1.jpg" }} alt="Rodzice 4-letniej Zosi" />
             <div>
               <p>{data.firstParents}</p>
 
@@ -27,11 +24,7 @@ export default function Testimonials({ data }: { data: TestimonialsData }) {
         <div className="flex flex-col justify-between gap-24 rounded-3xl bg-slate-100 p-6 text-slate-800">
           <P html={data.secondTestimonial} align="left" />
           <div className="flex gap-4 items-center">
-            <img
-              className="h-12 w-12 rounded-full"
-              src="images/parent-2.jpg"
-              alt="Rodzice 5-letniego Jasia"
-            />
+            <ResponsiveImage className="h-12 w-12 rounded-full" image={{ url: "images/parent-2.jpg" }} alt="Rodzice 5-letniego Jasia" />
             <div>
               <p>{data.secondParents}</p>
             </div>
@@ -40,11 +33,7 @@ export default function Testimonials({ data }: { data: TestimonialsData }) {
         <div className="flex flex-col justify-between gap-24 rounded-3xl bg-green-100 p-6 text-slate-800">
           <P html={data.thirdTestimonial} align="left" />
           <div className="flex gap-4 items-center">
-            <img
-              className="h-12 w-12 rounded-full"
-              src="images/parent-3.jpg"
-              alt="Rodzice 5-letniego Jasia"
-            />
+            <ResponsiveImage className="h-12 w-12 rounded-full" image={{ url: "images/parent-3.jpg" }} alt="Rodzice 5-letniego Jasia" />
             <div>
               <p>{data.thirdParents}</p>
             </div>

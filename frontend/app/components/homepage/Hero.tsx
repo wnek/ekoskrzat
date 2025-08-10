@@ -1,10 +1,11 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { H1, P } from "../global/ui/Typography";
+import ResponsiveImage from "~/components/global/ui/ResponsiveImage";
 
 
 import { useRef } from "react";
 
-export default function Hero({ data }: { data: object }) {
+export default function Hero({ data }: { data: any }) {
 
 
   const targetRef = useRef(null);
@@ -64,46 +65,36 @@ export default function Hero({ data }: { data: object }) {
         <div className="z-30">
 
           <div className="h-[calc(100vh-5rem)]">
-            <picture>
-              <source
-                media="(max-width: 799px)"
-                srcSet={"https://api.ekoskrzat.edu.pl" + data.image1.formats.small.url}
-
-              />
-              <img
-                className="h-full w-full object-cover"
-                src={"https://api.ekoskrzat.edu.pl" + data.image1.formats.large.url}
-                alt="Hero 1"
-              />
-            </picture>
+            <ResponsiveImage
+              baseUrl="https://api.ekoskrzat.edu.pl"
+              image={data.image1}
+              className="h-full w-full object-cover"
+              sizes="100vw"
+              alt="Hero 1"
+              loading="eager"
+            />
           </div>
 
           <div className="h-[calc(100vh-5rem)]">
-            <picture>
-              <source
-                media="(max-width: 799px)"
-                srcSet={"https://api.ekoskrzat.edu.pl" + data.image2.formats.small.url}
-              />
-              <img
-                className="h-full w-full object-cover"
-                src={"https://api.ekoskrzat.edu.pl" + data.image2.formats.large.url}
-                alt="Hero 2"
-              />
-            </picture>
+            <ResponsiveImage
+              baseUrl="https://api.ekoskrzat.edu.pl"
+              image={data.image2}
+              className="h-full w-full object-cover"
+              sizes="100vw"
+              alt="Hero 2"
+              loading="eager"
+            />
           </div>
 
           <div className="h-[calc(100vh-5rem)]">
-            <picture>
-              <source
-                media="(max-width: 799px)"
-                srcSet={"https://api.ekoskrzat.edu.pl" + data.image3.formats.small.url}
-              />
-              <img
-                className="h-full w-full object-cover"
-                src={"https://api.ekoskrzat.edu.pl" + data.image3.formats.large.url}
-                alt="Hero 3"
-              />
-            </picture>
+            <ResponsiveImage
+              baseUrl="https://api.ekoskrzat.edu.pl"
+              image={data.image3}
+              className="h-full w-full object-cover"
+              sizes="100vw"
+              alt="Hero 3"
+              loading="eager"
+            />
           </div>
         </div>
       </section>
