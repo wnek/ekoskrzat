@@ -51,7 +51,6 @@ export default function Mission({ data }: { data: MissionData }) {
           alt="Żółty prostokąt"
           className="absolute right-[20%] top-1/4 w-12 lg:w-48"
           style={{ y: rectY, rotate: rectRotation }}
-          fetchPriority="high"
         />
       </section>
     </div>
