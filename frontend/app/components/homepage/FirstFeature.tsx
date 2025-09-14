@@ -1,12 +1,12 @@
 import { H3 } from "../global/ui/Typography";
 import ResponsiveImage from "~/components/global/ui/ResponsiveImage";
+import { API_BASE_URL } from "~/lib/config";
 
 export default function FirstFeature({ data }: { data: any }) {
   return (
     <section className="my-4 min-h-screen rounded-3xl lg:h-screen">
       <div className="mx-4 h-screen rounded-3xl lg:absolute lg:h-full lg:w-[calc(100vw-3rem)] overflow-hidden">
         <ResponsiveImage
-          baseUrl="https://api.ekoskrzat.edu.pl"
           image={data.image}
           className="h-full w-full object-cover"
           sizes="(min-width: 1280px) calc(100vw - 3rem), (min-width: 1024px) calc(100vw - 3rem), 100vw"

@@ -4,6 +4,7 @@ import { BlocksRenderer } from '@strapi/blocks-react-renderer';
 import qs from "qs";
 
 import { H1, H2 } from "~/components/global/ui/Typography";
+import { API_BASE_URL } from "~/lib/config";
 
 export const meta: MetaFunction = () => {
     return [
@@ -28,7 +29,7 @@ const query = qs.stringify({
 });
 
 export const loader: LoaderFunction = async () => {
-    const response = await fetch("http://localhost:1337/api/recruitments?" + query);
+    const response = await fetch(`${API_BASE_URL}/api/recruitments?` + query);
     const offersData = await response.json();
     return json(offersData);
 }

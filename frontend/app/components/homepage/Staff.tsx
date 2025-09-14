@@ -24,7 +24,7 @@ export default function Staff({ data }: { data: any }) {
     >
       <div className="relative flex w-full items-center justify-center">
         <motion.div className="w-3/4 origin-center lg:w-1/2">
-          <ResponsiveImage className="w-full h-auto" image={{ url: "/images/staff-1.png" }} alt="Staff" />
+          <ResponsiveImage className="w-full h-auto rounded-2xl" image={data.staffImage} alt="Staff" />
         </motion.div>
 
       </div>

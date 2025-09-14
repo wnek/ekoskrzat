@@ -12,6 +12,7 @@ import "yet-another-react-lightbox/styles.css";
 
 import qs from "qs";
 import { H1 } from "~/components/global/ui/Typography";
+import { API_BASE_URL } from "~/lib/config";
 
 
 export const meta: MetaFunction = () => {
@@ -38,7 +39,7 @@ export const loader: LoaderFunction = async ({ params }) => {
 
     const { id } = params;
 
-    const response = await fetch(`http://localhost:1337/api/gallery?${query}`);
+    const response = await fetch(`${API_BASE_URL}/api/gallery?${query}`);
     const galleryData = await response.json();
     return json(galleryData);
 
@@ -51,7 +52,7 @@ export default function Gallery() {
     console.log(gallery.data.images[0].formats.large.url);
 
     const photos = gallery.data.images.map((image: any) => ({
-        src: `https://api.ekoskrzat.edu.pl${image.formats?.large?.url}`,
+        src: `${API_BASE_URL}${image.formats?.large?.url}`,
         width: image.formats?.large?.width,
         height: image.formats?.large?.height
     }));

@@ -3,6 +3,7 @@ import ResponsiveImage from "~/components/global/ui/ResponsiveImage";
 import { useLoaderData, Link, Outlet, useLocation, MetaFunction } from "@remix-run/react";
 import qs from "qs";
 import { json, type LoaderFunctionArgs } from "@remix-run/node";
+import { API_BASE_URL } from "~/lib/config";
 
 
 export const meta: MetaFunction = () => {
@@ -28,7 +29,7 @@ const query = qs.stringify({
 });
 
 export async function loader({ request }: LoaderFunctionArgs) {
-    const response = await fetch("http://localhost:1337/api/staffs?" + query);
+    const response = await fetch(`${API_BASE_URL}/api/staffs?` + query);
     const staffData = await response.json();
     return json(staffData);
 }
@@ -64,7 +65,6 @@ export default function NaszaKadra() {
                         <div key={staff.id} className="bg-slate-100 rounded-3xl p-8 gap-4 grid md:grid-cols-5 grid-cols-1 xl:grid-cols-1 2xl:grid-cols-6 ">
                             {staff.image?.url && (
                                 <ResponsiveImage
-                                    baseUrl="https://api.ekoskrzat.edu.pl"
                                     image={staff.image}
                                     alt={staff.name}
                                     className="w-full h-auto rounded-lg col-span-2 2xl:col-span-2 object-cover"

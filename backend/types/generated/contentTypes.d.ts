@@ -569,6 +569,8 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
     numbers: Schema.Attribute.Component<'homepage.numbers', false>;
     testimonials: Schema.Attribute.Component<'homepage.testimonials', false>;
     thirdFeature: Schema.Attribute.Component<'homepage.third-feature', false>;
+    seo: Schema.Attribute.Component<'seo.seo', false>;
+    join: Schema.Attribute.Component<'homepage.join', false>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

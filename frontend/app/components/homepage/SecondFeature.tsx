@@ -11,7 +11,7 @@ export default function SecondFeature({ data }: { data: any }) {
 
       <div className="mx-4 h-screen rounded-3xl lg:absolute lg:h-full lg:w-[calc(100vw-3rem)] overflow-hidden">
         <ResponsiveImage
-          image={{ url: "/images/feature-2.jpg" }}
+          image={data.secondFeatureImage}
           className="h-full w-full object-cover"
           sizes="(min-width: 1536px) calc(100vw - 3rem), (min-width: 1280px) calc(100vw - 3rem), (min-width: 1024px) calc(100vw - 3rem), 100vw"
           alt=""

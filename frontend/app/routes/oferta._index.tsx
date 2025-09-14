@@ -4,6 +4,7 @@ import { BlocksRenderer } from '@strapi/blocks-react-renderer';
 import qs from "qs";
 
 import { H1, H2 } from "~/components/global/ui/Typography";
+import { API_BASE_URL } from "~/lib/config";
 
 
 export const meta: MetaFunction = () => {
@@ -29,13 +30,13 @@ const query = qs.stringify({
 });
 
 export const loader: LoaderFunction = async () => {
-    const response = await fetch("http://localhost:1337/api/offers?" + query);
+    const response = await fetch(`${API_BASE_URL}/api/offers?` + query);
     const offersData = await response.json();
     return json(offersData);
 }
 
 export default function OfertaIndex() {
-    const offersData = useLoaderData();
+    const offersData = useLoaderData<typeof loader>();
 
     if (!offersData || !offersData.data || offersData.data.length === 0) {
         return <div>No offers data available</div>;

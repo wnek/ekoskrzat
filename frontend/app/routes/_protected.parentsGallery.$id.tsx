@@ -11,6 +11,7 @@ import "yet-another-react-lightbox/styles.css";
 
 import qs from "qs";
 import { H1 } from "~/components/global/ui/Typography";
+import { API_BASE_URL } from "~/lib/config";
 
 
 export const loader: LoaderFunction = async ({ params }) => {
@@ -20,7 +21,7 @@ export const loader: LoaderFunction = async ({ params }) => {
 
     const { id } = params;
 
-    const response = await fetch(`http://localhost:1337/api/parents-galleries/${id}?${query}`);
+    const response = await fetch(`${API_BASE_URL}/api/parents-galleries/${id}?${query}`);
     const galleryData = await response.json();
     return json(galleryData);
 
@@ -28,11 +29,11 @@ export const loader: LoaderFunction = async ({ params }) => {
 
 export default function Gallery() {
     const [index, setIndex] = React.useState(-1);
-    const gallery = useLoaderData();
+    const gallery = useLoaderData<typeof loader>();
 
 
     const photos = gallery.data.images.map((image: any) => ({
-        src: `https://api.ekoskrzat.edu.pl${image.formats?.large?.url}`,
+        src: `${API_BASE_URL}${image.formats?.large?.url}`,
         width: image.formats?.large?.width,
         height: image.formats?.large?.height
     }));

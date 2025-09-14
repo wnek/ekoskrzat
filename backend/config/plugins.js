@@ -14,7 +14,14 @@ module.exports = ({ env }) => {
     },
     upload: {
       config: {
-        sizeLimit: 1024 * 1024 * 1024 // 1024mb in bytes
+        sizeLimit: 1024 * 1024 * 1024, // 1024mb in bytes
+        breakpoints: {
+          xlarge: 1600,
+          large: 1200,
+          medium: 800,
+          small: 600,
+          thumb: 300,
+        },
       }
     }
   };

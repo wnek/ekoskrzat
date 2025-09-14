@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { H1, P } from "../global/ui/Typography";
 import ResponsiveImage from "~/components/global/ui/ResponsiveImage";
+import { API_BASE_URL } from "~/lib/config";
 
 
 import { useRef } from "react";
@@ -66,7 +67,6 @@ export default function Hero({ data }: { data: any }) {
 
           <div className="h-[calc(100vh-5rem)]">
             <ResponsiveImage
-              baseUrl="https://api.ekoskrzat.edu.pl"
               image={data.image1}
               className="h-full w-full object-cover"
               sizes="(min-width: 1024px) 50vw, 100vw"
@@ -78,7 +78,6 @@ export default function Hero({ data }: { data: any }) {
 
           <div className="h-[calc(100vh-5rem)]">
             <ResponsiveImage
-              baseUrl="https://api.ekoskrzat.edu.pl"
               image={data.image2}
               className="h-full w-full object-cover"
               sizes="(min-width: 1024px) 50vw, 100vw"
@@ -89,7 +88,6 @@ export default function Hero({ data }: { data: any }) {
 
           <div className="h-[calc(100vh-5rem)]">
             <ResponsiveImage
-              baseUrl="https://api.ekoskrzat.edu.pl"
               image={data.image3}
               className="h-full w-full object-cover"
               sizes="(min-width: 1024px) 50vw, 100vw"

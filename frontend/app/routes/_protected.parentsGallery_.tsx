@@ -5,6 +5,7 @@ import qs from "qs";
 
 import { H1, H2, H3 } from "~/components/global/ui/Typography";
 import ResponsiveImage from "~/components/global/ui/ResponsiveImage";
+import { API_BASE_URL } from "~/lib/config";
 
 
 const query = qs.stringify({
@@ -16,7 +17,7 @@ const query = qs.stringify({
 
 export const loader: LoaderFunction = async () => {
 
-    const response = await fetch("http://localhost:1337/api/parents-galleries?" + query);
+    const response = await fetch(`${API_BASE_URL}/api/parents-galleries?` + query);
     const homepageData = await response.json();
     return json(homepageData);
 
@@ -40,7 +41,6 @@ export default function ParentsGallery() {
                     >
                         <ResponsiveImage
                             className="rounded-md aspect-square object-cover w-full h-auto"
-                            baseUrl="https://api.ekoskrzat.edu.pl"
                             image={gallery.images?.[0]}
                             sizes="(min-width: 1536px) 16.66vw, (min-width: 1280px) 16.66vw, (min-width: 1024px) 33.33vw, (min-width: 768px) 50vw, 100vw"
                         />

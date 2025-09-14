@@ -1,15 +1,17 @@
 {
-  "collectionName": "components_homepage_third_features",
+  "collectionName": "components_homepage_joins",
   "info": {
-    "displayName": "thirdFeature",
-    "description": ""
+    "displayName": "Join"
   },
   "options": {},
   "attributes": {
     "title": {
       "type": "string"
     },
-    "thirdFeatureImage": {
+    "description": {
+      "type": "string"
+    },
+    "joinImage": {
       "allowedTypes": [
         "images",
         "files",

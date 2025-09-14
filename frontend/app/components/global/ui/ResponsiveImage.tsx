@@ -1,4 +1,5 @@
 import React from "react";
+import { API_BASE_URL } from "~/lib/config";
 
 type StrapiImageFormat = {
     url: string;
@@ -32,7 +33,7 @@ function toAbsoluteUrl(url: string, baseUrl?: string): string {
     if (url.startsWith("http://") || url.startsWith("https://") || url.startsWith("//")) {
         return url;
     }
-    const normalizedBase = (baseUrl || "").replace(/\/$/, "");
+    const normalizedBase = (baseUrl || API_BASE_URL || "").replace(/\/$/, "");
     return `${normalizedBase}${url}`;
 }
 

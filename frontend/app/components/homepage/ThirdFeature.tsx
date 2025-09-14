@@ -18,12 +18,17 @@ export default function ThirdFeature({ data }: { data: ThirdFeatureData }) {
       ref={targetRef}
       className="relative my-4 min-h-screen rounded-3xl lg:h-screen"
     >
-      <motion.div className="absolute right-16 top-0 z-30 w-24 lg:w-32" style={{ y: yCircle, rotate: rotation }}>
-        <ResponsiveImage image={{ url: "images/green-circle.png" }} alt="Zielone kółko" />
-      </motion.div>
+
+      <motion.img
+        src="/images/green-circle.png"
+        alt="Zielone koło"
+        className="absolute right-16 top-0 z-30 w-24 lg:w-32"
+        style={{ y: yCircle, rotate: rotation }}
+      />
+
       <div className="mx-4 h-screen rounded-3xl lg:absolute lg:h-full lg:w-[calc(100vw-3rem)] overflow-hidden">
         <ResponsiveImage
-          image={{ url: "/images/feature-3.jpg" }}
+          image={data.thirdFeatureImage}
           className="h-full w-full object-cover"
           sizes="(min-width: 1536px) calc(100vw - 3rem), (min-width: 1280px) calc(100vw - 3rem), (min-width: 1024px) calc(100vw - 3rem), 100vw"
           alt=""

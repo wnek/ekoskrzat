@@ -2,6 +2,7 @@ import type { MetaFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import { json, LoaderFunction } from "@remix-run/node";
 import qs from "qs";
+import { API_BASE_URL } from "~/lib/config";
 
 import Hero from "~/components/homepage/Hero";
 import AboutUs from "~/components/homepage/AboutUs";
@@ -13,25 +14,19 @@ import Numbers from "~/components/homepage/Numbers";
 import ThirdFeature from "~/components/homepage/ThirdFeature";
 import Testimonials from "~/components/homepage/Testimonials";
 import Join from "~/components/homepage/Join";
+import { buildMetaFromSeo, type StrapiSeo } from "~/lib/seo";
 
 
 
-export const meta: MetaFunction = () => {
-  return [
-    {
-      title:
-        "Przedszkole Bieżanów - Prokocim - Ekologiczne Przedszkole Ekoskrzat",
-    },
-    {
-      name: "description",
-      content:
-        "Prywatne przedszkole na terenie dzielnicy Bieżanów - Prokocim. Miejsce w którym dzieci mogą czuć się w pełni szczęśliwe, spokojne i bezpieczne. Poprzez kontakt z przyrodą, poznają najważniejsze wartości.",
-    },
-    {
-      name: "robots",
-      content: "index, follow",
-    },
-  ];
+export const meta: MetaFunction<typeof loader> = ({ data }) => {
+  const seo: StrapiSeo | undefined = data?.data?.seo;
+  return buildMetaFromSeo(seo, {
+    fallbackTitle:
+      "Przedszkole Bieżanów - Prokocim - Ekologiczne Przedszkole Ekoskrzat",
+    fallbackDescription:
+      "Prywatne przedszkole na terenie dzielnicy Bieżanów - Prokocim. Miejsce w którym dzieci mogą czuć się w pełni szczęśliwe, spokojne i bezpieczne. Poprzez kontakt z przyrodą, poznają najważniejsze wartości.",
+    fallbackRobots: "index, follow",
+  });
 };
 
 
@@ -45,6 +40,9 @@ interface HomepageData {
     secondFeature: object
     numbers: object
     thirdFeature: object
+    testimonials: object
+    seo?: StrapiSeo
+    join?: any
   }
 }
 
@@ -78,12 +76,18 @@ const query = qs.stringify({
     thirdFeature: {
       populate: "*",
     },
+    seo: {
+      populate: "*",
+    },
+    join: {
+      populate: "*",
+    },
   },
 });
 
 export const loader: LoaderFunction = async () => {
 
-  const response = await fetch("http://localhost:1337/api/homepage?" + query);
+  const response = await fetch(`${API_BASE_URL}/api/homepage?` + query);
   const homepageData = await response.json();
   return json(homepageData);
 
@@ -120,7 +124,7 @@ export default function Index() {
       <Numbers data={homepageData.data.numbers} />
       <ThirdFeature data={homepageData.data.thirdFeature} />
       <Testimonials data={homepageData.data.testimonials} />
-      <Join />
+      <Join data={homepageData.data.join} />
     </>
   );
 }

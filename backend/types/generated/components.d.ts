@@ -1,12 +1,30 @@
 import type { Struct, Schema } from '@strapi/strapi';
 
+export interface SeoSeo extends Struct.ComponentSchema {
+  collectionName: 'components_seo_seos';
+  info: {
+    displayName: 'Seo';
+    description: '';
+  };
+  attributes: {
+    metaTitle: Schema.Attribute.String;
+    metaDescription: Schema.Attribute.String;
+    index: Schema.Attribute.Boolean;
+    follow: Schema.Attribute.Boolean;
+  };
+}
+
 export interface HomepageThirdFeature extends Struct.ComponentSchema {
   collectionName: 'components_homepage_third_features';
   info: {
     displayName: 'thirdFeature';
+    description: '';
   };
   attributes: {
     title: Schema.Attribute.String;
+    thirdFeatureImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
   };
 }
 
@@ -30,10 +48,14 @@ export interface HomepageStaff extends Struct.ComponentSchema {
   collectionName: 'components_homepage_staff';
   info: {
     displayName: 'staff';
+    description: '';
   };
   attributes: {
     title: Schema.Attribute.String;
     description: Schema.Attribute.Text;
+    staffImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
   };
 }
 
@@ -41,10 +63,14 @@ export interface HomepageSecondFeature extends Struct.ComponentSchema {
   collectionName: 'components_homepage_second_features';
   info: {
     displayName: 'secondFeature';
+    description: '';
   };
   attributes: {
     title: Schema.Attribute.String;
     description: Schema.Attribute.Text;
+    secondFeatureImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
   };
 }
 
@@ -74,6 +100,18 @@ export interface HomepageMission extends Struct.ComponentSchema {
   };
   attributes: {
     text: Schema.Attribute.Text;
+  };
+}
+
+export interface HomepageJoin extends Struct.ComponentSchema {
+  collectionName: 'components_homepage_joins';
+  info: {
+    displayName: 'Join';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    description: Schema.Attribute.String;
+    joinImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -133,12 +171,14 @@ export interface AboutusOneItem extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'seo.seo': SeoSeo;
       'homepage.third-feature': HomepageThirdFeature;
       'homepage.testimonials': HomepageTestimonials;
       'homepage.staff': HomepageStaff;
       'homepage.second-feature': HomepageSecondFeature;
       'homepage.numbers': HomepageNumbers;
       'homepage.mission': HomepageMission;
+      'homepage.join': HomepageJoin;
       'homepage.hero': HomepageHero;
       'homepage.first-feature': HomepageFirstFeature;
       'homepage.about-us': HomepageAboutUs;

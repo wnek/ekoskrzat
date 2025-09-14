@@ -56,6 +56,16 @@
       "type": "component",
       "repeatable": false,
       "component": "homepage.third-feature"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo"
+    },
+    "join": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.join"
     }
   }
 }

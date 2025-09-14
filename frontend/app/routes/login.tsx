@@ -1,6 +1,7 @@
 import { ActionFunction, json } from "@remix-run/node";
 import { Form, useActionData, MetaFunction } from "@remix-run/react";
 import { createUserSession } from "~/lib/utils/auth.servers";
+import { API_BASE_URL } from "~/lib/config";
 
 export const meta: MetaFunction = () => {
     return [
@@ -16,7 +17,7 @@ export const action: ActionFunction = async ({ request }) => {
     const formData = await request.formData();
     const password = formData.get("password");
 
-    const response = await fetch("http://localhost:1337/api/gallery-auth", {
+    const response = await fetch(`${API_BASE_URL}/api/gallery-auth`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ password }),
