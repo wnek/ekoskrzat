@@ -17,16 +17,21 @@
     },
     "firstSectionItems": {
       "type": "component",
-      "repeatable": true,
-      "component": "aboutus.one-item"
+      "component": "aboutus.one-item",
+      "repeatable": true
     },
     "secondSectionTitle": {
       "type": "string"
     },
     "secondSectionItems": {
       "type": "component",
-      "repeatable": true,
-      "component": "aboutus.one-item"
+      "component": "aboutus.one-item",
+      "repeatable": true
+    },
+    "aboutSeo": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": false
     }
   }
 }

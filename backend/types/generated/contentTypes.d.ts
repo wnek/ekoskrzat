@@ -385,6 +385,7 @@ export interface ApiAboutUsAboutUs extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    aboutSeo: Schema.Attribute.Component<'seo.seo', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -420,6 +421,7 @@ export interface ApiGalleryGallery extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    gallerySeo: Schema.Attribute.Component<'seo.seo', false>;
     images: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
@@ -495,6 +497,8 @@ export interface ApiOfferOffer extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::offer.offer'> &
       Schema.Attribute.Private;
+    offerSeo: Schema.Attribute.Component<'seo.seo', false>;
+    offerSlug: Schema.Attribute.UID<'title'>;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
@@ -556,6 +560,8 @@ export interface ApiRecruitmentRecruitment extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    recruitSeo: Schema.Attribute.Component<'seo.seo', false>;
+    recruitSlug: Schema.Attribute.UID<'title'>;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

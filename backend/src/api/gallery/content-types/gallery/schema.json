@@ -16,14 +16,19 @@
       "type": "string"
     },
     "images": {
+      "type": "media",
+      "multiple": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
+    },
+    "gallerySeo": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": false
     }
   }
 }

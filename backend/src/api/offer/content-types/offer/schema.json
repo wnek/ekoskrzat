@@ -16,6 +16,15 @@
     },
     "content": {
       "type": "blocks"
+    },
+    "offerSeo": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": false
+    },
+    "offerSlug": {
+      "type": "uid",
+      "targetField": "title"
     }
   }
 }
