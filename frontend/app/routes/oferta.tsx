@@ -2,7 +2,6 @@ import { json, LoaderFunction } from "@remix-run/node";
 import { useLoaderData, Link, Outlet, useLocation } from "@remix-run/react";
 import qs from "qs";
 
-import { H1 } from "../components/global/ui/Typography";
 import { API_BASE_URL } from "../lib/config";
 
 const query = qs.stringify({
@@ -33,7 +32,7 @@ export default function Oferta() {
                     className="bg-cover bg-center xl:h-[500px] h-[200px] flex items-center justify-center rounded-3xl"
                     style={{ backgroundImage: "url('/images/oferta-hero.jpg')" }}
                 >
-                    <H1 html="Oferta" className="text-white" />
+                    <p className="text-white font-display ~text-[1.8rem]/[3.8rem] ~leading-[2rem]/[4.7rem]" >Oferta</p>
                 </div>
 
                 <div className="grid xl:grid-cols-4 gap-8">

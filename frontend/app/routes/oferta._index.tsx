@@ -3,7 +3,7 @@ import { useLoaderData } from "@remix-run/react";
 import { BlocksRenderer } from '@strapi/blocks-react-renderer';
 import qs from "qs";
 
-import { H2 } from "../components/global/ui/Typography";
+import { H1 } from "../components/global/ui/Typography";
 import { API_BASE_URL } from "../lib/config";
 import type { MetaFunction } from "@remix-run/node";
 import { buildMetaFromSeo, type StrapiSeo } from "../lib/seo";
@@ -42,7 +42,7 @@ export default function OfertaIndex() {
     return (
         <section className="flex flex-col gap-16 p-4 py-8 xl:py-16 xl:px-32 bg-slate-100 rounded-3xl col-span-3">
 
-            <H2 html={firstOffer.title} className="mb-8" />
+            <H1 html={firstOffer.title} className="mb-8" />
 
             {/* Content */}
             <div className="prose max-w-none">

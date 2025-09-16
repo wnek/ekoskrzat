@@ -2,7 +2,7 @@ import { json, LoaderFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import { BlocksRenderer } from '@strapi/blocks-react-renderer';
 
-import { H2 } from "../components/global/ui/Typography";
+import { H1 } from "../components/global/ui/Typography";
 import type { MetaFunction } from "@remix-run/node";
 import { buildMetaFromSeo, type StrapiSeo } from "../lib/seo";
 import { fetchEntryBySlugOrId } from "../lib/utils/strapiEntry";
@@ -41,7 +41,7 @@ export default function OfferPage() {
     return (
         <section className="flex flex-col gap-16 p-4 py-8 xl:py-16 xl:px-32 bg-slate-100 rounded-3xl col-span-3">
 
-            <H2 html={oneOfferData.data.title} className="mb-8" />
+            <H1 html={oneOfferData.data.title} className="mb-8" />
 
             {/* Content */}
             <div className="prose max-w-none">
