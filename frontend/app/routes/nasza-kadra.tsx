@@ -1,26 +1,21 @@
-import { H1, H3, P } from "~/components/global/ui/Typography";
-import ResponsiveImage from "~/components/global/ui/ResponsiveImage";
-import { useLoaderData, Link, Outlet, useLocation, MetaFunction } from "@remix-run/react";
+import { H1, H3, P } from "../components/global/ui/Typography";
+import ResponsiveImage from "../components/global/ui/ResponsiveImage";
+import { useLoaderData, useLocation } from "@remix-run/react";
 import qs from "qs";
 import { json, type LoaderFunctionArgs } from "@remix-run/node";
-import { API_BASE_URL } from "~/lib/config";
+import type { MetaFunction } from "@remix-run/node";
+import { API_BASE_URL } from "../lib/config";
+import { buildMetaFromSeo, type StrapiSeo } from "../lib/seo";
 
 
-export const meta: MetaFunction = () => {
-    return [
-        {
-            name: "title",
-            content: "Nasza Kadra",
-        },
-        {
-            name: "description",
-            content: "Prywatne przedszkole na terenie dzielnicy Bieżanów - Prokocim. Miejsce w którym dzieci mogą czuć się w pełni szczęśliwe, spokojne i bezpieczne. Poprzez kontakt z przyrodą, poznają najważniejsze wartości.",
-        },
-        {
-            name: "robots",
-            content: "index, follow",
-        },
-    ];
+export const meta: MetaFunction<typeof loader> = ({ data }) => {
+    const seo: StrapiSeo | undefined = data?.data?.seo;
+    return buildMetaFromSeo(seo, {
+        fallbackTitle: "Nasza kadra - Ekologiczne Przedszkole Ekoskrzat Kraków",
+        fallbackDescription:
+            "Prywatne przedszkole na terenie dzielnicy Bieżanów - Prokocim. Miejsce w którym dzieci mogą czuć się w pełni szczęśliwe, spokojne i bezpieczne. Poprzez kontakt z przyrodą, poznają najważniejsze wartości.",
+        fallbackRobots: "index, follow",
+    });
 };
 
 const query = qs.stringify({

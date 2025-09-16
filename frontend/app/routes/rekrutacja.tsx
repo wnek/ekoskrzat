@@ -1,24 +1,24 @@
-import { json, type LoaderFunctionArgs } from "@remix-run/node";
+import { json, LoaderFunction } from "@remix-run/node";
 import { useLoaderData, Link, Outlet, useLocation } from "@remix-run/react";
-import { BlocksRenderer } from '@strapi/blocks-react-renderer';
 import qs from "qs";
 
-import { H1 } from "~/components/global/ui/Typography";
-import { API_BASE_URL } from "~/lib/config";
+import { API_BASE_URL } from "../lib/config";
 
 const query = qs.stringify({
     populate: "*",
     sort: "id:asc"
 });
 
-export async function loader({ request }: LoaderFunctionArgs) {
+export const loader: LoaderFunction = async () => {
     const response = await fetch(`${API_BASE_URL}/api/recruitments?` + query);
     const offersData = await response.json();
     return json(offersData);
 }
 
+type RecruitmentListItem = { id: number; documentId?: string; recruitSlug?: string; title: string };
+
 export default function Rekrutacja() {
-    const offersData = useLoaderData();
+    const offersData = useLoaderData<typeof loader>();
     const location = useLocation();
 
     if (!offersData || !offersData.data) {
@@ -32,7 +32,7 @@ export default function Rekrutacja() {
                     className="bg-cover bg-center xl:h-[500px] h-[200px] flex items-center justify-center rounded-3xl"
                     style={{ backgroundImage: "url('/images/rekrutacja-hero.jpg')" }}
                 >
-                    <H1 html="Rekrutacja" className="text-white" />
+                    <p className="text-white font-display ~text-[1.8rem]/[3.8rem] ~leading-[2rem]/[4.7rem]" >Rekrutacja</p>
                 </div>
 
                 <div className="grid xl:grid-cols-4 gap-8">
@@ -40,15 +40,16 @@ export default function Rekrutacja() {
                     <nav className="flex md:flex-col gap-4 overflow-x-auto scrollbar-hide 
                         md:mx-0 md:px-0 col-span-3 xl:col-span-1
                         snap-x snap-mandatory md:snap-none">
-                        {offersData.data.map((offer: any, index: number) => {
-                            const offerPath = `/rekrutacja/${offer.documentId}`;
+                        {offersData.data.map((offer: RecruitmentListItem, index: number) => {
+                            const slugOrId = offer.recruitSlug || offer.documentId || offer.id;
+                            const offerPath = `/rekrutacja/${slugOrId}`;
                             const isActive = location.pathname === offerPath ||
                                 (location.pathname === '/rekrutacja' && index === 0);
 
                             return (
                                 <Link
                                     key={offer.id}
-                                    to={offer.documentId ? offerPath : '/oferta'}
+                                    to={slugOrId ? offerPath : '/rekrutacja'}
                                     className={`p-6 rounded-3xl transition-colors 
                                         min-w-[80%] md:max-w-full md:min-w-0
                                         snap-center md:snap-align-none
@@ -67,6 +68,6 @@ export default function Rekrutacja() {
                     <Outlet />
                 </div>
             </div>
-        </section>
+        </section >
     );
 }

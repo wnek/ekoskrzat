@@ -1,44 +1,37 @@
 import { json, LoaderFunction } from "@remix-run/node";
-import { useLoaderData, Link, useParams, MetaFunction } from "@remix-run/react";
+import { useLoaderData } from "@remix-run/react";
 import { BlocksRenderer } from '@strapi/blocks-react-renderer';
-import qs from "qs";
 
-import { H1, H2 } from "~/components/global/ui/Typography";
-import { API_BASE_URL } from "~/lib/config";
+import { H1 } from "../components/global/ui/Typography";
+import type { MetaFunction } from "@remix-run/node";
+import { buildMetaFromSeo, type StrapiSeo } from "../lib/seo";
+import { fetchEntryBySlugOrId } from "../lib/utils/strapiEntry";
 
-export const meta: MetaFunction = () => {
-    return [
-        {
-            name: "title",
-            content: "Rekrutacja",
-        },
-        {
-            name: "description",
-            content: "Prywatne przedszkole na terenie dzielnicy Bieżanów - Prokocim. Miejsce w którym dzieci mogą czuć się w pełni szczęśliwe, spokojne i bezpieczne. Poprzez kontakt z przyrodą, poznają najważniejsze wartości.",
-        },
-        {
-            name: "robots",
-            content: "index, follow",
-        },
-    ];
+export const meta: MetaFunction<typeof loader> = ({ data }) => {
+    const seo: StrapiSeo | undefined = data?.data?.recruitSeo;
+    return buildMetaFromSeo(seo, {
+        fallbackTitle: "Rekrutacja",
+        fallbackDescription:
+            "Prywatne przedszkole na terenie dzielnicy Bieżanów - Prokocim. Miejsce w którym dzieci mogą czuć się w pełni szczęśliwe, spokojne i bezpieczne. Poprzez kontakt z przyrodą, poznają najważniejsze wartości.",
+        fallbackRobots: "index, follow",
+    });
 };
 
 export const loader: LoaderFunction = async ({ params }) => {
-    const query = qs.stringify({
-        populate: "*",
-        sort: "id:asc"
-    });
-
     const { id } = params;
-
-    const response = await fetch(`${API_BASE_URL}/api/recruitments/${id}?${query}`);
-    const oneOfferData = await response.json();
+    if (!id) {
+        throw new Response("Missing id", { status: 400 });
+    }
+    const oneOfferData = await fetchEntryBySlugOrId({
+        idOrSlug: id,
+        apiPath: "/api/recruitments",
+        slugField: "recruitSlug",
+    });
     return json(oneOfferData);
-
 }
 
 export default function RekrutacjaPage() {
-    const oneOfferData = useLoaderData();
+    const oneOfferData = useLoaderData<typeof loader>();
 
     if (!oneOfferData) {
         return <div>Rekrutacja nie znaleziona</div>;
@@ -47,7 +40,7 @@ export default function RekrutacjaPage() {
     return (
         <section className="flex flex-col gap-16 p-4 py-8 xl:py-16 xl:px-32 bg-slate-100 rounded-3xl col-span-3">
 
-            <H2 html={oneOfferData.data.title} className="mb-8" />
+            <H1 html={oneOfferData.data.title} className="mb-8" />
 
             {/* Content */}
             <div className="prose max-w-none">

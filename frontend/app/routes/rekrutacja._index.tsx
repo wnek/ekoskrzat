@@ -1,26 +1,21 @@
 import { json, LoaderFunction } from "@remix-run/node";
-import { useLoaderData, Link, MetaFunction } from "@remix-run/react";
+import { useLoaderData } from "@remix-run/react";
 import { BlocksRenderer } from '@strapi/blocks-react-renderer';
 import qs from "qs";
 
-import { H1, H2 } from "~/components/global/ui/Typography";
-import { API_BASE_URL } from "~/lib/config";
+import { H1, H2 } from "../components/global/ui/Typography";
+import { API_BASE_URL } from "../lib/config";
+import type { MetaFunction } from "@remix-run/node";
+import { buildMetaFromSeo, type StrapiSeo } from "../lib/seo";
 
-export const meta: MetaFunction = () => {
-    return [
-        {
-            name: "title",
-            content: "Rekrutacja",
-        },
-        {
-            name: "description",
-            content: "Prywatne przedszkole na terenie dzielnicy Bieżanów - Prokocim. Miejsce w którym dzieci mogą czuć się w pełni szczęśliwe, spokojne i bezpieczne. Poprzez kontakt z przyrodą, poznają najważniejsze wartości.",
-        },
-        {
-            name: "robots",
-            content: "index, follow",
-        },
-    ];
+export const meta: MetaFunction<typeof loader> = ({ data }) => {
+    const seo: StrapiSeo | undefined = data?.data?.[0]?.seo;
+    return buildMetaFromSeo(seo, {
+        fallbackTitle: "Rekrutacja - Niepubliczne Przedszkole Ekoskrzat - Kraków",
+        fallbackDescription:
+            "Prywatne przedszkole na terenie dzielnicy Bieżanów - Prokocim. Miejsce w którym dzieci mogą czuć się w pełni szczęśliwe, spokojne i bezpieczne. Poprzez kontakt z przyrodą, poznają najważniejsze wartości.",
+        fallbackRobots: "index, follow",
+    });
 };
 
 const query = qs.stringify({
@@ -34,9 +29,12 @@ export const loader: LoaderFunction = async () => {
     return json(offersData);
 }
 
-export default function RekrutacjaIndex() {
-    const offersData = useLoaderData();
 
+
+export default function RekrutacjaIndex() {
+    const offersData = useLoaderData<typeof loader>();
+
+    console.log(offersData);
     if (!offersData || !offersData.data || offersData.data.length === 0) {
         return <div>No offers data available</div>;
     }
@@ -46,7 +44,7 @@ export default function RekrutacjaIndex() {
     return (
         <section className="flex flex-col gap-16 p-4 py-8 xl:py-16 xl:px-32 bg-slate-100 rounded-3xl col-span-3">
 
-            <H2 html={firstOffer.title} className="mb-8" />
+            <H1 html={firstOffer.title} className="mb-8" />
 
             {/* Content */}
             <div className="prose max-w-none">

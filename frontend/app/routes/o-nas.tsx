@@ -4,22 +4,16 @@ import qs from "qs";
 import { H1, H2, H3, P } from "~/components/global/ui/Typography";
 import ResponsiveImage from "~/components/global/ui/ResponsiveImage";
 import { API_BASE_URL } from "~/lib/config";
+import { buildMetaFromSeo, StrapiSeo } from "~/lib/seo";
 
-export const meta: MetaFunction = () => {
-    return [
-        {
-            name: "title",
-            content: "O nas",
-        },
-        {
-            name: "description",
-            content: "Prywatne przedszkole na terenie dzielnicy Bieżanów - Prokocim. Miejsce w którym dzieci mogą czuć się w pełni szczęśliwe, spokojne i bezpieczne. Poprzez kontakt z przyrodą, poznają najważniejsze wartości.",
-        },
-        {
-            name: "robots",
-            content: "index, follow",
-        },
-    ];
+export const meta: MetaFunction<typeof loader> = ({ data }) => {
+    const seo: StrapiSeo | undefined = data?.data?.aboutSeo;
+    return buildMetaFromSeo(seo, {
+        fallbackTitle: "O nas - Ekologiczne Przedszkole Ekoskrzat Kraków",
+        fallbackDescription:
+            "Prywatne przedszkole na terenie dzielnicy Bieżanów - Prokocim. Miejsce w którym dzieci mogą czuć się w pełni szczęśliwe, spokojne i bezpieczne. Poprzez kontakt z przyrodą, poznają najważniejsze wartości.",
+        fallbackRobots: "index, follow",
+    });
 };
 const query = qs.stringify({
     populate: {

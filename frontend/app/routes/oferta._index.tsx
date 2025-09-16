@@ -1,27 +1,22 @@
 import { json, LoaderFunction } from "@remix-run/node";
-import { useLoaderData, Link, MetaFunction } from "@remix-run/react";
+import { useLoaderData } from "@remix-run/react";
 import { BlocksRenderer } from '@strapi/blocks-react-renderer';
 import qs from "qs";
 
-import { H1, H2 } from "~/components/global/ui/Typography";
-import { API_BASE_URL } from "~/lib/config";
+import { H2 } from "../components/global/ui/Typography";
+import { API_BASE_URL } from "../lib/config";
+import type { MetaFunction } from "@remix-run/node";
+import { buildMetaFromSeo, type StrapiSeo } from "../lib/seo";
 
 
-export const meta: MetaFunction = () => {
-    return [
-        {
-            name: "title",
-            content: "Oferta",
-        },
-        {
-            name: "description",
-            content: "Prywatne przedszkole na terenie dzielnicy Bieżanów - Prokocim. Miejsce w którym dzieci mogą czuć się w pełni szczęśliwe, spokojne i bezpieczne. Poprzez kontakt z przyrodą, poznają najważniejsze wartości.",
-        },
-        {
-            name: "robots",
-            content: "index, follow",
-        },
-    ];
+export const meta: MetaFunction<typeof loader> = ({ data }) => {
+    const seo: StrapiSeo | undefined = data?.data?.[0]?.offerSeo;
+    return buildMetaFromSeo(seo, {
+        fallbackTitle: "Oferta",
+        fallbackDescription:
+            "Prywatne przedszkole na terenie dzielnicy Bieżanów - Prokocim. Miejsce w którym dzieci mogą czuć się w pełni szczęśliwe, spokojne i bezpieczne. Poprzez kontakt z przyrodą, poznają najważniejsze wartości.",
+        fallbackRobots: "index, follow",
+    });
 };
 
 const query = qs.stringify({

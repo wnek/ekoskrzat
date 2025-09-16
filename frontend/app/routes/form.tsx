@@ -4,6 +4,7 @@ import type { MetaFunction } from "@remix-run/node";
 export const meta: MetaFunction = () => {
   return [
     {
+      title: "Karta zgłoszeniowa - Prywatne Przedszkole Ekoskrzat - Kraków ",
       name: "description",
       content: "Serdecznie zapraszamy do dokonywania zapisów dziecka do przedszkola za pośrednictwem formularza.",
     },
