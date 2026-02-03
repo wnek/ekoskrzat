@@ -30,7 +30,7 @@ export default function Hero({ data }: { data: any }) {
       />
 
       <motion.img
-        src="images/scribble.svg"
+        src="/images/scribble.svg"
         alt="Linia"
         className="absolute left-[-50%] top-3/4 w-full"
         style={{ y: ySquare }}
@@ -57,7 +57,7 @@ export default function Hero({ data }: { data: any }) {
             >
               Zapisz dziecko
               <div className="flex h-8 w-8 rounded-full bg-white p-2">
-                <img src="images/arrow.svg" alt="Strzałka" />
+                <img src="/images/arrow.svg" alt="Strzałka" />
               </div>
             </a>
             {/* <a href="/o-nas">Dowiedz się więcej</a> */}

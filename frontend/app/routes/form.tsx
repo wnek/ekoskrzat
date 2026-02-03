@@ -224,7 +224,7 @@ export default function SubmitForm() {
 
                 Wyślij
                 <div className="flex h-8 w-8 rounded-full bg-white p-2">
-                  <img src="images/arrow.svg" alt="Strzałka" />
+                  <img src="/images/arrow.svg" alt="Strzałka" />
                 </div>
               </button>
             </div>

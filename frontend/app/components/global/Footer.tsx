@@ -26,7 +26,7 @@ export default function Footer() {
 
           <div className="flex flex-col justify-between gap-4 rounded-3xl bg-green-100 p-8 text-slate-800">
             <div className="flex w-fit items-center rounded-full bg-white p-2">
-              <img src="images/home.svg" alt="Dom" className="w-6" />
+              <img src="/images/home.svg" alt="Dom" className="w-6" />
             </div>
             <div>
               <p className="font-bold 2xl:text-2xl">Adres</p>
@@ -36,7 +36,7 @@ export default function Footer() {
 
           <div className="flex flex-col justify-between gap-24 rounded-3xl bg-slate-100 p-8 text-slate-800">
             <div className="flex w-fit items-center rounded-full bg-white p-2">
-              <img src="images/phone.svg" alt="Telefon" className="w-6" />
+              <img src="/images/phone.svg" alt="Telefon" className="w-6" />
             </div>
             <div className="flex flex-col gap-6">
               <div>
@@ -65,7 +65,7 @@ export default function Footer() {
 
           <div className="flex flex-col justify-between gap-24 rounded-3xl bg-slate-100 p-8 text-slate-800">
             <div className="flex w-fit items-center rounded-full bg-white p-2">
-              <img src="images/clock.svg" alt="Zegar" className="w-6" />
+              <img src="/images/clock.svg" alt="Zegar" className="w-6" />
             </div>
             <div>
               <p className="font-bold 2xl:text-2xl">Godziny otwarcia</p>
@@ -78,7 +78,7 @@ export default function Footer() {
 
           <div className="flex flex-col justify-between gap-24 rounded-3xl bg-stone-100 p-8 text-slate-800">
             <div className="flex w-fit items-center rounded-full bg-white p-2">
-              <img src="images/mail.svg" alt="Zegar" className="w-6" />
+              <img src="/images/mail.svg" alt="Zegar" className="w-6" />
             </div>
             <div>
               <p className="font-bold 2xl:text-2xl">E-mail</p>
@@ -101,13 +101,13 @@ export default function Footer() {
               target="_blank"
               rel="noreferrer"
             >
-              <img src="images/facebook.svg" alt="Facebook" className="w-8" />
+              <img src="/images/facebook.svg" alt="Facebook" className="w-8" />
             </a>
           </div>
         </div>
       </div>
       <div className="flex min-h-[40vh] w-full items-end xl:px-32">
-        <img src="images/footer.jpg" alt="Footer" className="w-full" />
+        <img src="/images/footer.jpg" alt="Footer" className="w-full" />
       </div>
     </section>
   );
